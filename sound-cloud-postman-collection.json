@@ -1,0 +1,3244 @@
+{
+    "id": "e42f5ca55135c99cef5483411d593af9",
+    "name": "Sound Cloud",
+    "description": null,
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [
+        {
+            "id": "9d827a76f13511853fe206640170a3ec",
+            "name": "Get Tracks",
+            "url": "httpsapi.soundcloud.com\/\/tracks.json",
+            "description": "Returns a collection of tracks",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "consumer_key",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "rawModeData": ""
+        },
+        {
+            "id": "dff747293957665498dd7d6181186e54",
+            "name": "Post Tracks",
+            "url": "httpsapi.soundcloud.com\/\/tracks.json",
+            "description": "Uploads a track",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "rawModeData": ""
+        },
+        {
+            "id": "01e774a21caca88ad44d4c98591a92f6",
+            "name": "Get Tracks Track",
+            "url": "httpsapi.soundcloud.com\/\/tracks\/{track_id}.json",
+            "description": "Returns a track by track id",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "consumer_key",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "rawModeData": ""
+        },
+        {
+            "id": "d10ac453926a199f4da4e60ca308cc5f",
+            "name": "Put Tracks Track",
+            "url": "httpsapi.soundcloud.com\/\/tracks\/{track_id}.json",
+            "description": "Updates a given track",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "put",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "rawModeData": ""
+        },
+        {
+            "id": "87a077312573a2c9c0d73d56a951aea9",
+            "name": "Delete Tracks Track",
+            "url": "httpsapi.soundcloud.com\/\/tracks\/{track_id}.json",
+            "description": "Deletes a given track",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "delete",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "rawModeData": ""
+        },
+        {
+            "id": "4dd46a11f33eba7125e58e911c28f699",
+            "name": "Get Tracks Track Comments",
+            "url": "httpsapi.soundcloud.com\/\/tracks\/{track_id}\/comments.json",
+            "description": "Returns comments of a track by track id",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "consumer_key",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "rawModeData": ""
+        },
+        {
+            "id": "464f03930bde5c2c23d719f542e5f75a",
+            "name": "Post Tracks Track Comments",
+            "url": "httpsapi.soundcloud.com\/\/tracks\/{track_id}\/comments.json",
+            "description": "Posts a comments to a track by track id",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "rawModeData": ""
+        },
+        {
+            "id": "a469cc031bb713802d815143b3a0d577",
+            "name": "Get Tracks Track Permissions",
+            "url": "httpsapi.soundcloud.com\/\/tracks\/{track_id}\/permissions.json",
+            "description": "Returns all users with permission for a track by track id",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "consumer_key",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "rawModeData": ""
+        },
+        {
+            "id": "e6903ff6472fcdcddc38242139e4ff7b",
+            "name": "Put Tracks Track Permissions",
+            "url": "httpsapi.soundcloud.com\/\/tracks\/{track_id}\/permissions.json",
+            "description": "Updates the list of permitted users for a track by track id",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "put",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "rawModeData": ""
+        },
+        {
+            "id": "60f87d85ffbbb2d8a372d7f1be7cc8b6",
+            "name": "Get Tracks Track Secret Token",
+            "url": "httpsapi.soundcloud.com\/\/tracks\/{track_id}\/secret-token.json",
+            "description": "Returns the secret token for a track by track id. This resource can only be used by the track owner.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "rawModeData": ""
+        },
+        {
+            "id": "b1724b4094460d0e27543e038c6cea75",
+            "name": "Put Tracks Track Secret Token",
+            "url": "httpsapi.soundcloud.com\/\/tracks\/{track_id}\/secret-token.json",
+            "description": "Resets the secret token for a track by track id. The secret token can not be specified but will be randomly chosen on\n          the server and returned. This resource can only be used by the track owner.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "put",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "rawModeData": ""
+        },
+        {
+            "id": "2afc573df8cf7d2f0e4a78ee84063b0d",
+            "name": "Get Users",
+            "url": "httpsapi.soundcloud.com\/\/users.json",
+            "description": "Returns a collection of users",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "consumer_key",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "rawModeData": ""
+        },
+        {
+            "id": "b41997a113aa692e2dfe5d5d8022d941",
+            "name": "Get Users",
+            "url": "httpsapi.soundcloud.com\/\/users\/{user_id}.json",
+            "description": "Returns a user by user id",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "consumer_key",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "rawModeData": ""
+        },
+        {
+            "id": "e81a22db77b470b0876bdf2f1dafb75f",
+            "name": "Get Users Tracks",
+            "url": "httpsapi.soundcloud.com\/\/users\/{user_id}\/tracks.json",
+            "description": "Returns a collection of tracks uploaded by user id",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "consumer_key",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "rawModeData": ""
+        },
+        {
+            "id": "5877029dd1355de6909ebd123f5fbb83",
+            "name": "Get Users Comments",
+            "url": "httpsapi.soundcloud.com\/\/users\/{user_id}\/comments.json",
+            "description": "Returns a collection of comments made by user id",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "consumer_key",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "rawModeData": ""
+        },
+        {
+            "id": "2638bae14979744d17b5afdb03e6c54a",
+            "name": "Get Users Followings",
+            "url": "httpsapi.soundcloud.com\/\/users\/{user_id}\/followings.json",
+            "description": "Returns a collection of users the user with user id is following",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "consumer_key",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "rawModeData": ""
+        },
+        {
+            "id": "108510553980a04ebb37c4ada50de411",
+            "name": "Get Users Followings Contact",
+            "url": "httpsapi.soundcloud.com\/\/users\/{user_id}\/followings\/{contact_id}.json",
+            "description": "Checks if the user with the id contact_id is in the givens user's list of contacts.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "consumer_key",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "rawModeData": ""
+        },
+        {
+            "id": "39964b1fbc5422191d184ce1ba740536",
+            "name": "Put Users Followings Contact",
+            "url": "httpsapi.soundcloud.com\/\/users\/{user_id}\/followings\/{contact_id}.json",
+            "description": "Adds the user with the id contact_id to the givens user's list of contacts.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "put",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "rawModeData": ""
+        },
+        {
+            "id": "71b101141ceee5043bbaa6f1f9347ff3",
+            "name": "Delete Users Followings Contact",
+            "url": "httpsapi.soundcloud.com\/\/users\/{user_id}\/followings\/{contact_id}.json",
+            "description": "Removes the user with the id contact_id from the givens user's list of contacts.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "delete",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "rawModeData": ""
+        },
+        {
+            "id": "c37a61dc2062f75d6c2aa0dfcb3e3333",
+            "name": "Get Users Followers",
+            "url": "httpsapi.soundcloud.com\/\/users\/{user_id}\/followers.json",
+            "description": "Returns a collection of users who follow the user with user id",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "consumer_key",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "rawModeData": ""
+        },
+        {
+            "id": "126ed59af0829843e3f27539eacd2751",
+            "name": "Get Users Followers Contact",
+            "url": "httpsapi.soundcloud.com\/\/users\/{user_id}\/followers\/{contact_id}.json",
+            "description": "Checks if the user with contact_id is a follower of the given user.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "consumer_key",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "rawModeData": ""
+        },
+        {
+            "id": "a4fcbc59d9e0c3db49439d9a1c33dd62",
+            "name": "Get Users Favorites",
+            "url": "httpsapi.soundcloud.com\/\/users\/{user_id}\/favorites.json",
+            "description": "Returns a collection of tracks favorited by the user with user id",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "consumer_key",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "rawModeData": ""
+        },
+        {
+            "id": "ee2304d85bb7359757dee79e20a81b4d",
+            "name": "Put Users Favorites Track",
+            "url": "httpsapi.soundcloud.com\/\/users\/{user_id}\/favorites\/{track_id}.json",
+            "description": "Adds the given track to the given user's list of favorites.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "put",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "rawModeData": ""
+        },
+        {
+            "id": "c57b99218539dc5514e8dae806fc9c96",
+            "name": "Delete Users Favorites Track",
+            "url": "httpsapi.soundcloud.com\/\/users\/{user_id}\/favorites\/{track_id}.json",
+            "description": "Deletes the given track from the given user's list of favorites.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "delete",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "rawModeData": ""
+        },
+        {
+            "id": "5b177e3ff05cc684d66d129de0a7fb07",
+            "name": "Get Users Groups",
+            "url": "httpsapi.soundcloud.com\/\/users\/{user_id}\/groups.json",
+            "description": "Returns a collection of groups joined by user with user id",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "consumer_key",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "rawModeData": ""
+        },
+        {
+            "id": "bf94e1524c81e68e6d5db18a6166d248",
+            "name": "Get Users Playlists",
+            "url": "httpsapi.soundcloud.com\/\/users\/{user_id}\/playlists.json",
+            "description": "Returns a collection of playlists created by user with user id",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "consumer_key",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "rawModeData": ""
+        },
+        {
+            "id": "1bda18fe4341d60cc20855d68cd113e8",
+            "name": "Get Me",
+            "url": "httpsapi.soundcloud.com\/\/me.json",
+            "description": "Returns the logged-in user",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "rawModeData": ""
+        },
+        {
+            "id": "f8d888d70385ef1d4bdabfa8a4c3755b",
+            "name": "Put Me",
+            "url": "httpsapi.soundcloud.com\/\/me.json",
+            "description": "Updates the logged-in user",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "put",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "rawModeData": ""
+        },
+        {
+            "id": "3d4940fac2287c2341d9d0e86735ce10",
+            "name": "Get Me Tracks",
+            "url": "httpsapi.soundcloud.com\/\/me\/tracks.json",
+            "description": "Returns a collection of tracks uploaded by logged-in user",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "rawModeData": ""
+        },
+        {
+            "id": "c1a168e0e0060a920b2fe86b4c854fdd",
+            "name": "Get Me Comments",
+            "url": "httpsapi.soundcloud.com\/\/me\/comments.json",
+            "description": "Returns a collection of comments made by logged-in user",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "rawModeData": ""
+        },
+        {
+            "id": "2ee850d7426fcf255c72e1548bd38162",
+            "name": "Get Me Followings",
+            "url": "httpsapi.soundcloud.com\/\/me\/followings.json",
+            "description": "Returns a collection of users the logged-in user is following",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "rawModeData": ""
+        },
+        {
+            "id": "b325b9830b0a12508b24a37840fa1da6",
+            "name": "Get Me Followings Contact",
+            "url": "httpsapi.soundcloud.com\/\/me\/followings\/{contact_id}.json",
+            "description": "Checks if the user with the id contact_id is in the logged-in user's list of contacts.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "rawModeData": ""
+        },
+        {
+            "id": "7d393200d9fb7f5d0324a56386bf57de",
+            "name": "Put Me Followings Contact",
+            "url": "httpsapi.soundcloud.com\/\/me\/followings\/{contact_id}.json",
+            "description": "Adds the user with the id contact_id to the logged-in user's list of contacts.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "put",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "rawModeData": ""
+        },
+        {
+            "id": "7485c17d772ca68b31cdadecca3a21bc",
+            "name": "Delete Me Followings Contact",
+            "url": "httpsapi.soundcloud.com\/\/me\/followings\/{contact_id}.json",
+            "description": "Deletes the user with the id contact_id from the logged-in user's list of contacts.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "delete",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "rawModeData": ""
+        },
+        {
+            "id": "54a9dc499ce11b8e1ba92ac28e0935b1",
+            "name": "Get Me Followers",
+            "url": "httpsapi.soundcloud.com\/\/me\/followers.json",
+            "description": "Returns a collection of users who follow the logged-in user",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "rawModeData": ""
+        },
+        {
+            "id": "6b6f736111df29b95a3c1161d3e25105",
+            "name": "Get Me Followers Contact",
+            "url": "httpsapi.soundcloud.com\/\/me\/followers\/{contact_id}.json",
+            "description": "Checks if the user with the id contact_id is a follower of the logged-in user",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "rawModeData": ""
+        },
+        {
+            "id": "a2fd0703e1df390ba3eaff40a87c70e9",
+            "name": "Get Me Favorites",
+            "url": "httpsapi.soundcloud.com\/\/me\/favorites.json",
+            "description": "Returns a collection of tracks favorited by the logged-in user",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "rawModeData": ""
+        },
+        {
+            "id": "824536456828dc66c8bffdacaa9a5c38",
+            "name": "Put Me Favorites Track",
+            "url": "httpsapi.soundcloud.com\/\/me\/favorites\/{track_id}.json",
+            "description": "Adds the given track to the logged-in user's list of favorites.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "put",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "rawModeData": ""
+        },
+        {
+            "id": "6d99339a07f13b34b091f0f1058dfbb2",
+            "name": "Delete Me Favorites Track",
+            "url": "httpsapi.soundcloud.com\/\/me\/favorites\/{track_id}.json",
+            "description": "Deletes the given track from the logged-in user's list of favorites.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "delete",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "rawModeData": ""
+        },
+        {
+            "id": "a3e3ff1fdcd37f5b53d99aaf3d8683cc",
+            "name": "Get Me Groups",
+            "url": "httpsapi.soundcloud.com\/\/me\/groups.json",
+            "description": "Returns a collection of groups joined by logged-in user",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "rawModeData": ""
+        },
+        {
+            "id": "e1e081d74268268dc31875bed2d87aaa",
+            "name": "Get Me Playlists",
+            "url": "httpsapi.soundcloud.com\/\/me\/playlists.json",
+            "description": "Returns a collection of playlists created by the logged-in user",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "rawModeData": ""
+        },
+        {
+            "id": "21d75b1710918f2d5168b31987b631b0",
+            "name": "Get Playlists",
+            "url": "httpsapi.soundcloud.com\/\/playlists.json",
+            "description": "Returns a collection of playlists",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "consumer_key",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "rawModeData": ""
+        },
+        {
+            "id": "f6123a683298bb6047d9a2de3b239cda",
+            "name": "Get Playlists Playlist",
+            "url": "httpsapi.soundcloud.com\/\/playlists\/{playlist_id}.json",
+            "description": "Returns a playlist by playlist id",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "consumer_key",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "rawModeData": ""
+        },
+        {
+            "id": "cade03656f0aecc1c076f83be9a52324",
+            "name": "Get Groups",
+            "url": "httpsapi.soundcloud.com\/\/groups.json",
+            "description": "Returns a collection of groups",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "consumer_key",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "rawModeData": ""
+        },
+        {
+            "id": "3eb3659d470907ddf2458d22fd39b61d",
+            "name": "Get Groups",
+            "url": "httpsapi.soundcloud.com\/\/groups\/{group_id}.json",
+            "description": "Returns a group by group id",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "consumer_key",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "rawModeData": ""
+        },
+        {
+            "id": "d218f7fcdc28252730676f9494468be8",
+            "name": "Get Groups Users",
+            "url": "httpsapi.soundcloud.com\/\/groups\/{group_id}\/users.json",
+            "description": "Returns a combined collection of moderators, members and contributors of the group with group id",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "consumer_key",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "rawModeData": ""
+        },
+        {
+            "id": "a44215afe28ce48027f84cd265e0ef01",
+            "name": "Get Groups Moderators",
+            "url": "httpsapi.soundcloud.com\/\/groups\/{group_id}\/moderators.json",
+            "description": "Returns a collection of moderators of the group with group id",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "consumer_key",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "rawModeData": ""
+        },
+        {
+            "id": "4cb9a856b488d4660d5cf96ecb6b5257",
+            "name": "Get Groups Members",
+            "url": "httpsapi.soundcloud.com\/\/groups\/{group_id}\/members.json",
+            "description": "Returns a collection of members of the group with group id",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "consumer_key",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "rawModeData": ""
+        },
+        {
+            "id": "d05fc637748f7f05ad457bc06616d425",
+            "name": "Get Groups Contributors",
+            "url": "httpsapi.soundcloud.com\/\/groups\/{group_id}\/contributors.json",
+            "description": "Returns a collection of contributors of the group with group id",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "consumer_key",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "rawModeData": ""
+        },
+        {
+            "id": "74a6466a084bcc823fccdab5412c7dec",
+            "name": "Get Groups Tracks",
+            "url": "httpsapi.soundcloud.com\/\/groups\/{group_id}\/tracks.json",
+            "description": "Returns a collection of tracks contributed to the group with group id",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "consumer_key",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "rawModeData": ""
+        },
+        {
+            "id": "b5f6fa6ebf5022007fd5ce40637ae51f",
+            "name": "Get Comments",
+            "url": "httpsapi.soundcloud.com\/\/comments\/{comment_id}.json",
+            "description": "Returns a comment by comment id",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "consumer_key",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "rawModeData": ""
+        },
+        {
+            "id": "173231b9a1ccd5c87ab26c25b88e5b14",
+            "name": "Get Resolve",
+            "url": "httpsapi.soundcloud.com\/\/resolve.json",
+            "description": "Translates a website URI into an API URI",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "consumer_key",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "rawModeData": ""
+        },
+        {
+            "id": "3691b326a6b60a31a831d1e593059868",
+            "name": "Get Tracks. Format",
+            "url": "httpsapi.soundcloud.com\/\/tracks.{format}",
+            "description": "Returns a collection of tracks",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "consumer_key",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "q",
+                    "description": "Access, host, upload, and comment on audio.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "tags",
+                    "description": "Access, host, upload, and comment on audio.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "filter",
+                    "description": "Access, host, upload, and comment on audio.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "order",
+                    "description": "Access, host, upload, and comment on audio.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "bpm",
+                    "description": "Access, host, upload, and comment on audio.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "duration",
+                    "description": "Access, host, upload, and comment on audio.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "created_at",
+                    "description": "Access, host, upload, and comment on audio.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "ids",
+                    "description": "Access, host, upload, and comment on audio.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "rawModeData": ""
+        },
+        {
+            "id": "8cebdf788398120ed26de9c6b64a1392",
+            "name": "Post Tracks. Format",
+            "url": "httpsapi.soundcloud.com\/\/tracks.{format}",
+            "description": "Post tracks. format.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "title",
+                    "description": "Access, host, upload, and comment on audio.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "asset_data",
+                    "description": "Access, host, upload, and comment on audio.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "rawModeData": ""
+        },
+        {
+            "id": "ec33893d62dcc1705d470bdcfc38395f",
+            "name": "Get Tracks Track . Format",
+            "url": "httpsapi.soundcloud.com\/\/tracks\/{track_id}.{format}",
+            "description": "Returns a track by track id",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "consumer_key",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "track_id",
+                    "description": "Access, host, upload, and comment on audio.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "rawModeData": ""
+        },
+        {
+            "id": "2e1af08b9bdf2ab114a73ca643454456",
+            "name": "Put Tracks Track . Format",
+            "url": "httpsapi.soundcloud.com\/\/tracks\/{track_id}.{format}",
+            "description": "Put tracks track . format.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "put",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "title",
+                    "description": "Access, host, upload, and comment on audio.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "asset_data",
+                    "description": "Access, host, upload, and comment on audio.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "rawModeData": ""
+        },
+        {
+            "id": "19fa6f900f55b05eb2eb6c4bd8c8e62c",
+            "name": "Delete Tracks Track . Format",
+            "url": "httpsapi.soundcloud.com\/\/tracks\/{track_id}.{format}",
+            "description": "Delete tracks track . format.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "delete",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "track_id",
+                    "description": "Access, host, upload, and comment on audio.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "rawModeData": ""
+        },
+        {
+            "id": "6a26f5c63e4f5b2d143fcb7ff4294859",
+            "name": "Get Tracks Track Comments. Format",
+            "url": "httpsapi.soundcloud.com\/\/tracks\/{track_id}\/comments.{format}",
+            "description": "Returns comments of a track by track id",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "consumer_key",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "track_id",
+                    "description": "Access, host, upload, and comment on audio.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "rawModeData": ""
+        },
+        {
+            "id": "5ae1a0ac028183ac74b11a16bc05bb27",
+            "name": "Post Tracks Track Comments. Format",
+            "url": "httpsapi.soundcloud.com\/\/tracks\/{track_id}\/comments.{format}",
+            "description": "Posts a comments to a track by track id",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "track_id",
+                    "description": "Access, host, upload, and comment on audio.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "rawModeData": ""
+        },
+        {
+            "id": "6aeb83b19db034256aab1e0889f7b95b",
+            "name": "Get Tracks Track Permissions. Format",
+            "url": "httpsapi.soundcloud.com\/\/tracks\/{track_id}\/permissions.{format}",
+            "description": "Returns all users with permission for a track by track id",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "consumer_key",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "track_id",
+                    "description": "Access, host, upload, and comment on audio.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "rawModeData": ""
+        },
+        {
+            "id": "7040fa3abd5b55047df4ac1d206c3617",
+            "name": "Put Tracks Track Permissions. Format",
+            "url": "httpsapi.soundcloud.com\/\/tracks\/{track_id}\/permissions.{format}",
+            "description": "Updates the list of permitted users for a track by track id",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "put",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "track_id",
+                    "description": "Access, host, upload, and comment on audio.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "rawModeData": ""
+        },
+        {
+            "id": "b3e22d1d1065bc141430c6bf7cab00f5",
+            "name": "Get Tracks Track Secret Token. Format",
+            "url": "httpsapi.soundcloud.com\/\/tracks\/{track_id}\/secret-token.{format}",
+            "description": "Returns the secret token for a track by track id. This resource can only be used by the track owner.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "track_id",
+                    "description": "Access, host, upload, and comment on audio.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "rawModeData": ""
+        },
+        {
+            "id": "93bbaae993d205ab17479288e30704b1",
+            "name": "Put Tracks Track Secret Token. Format",
+            "url": "httpsapi.soundcloud.com\/\/tracks\/{track_id}\/secret-token.{format}",
+            "description": "Resets the secret token for a track by track id. The secret token can not be specified but will be randomly chosen on\n                    the server and returned. This resource can only be used by the track owner.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "put",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "track_id",
+                    "description": "Access, host, upload, and comment on audio.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "rawModeData": ""
+        },
+        {
+            "id": "ca4707ea5d132123facf17405600f9b6",
+            "name": "Get Users. Format",
+            "url": "httpsapi.soundcloud.com\/\/users.{format}",
+            "description": "Returns a collection of users",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "consumer_key",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "q",
+                    "description": "Access, host, upload, and comment on audio.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "rawModeData": ""
+        },
+        {
+            "id": "a1882b9104711d2f17d7bdd2ba707b16",
+            "name": "Get Users . Format",
+            "url": "httpsapi.soundcloud.com\/\/users\/{user_id}.{format}",
+            "description": "Returns a user by user id",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "consumer_key",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "user_id",
+                    "description": "Access, host, upload, and comment on audio.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "rawModeData": ""
+        },
+        {
+            "id": "aff1e5b8b8d884d01ce2d96f4f62127c",
+            "name": "Get Users Tracks. Format",
+            "url": "httpsapi.soundcloud.com\/\/users\/{user_id}\/tracks.{format}",
+            "description": "Returns a collection of tracks uploaded by user id",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "consumer_key",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "user_id",
+                    "description": "Access, host, upload, and comment on audio.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "rawModeData": ""
+        },
+        {
+            "id": "7b2d0a01b72483f517a8bc9985736fc0",
+            "name": "Get Users Comments. Format",
+            "url": "httpsapi.soundcloud.com\/\/users\/{user_id}\/comments.{format}",
+            "description": "Returns a collection of comments made by user id",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "consumer_key",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "user_id",
+                    "description": "Access, host, upload, and comment on audio.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "rawModeData": ""
+        },
+        {
+            "id": "5f02596a1426d2907dee1e39e188a81e",
+            "name": "Get Users Followings. Format",
+            "url": "httpsapi.soundcloud.com\/\/users\/{user_id}\/followings.{format}",
+            "description": "Returns a collection of users the user with user id is following",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "consumer_key",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "user_id",
+                    "description": "Access, host, upload, and comment on audio.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "rawModeData": ""
+        },
+        {
+            "id": "53803a5dad369987573cc3f8cb418aad",
+            "name": "Get Users Followings Contact . Format",
+            "url": "httpsapi.soundcloud.com\/\/users\/{user_id}\/followings\/{contact_id}.{format}",
+            "description": "Checks if the user with the id contact_id is in the givens user's list of contacts.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "consumer_key",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "user_id",
+                    "description": "Access, host, upload, and comment on audio.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "contact_id",
+                    "description": "Access, host, upload, and comment on audio.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "rawModeData": ""
+        },
+        {
+            "id": "6021d0a84c5260df795ae2b28e9af263",
+            "name": "Put Users Followings Contact . Format",
+            "url": "httpsapi.soundcloud.com\/\/users\/{user_id}\/followings\/{contact_id}.{format}",
+            "description": "Adds the user with the id contact_id to the givens user's list of contacts.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "put",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "user_id",
+                    "description": "Access, host, upload, and comment on audio.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "contact_id",
+                    "description": "Access, host, upload, and comment on audio.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "rawModeData": ""
+        },
+        {
+            "id": "3bce2a41e1836eff8accfecad413e575",
+            "name": "Delete Users Followings Contact . Format",
+            "url": "httpsapi.soundcloud.com\/\/users\/{user_id}\/followings\/{contact_id}.{format}",
+            "description": "Removes the user with the id contact_id from the givens user's list of contacts.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "delete",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "user_id",
+                    "description": "Access, host, upload, and comment on audio.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "contact_id",
+                    "description": "Access, host, upload, and comment on audio.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "rawModeData": ""
+        },
+        {
+            "id": "97ca699847f071bc5d2ee2641814d119",
+            "name": "Get Users Followers. Format",
+            "url": "httpsapi.soundcloud.com\/\/users\/{user_id}\/followers.{format}",
+            "description": "Returns a collection of users who follow the user with user id",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "consumer_key",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "user_id",
+                    "description": "Access, host, upload, and comment on audio.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "rawModeData": ""
+        },
+        {
+            "id": "5ff3f904356af49a475fa2922e954c75",
+            "name": "Get Users Followers Contact . Format",
+            "url": "httpsapi.soundcloud.com\/\/users\/{user_id}\/followers\/{contact_id}.{format}",
+            "description": "Checks if the user with contact_id is a follower of the given user.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "consumer_key",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "user_id",
+                    "description": "Access, host, upload, and comment on audio.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "contact_id",
+                    "description": "Access, host, upload, and comment on audio.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "rawModeData": ""
+        },
+        {
+            "id": "0da43f8fb2170bedbf2b2d971013799a",
+            "name": "Get Users Favorites. Format",
+            "url": "httpsapi.soundcloud.com\/\/users\/{user_id}\/favorites.{format}",
+            "description": "Returns a collection of tracks favorited by the user with user id",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "consumer_key",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "user_id",
+                    "description": "Access, host, upload, and comment on audio.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "rawModeData": ""
+        },
+        {
+            "id": "749e196ef795240687294e12e4785453",
+            "name": "Put Users Favorites Track . Format",
+            "url": "httpsapi.soundcloud.com\/\/users\/{user_id}\/favorites\/{track_id}.{format}",
+            "description": "Adds the given track to the given user's list of favorites.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "put",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "user_id",
+                    "description": "Access, host, upload, and comment on audio.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "track_id",
+                    "description": "Access, host, upload, and comment on audio.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "rawModeData": ""
+        },
+        {
+            "id": "6582579d99e10f7527832e756adf0575",
+            "name": "Delete Users Favorites Track . Format",
+            "url": "httpsapi.soundcloud.com\/\/users\/{user_id}\/favorites\/{track_id}.{format}",
+            "description": "Deletes the given track from the given user's list of favorites.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "delete",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "user_id",
+                    "description": "Access, host, upload, and comment on audio.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "track_id",
+                    "description": "Access, host, upload, and comment on audio.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "rawModeData": ""
+        },
+        {
+            "id": "b4e5510bc9a2c726ba861b3e8ef725fa",
+            "name": "Get Users Groups. Format",
+            "url": "httpsapi.soundcloud.com\/\/users\/{user_id}\/groups.{format}",
+            "description": "Returns a collection of groups joined by user with user id",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "consumer_key",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "user_id",
+                    "description": "Access, host, upload, and comment on audio.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "rawModeData": ""
+        },
+        {
+            "id": "9c39ad4887d17ba44c6dfcedbe9b1dc3",
+            "name": "Get Users Playlists. Format",
+            "url": "httpsapi.soundcloud.com\/\/users\/{user_id}\/playlists.{format}",
+            "description": "Returns a collection of playlists created by user with user id",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "consumer_key",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "user_id",
+                    "description": "Access, host, upload, and comment on audio.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "rawModeData": ""
+        },
+        {
+            "id": "979f0d781d687a6f7328d035e0c0d3d1",
+            "name": "Get Me. Format",
+            "url": "httpsapi.soundcloud.com\/\/me.{format}",
+            "description": "Returns the logged-in user",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "rawModeData": ""
+        },
+        {
+            "id": "87ad597059f17fc2d19da1772fef21d5",
+            "name": "Put Me. Format",
+            "url": "httpsapi.soundcloud.com\/\/me.{format}",
+            "description": "Updates the logged-in user",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "put",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "rawModeData": ""
+        },
+        {
+            "id": "7b43d3d300709e150bfe8211504789c5",
+            "name": "Get Me Tracks. Format",
+            "url": "httpsapi.soundcloud.com\/\/me\/tracks.{format}",
+            "description": "Returns a collection of tracks uploaded by logged-in user",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "rawModeData": ""
+        },
+        {
+            "id": "da0961fc8718a0a8414057bcc6f5e3c4",
+            "name": "Get Me Comments. Format",
+            "url": "httpsapi.soundcloud.com\/\/me\/comments.{format}",
+            "description": "Returns a collection of comments made by logged-in user",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "rawModeData": ""
+        },
+        {
+            "id": "759ac0bede155dedd7a6ffeec4d6c1f4",
+            "name": "Get Me Followings. Format",
+            "url": "httpsapi.soundcloud.com\/\/me\/followings.{format}",
+            "description": "Returns a collection of users the logged-in user is following",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "rawModeData": ""
+        },
+        {
+            "id": "d11be2dddabd5cdf44a4b3740771ac55",
+            "name": "Get Me Followings Contact . Format",
+            "url": "httpsapi.soundcloud.com\/\/me\/followings\/{contact_id}.{format}",
+            "description": "Checks if the user with the id contact_id is in the logged-in user's list of contacts.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "contact_id",
+                    "description": "Access, host, upload, and comment on audio.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "rawModeData": ""
+        },
+        {
+            "id": "9c441d4a26ff4836b2c8c1d191d7e216",
+            "name": "Put Me Followings Contact . Format",
+            "url": "httpsapi.soundcloud.com\/\/me\/followings\/{contact_id}.{format}",
+            "description": "Adds the user with the id contact_id to the logged-in user's list of contacts.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "put",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "contact_id",
+                    "description": "Access, host, upload, and comment on audio.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "rawModeData": ""
+        },
+        {
+            "id": "67edb43c27d0e3bab8ab727802c97708",
+            "name": "Delete Me Followings Contact . Format",
+            "url": "httpsapi.soundcloud.com\/\/me\/followings\/{contact_id}.{format}",
+            "description": "Deletes the user with the id contact_id from the logged-in user's list of contacts.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "delete",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "contact_id",
+                    "description": "Access, host, upload, and comment on audio.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "rawModeData": ""
+        },
+        {
+            "id": "e7897e5314ce51facf164f3629fba729",
+            "name": "Get Me Followers. Format",
+            "url": "httpsapi.soundcloud.com\/\/me\/followers.{format}",
+            "description": "Returns a collection of users who follow the logged-in user",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "rawModeData": ""
+        },
+        {
+            "id": "b63cc060da4b3ae1a7af7cc87e75af90",
+            "name": "Get Me Followers Contact . Format",
+            "url": "httpsapi.soundcloud.com\/\/me\/followers\/{contact_id}.{format}",
+            "description": "Checks if the user with the id contact_id is a follower of the logged-in user",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "contact_id",
+                    "description": "Access, host, upload, and comment on audio.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "rawModeData": ""
+        },
+        {
+            "id": "bbebeed3eea5ea552fb69c54f884de35",
+            "name": "Get Me Favorites. Format",
+            "url": "httpsapi.soundcloud.com\/\/me\/favorites.{format}",
+            "description": "Returns a collection of tracks favorited by the logged-in user",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "rawModeData": ""
+        },
+        {
+            "id": "0f18a353b805e080af94911c279e07aa",
+            "name": "Put Me Favorites Track . Format",
+            "url": "httpsapi.soundcloud.com\/\/me\/favorites\/{track_id}.{format}",
+            "description": "Adds the given track to the logged-in user's list of favorites.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "put",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "track_id",
+                    "description": "Access, host, upload, and comment on audio.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "rawModeData": ""
+        },
+        {
+            "id": "649424189c8763afccedc8deb38c82ef",
+            "name": "Delete Me Favorites Track . Format",
+            "url": "httpsapi.soundcloud.com\/\/me\/favorites\/{track_id}.{format}",
+            "description": "Deletes the given track from the logged-in user's list of favorites.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "delete",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "track_id",
+                    "description": "Access, host, upload, and comment on audio.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "rawModeData": ""
+        },
+        {
+            "id": "623ae3ac25c2cedebbb091f85f64dce6",
+            "name": "Get Me Groups. Format",
+            "url": "httpsapi.soundcloud.com\/\/me\/groups.{format}",
+            "description": "Returns a collection of groups joined by logged-in user",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "rawModeData": ""
+        },
+        {
+            "id": "3dd0d2d54c60002e604bfcea56ac1502",
+            "name": "Get Me Playlists. Format",
+            "url": "httpsapi.soundcloud.com\/\/me\/playlists.{format}",
+            "description": "Returns a collection of playlists created by the logged-in user",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "rawModeData": ""
+        },
+        {
+            "id": "320d8d77fca7dcd09834801945e996af",
+            "name": "Get Playlists. Format",
+            "url": "httpsapi.soundcloud.com\/\/playlists.{format}",
+            "description": "Returns a collection of playlists",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "consumer_key",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "q",
+                    "description": "Access, host, upload, and comment on audio.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "filter",
+                    "description": "Access, host, upload, and comment on audio.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "rawModeData": ""
+        },
+        {
+            "id": "d5bdfd4dc9f28cb0d8b48eb5f40c7a5a",
+            "name": "Get Playlists Playlist . Format",
+            "url": "httpsapi.soundcloud.com\/\/playlists\/{playlist_id}.{format}",
+            "description": "Returns a playlist by playlist id",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "consumer_key",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "playlist_id",
+                    "description": "Access, host, upload, and comment on audio.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "rawModeData": ""
+        },
+        {
+            "id": "4dd32c18d4f89fd3ce348e35b2cb8fec",
+            "name": "Get Groups. Format",
+            "url": "httpsapi.soundcloud.com\/\/groups.{format}",
+            "description": "Returns a collection of groups",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "consumer_key",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "rawModeData": ""
+        },
+        {
+            "id": "131d8825b623532931a39ffbbef30ac0",
+            "name": "Get Groups . Format",
+            "url": "httpsapi.soundcloud.com\/\/groups\/{group_id}.{format}",
+            "description": "Returns a group by group id",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "consumer_key",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "playlist_id",
+                    "description": "Access, host, upload, and comment on audio.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "rawModeData": ""
+        },
+        {
+            "id": "76cdb169379b72418ba9220f12bed685",
+            "name": "Get Groups Users. Format",
+            "url": "httpsapi.soundcloud.com\/\/groups\/{group_id}\/users.{format}",
+            "description": "Returns a combined collection of moderators, members and contributors of the group with group id",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "consumer_key",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "playlist_id",
+                    "description": "Access, host, upload, and comment on audio.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "rawModeData": ""
+        },
+        {
+            "id": "5021f29a40b815f139845601c3795316",
+            "name": "Get Groups Moderators. Format",
+            "url": "httpsapi.soundcloud.com\/\/groups\/{group_id}\/moderators.{format}",
+            "description": "Returns a collection of moderators of the group with group id",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "consumer_key",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "playlist_id",
+                    "description": "Access, host, upload, and comment on audio.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "rawModeData": ""
+        },
+        {
+            "id": "87b0077bd9bedcad618798b590823aae",
+            "name": "Get Groups Members. Format",
+            "url": "httpsapi.soundcloud.com\/\/groups\/{group_id}\/members.{format}",
+            "description": "Returns a collection of members of the group with group id",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "consumer_key",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "playlist_id",
+                    "description": "Access, host, upload, and comment on audio.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "rawModeData": ""
+        },
+        {
+            "id": "a7f9e76c5a15ee7bb22f460200961af8",
+            "name": "Get Groups Contributors. Format",
+            "url": "httpsapi.soundcloud.com\/\/groups\/{group_id}\/contributors.{format}",
+            "description": "Returns a collection of contributors of the group with group id",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "consumer_key",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "playlist_id",
+                    "description": "Access, host, upload, and comment on audio.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "rawModeData": ""
+        },
+        {
+            "id": "84142c080e4a3a287a645080727b480c",
+            "name": "Get Groups Tracks. Format",
+            "url": "httpsapi.soundcloud.com\/\/groups\/{group_id}\/tracks.{format}",
+            "description": "Returns a collection of tracks contributed to the group with group id",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "consumer_key",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "playlist_id",
+                    "description": "Access, host, upload, and comment on audio.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "rawModeData": ""
+        },
+        {
+            "id": "c9f9ce310eb2b95cb653344516ccb415",
+            "name": "Get Comments . Format",
+            "url": "httpsapi.soundcloud.com\/\/comments\/{comment_id}.{format}",
+            "description": "Returns a comment by comment id",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "consumer_key",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "playlist_id",
+                    "description": "Access, host, upload, and comment on audio.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "rawModeData": ""
+        },
+        {
+            "id": "f01ffccafeb7059ee24c3fa24d28e3d6",
+            "name": "Get Resolve. Format",
+            "url": "httpsapi.soundcloud.com\/\/resolve.{format}",
+            "description": "Translates a website URI into an API URI",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "consumer_key",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "url",
+                    "description": "Access, host, upload, and comment on audio.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "rawModeData": ""
+        }
+    ]
+}
