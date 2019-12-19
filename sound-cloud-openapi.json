@@ -1,0 +1,1520 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "version": "",
+        "title": "Sound Cloud",
+        "description": "Access, host, upload, and comment on audio.",
+        "termsOfService": ""
+    },
+    "servers": [
+        "httpsapi.soundcloud.com\/"
+    ],
+    "paths": {
+        "\/tracks.json": {
+            "get": {
+                "summary": "Get Tracks",
+                "description": "Returns a collection of tracks",
+                "operationId": "GetTracksJson",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "consumer_key",
+                        "in": "query",
+                        "description": ""
+                    }
+                ]
+            },
+            "post": {
+                "summary": "Post Tracks",
+                "description": "Uploads a track",
+                "operationId": "PostTracksJson",
+                "deprecated": 0,
+                "parameters": []
+            }
+        },
+        "\/tracks\/{track_id}.json": {
+            "get": {
+                "summary": "Get Tracks Track",
+                "description": "Returns a track by track id",
+                "operationId": "GetTracksTrackJson",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "consumer_key",
+                        "in": "query",
+                        "description": ""
+                    }
+                ]
+            },
+            "put": {
+                "summary": "Put Tracks Track",
+                "description": "Updates a given track",
+                "operationId": "PutTracksTrackJson",
+                "deprecated": 0,
+                "parameters": []
+            },
+            "delete": {
+                "summary": "Delete Tracks Track",
+                "description": "Deletes a given track",
+                "operationId": "DeleteTracksTrackJson",
+                "deprecated": 0,
+                "parameters": []
+            }
+        },
+        "\/tracks\/{track_id}\/comments.json": {
+            "get": {
+                "summary": "Get Tracks Track Comments",
+                "description": "Returns comments of a track by track id",
+                "operationId": "GetTracksTrackCommentsJson",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "consumer_key",
+                        "in": "query",
+                        "description": ""
+                    }
+                ]
+            },
+            "post": {
+                "summary": "Post Tracks Track Comments",
+                "description": "Posts a comments to a track by track id",
+                "operationId": "PostTracksTrackCommentsJson",
+                "deprecated": 0,
+                "parameters": []
+            }
+        },
+        "\/tracks\/{track_id}\/permissions.json": {
+            "get": {
+                "summary": "Get Tracks Track Permissions",
+                "description": "Returns all users with permission for a track by track id",
+                "operationId": "GetTracksTrackPermissionsJson",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "consumer_key",
+                        "in": "query",
+                        "description": ""
+                    }
+                ]
+            },
+            "put": {
+                "summary": "Put Tracks Track Permissions",
+                "description": "Updates the list of permitted users for a track by track id",
+                "operationId": "PutTracksTrackPermissionsJson",
+                "deprecated": 0,
+                "parameters": []
+            }
+        },
+        "\/tracks\/{track_id}\/secret-token.json": {
+            "get": {
+                "summary": "Get Tracks Track Secret Token",
+                "description": "Returns the secret token for a track by track id. This resource can only be used by the track owner.",
+                "operationId": "GetTracksTrackSecretTokenJson",
+                "deprecated": 0,
+                "parameters": []
+            },
+            "put": {
+                "summary": "Put Tracks Track Secret Token",
+                "description": "Resets the secret token for a track by track id. The secret token can not be specified but will be randomly chosen on\n          the server and returned. This resource can only be used by the track owner.",
+                "operationId": "PutTracksTrackSecretTokenJson",
+                "deprecated": 0,
+                "parameters": []
+            }
+        },
+        "\/users.json": {
+            "get": {
+                "summary": "Get Users",
+                "description": "Returns a collection of users",
+                "operationId": "GetUsersJson",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "consumer_key",
+                        "in": "query",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/users\/{user_id}.json": {
+            "get": {
+                "summary": "Get Users",
+                "description": "Returns a user by user id",
+                "operationId": "GetUsersUserJson",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "consumer_key",
+                        "in": "query",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/users\/{user_id}\/tracks.json": {
+            "get": {
+                "summary": "Get Users Tracks",
+                "description": "Returns a collection of tracks uploaded by user id",
+                "operationId": "GetUsersUserTracksJson",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "consumer_key",
+                        "in": "query",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/users\/{user_id}\/comments.json": {
+            "get": {
+                "summary": "Get Users Comments",
+                "description": "Returns a collection of comments made by user id",
+                "operationId": "GetUsersUserCommentsJson",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "consumer_key",
+                        "in": "query",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/users\/{user_id}\/followings.json": {
+            "get": {
+                "summary": "Get Users Followings",
+                "description": "Returns a collection of users the user with user id is following",
+                "operationId": "GetUsersUserFollowingsJson",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "consumer_key",
+                        "in": "query",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/users\/{user_id}\/followings\/{contact_id}.json": {
+            "get": {
+                "summary": "Get Users Followings Contact",
+                "description": "Checks if the user with the id contact_id is in the givens user's list of contacts.",
+                "operationId": "GetUsersUserFollowingsContactJson",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "consumer_key",
+                        "in": "query",
+                        "description": ""
+                    }
+                ]
+            },
+            "put": {
+                "summary": "Put Users Followings Contact",
+                "description": "Adds the user with the id contact_id to the givens user's list of contacts.",
+                "operationId": "PutUsersUserFollowingsContactJson",
+                "deprecated": 0,
+                "parameters": []
+            },
+            "delete": {
+                "summary": "Delete Users Followings Contact",
+                "description": "Removes the user with the id contact_id from the givens user's list of contacts.",
+                "operationId": "DeleteUsersUserFollowingsContactJson",
+                "deprecated": 0,
+                "parameters": []
+            }
+        },
+        "\/users\/{user_id}\/followers.json": {
+            "get": {
+                "summary": "Get Users Followers",
+                "description": "Returns a collection of users who follow the user with user id",
+                "operationId": "GetUsersUserFollowersJson",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "consumer_key",
+                        "in": "query",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/users\/{user_id}\/followers\/{contact_id}.json": {
+            "get": {
+                "summary": "Get Users Followers Contact",
+                "description": "Checks if the user with contact_id is a follower of the given user.",
+                "operationId": "GetUsersUserFollowersContactJson",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "consumer_key",
+                        "in": "query",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/users\/{user_id}\/favorites.json": {
+            "get": {
+                "summary": "Get Users Favorites",
+                "description": "Returns a collection of tracks favorited by the user with user id",
+                "operationId": "GetUsersUserFavoritesJson",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "consumer_key",
+                        "in": "query",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/users\/{user_id}\/favorites\/{track_id}.json": {
+            "put": {
+                "summary": "Put Users Favorites Track",
+                "description": "Adds the given track to the given user's list of favorites.",
+                "operationId": "PutUsersUserFavoritesTrackJson",
+                "deprecated": 0,
+                "parameters": []
+            },
+            "delete": {
+                "summary": "Delete Users Favorites Track",
+                "description": "Deletes the given track from the given user's list of favorites.",
+                "operationId": "DeleteUsersUserFavoritesTrackJson",
+                "deprecated": 0,
+                "parameters": []
+            }
+        },
+        "\/users\/{user_id}\/groups.json": {
+            "get": {
+                "summary": "Get Users Groups",
+                "description": "Returns a collection of groups joined by user with user id",
+                "operationId": "GetUsersUserGroupsJson",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "consumer_key",
+                        "in": "query",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/users\/{user_id}\/playlists.json": {
+            "get": {
+                "summary": "Get Users Playlists",
+                "description": "Returns a collection of playlists created by user with user id",
+                "operationId": "GetUsersUserPlaylistsJson",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "consumer_key",
+                        "in": "query",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/me.json": {
+            "get": {
+                "summary": "Get Me",
+                "description": "Returns the logged-in user",
+                "operationId": "GetMeJson",
+                "deprecated": 0,
+                "parameters": []
+            },
+            "put": {
+                "summary": "Put Me",
+                "description": "Updates the logged-in user",
+                "operationId": "PutMeJson",
+                "deprecated": 0,
+                "parameters": []
+            }
+        },
+        "\/me\/tracks.json": {
+            "get": {
+                "summary": "Get Me Tracks",
+                "description": "Returns a collection of tracks uploaded by logged-in user",
+                "operationId": "GetMeTracksJson",
+                "deprecated": 0,
+                "parameters": []
+            }
+        },
+        "\/me\/comments.json": {
+            "get": {
+                "summary": "Get Me Comments",
+                "description": "Returns a collection of comments made by logged-in user",
+                "operationId": "GetMeCommentsJson",
+                "deprecated": 0,
+                "parameters": []
+            }
+        },
+        "\/me\/followings.json": {
+            "get": {
+                "summary": "Get Me Followings",
+                "description": "Returns a collection of users the logged-in user is following",
+                "operationId": "GetMeFollowingsJson",
+                "deprecated": 0,
+                "parameters": []
+            }
+        },
+        "\/me\/followings\/{contact_id}.json": {
+            "get": {
+                "summary": "Get Me Followings Contact",
+                "description": "Checks if the user with the id contact_id is in the logged-in user's list of contacts.",
+                "operationId": "GetMeFollowingsContactJson",
+                "deprecated": 0,
+                "parameters": []
+            },
+            "put": {
+                "summary": "Put Me Followings Contact",
+                "description": "Adds the user with the id contact_id to the logged-in user's list of contacts.",
+                "operationId": "PutMeFollowingsContactJson",
+                "deprecated": 0,
+                "parameters": []
+            },
+            "delete": {
+                "summary": "Delete Me Followings Contact",
+                "description": "Deletes the user with the id contact_id from the logged-in user's list of contacts.",
+                "operationId": "DeleteMeFollowingsContactJson",
+                "deprecated": 0,
+                "parameters": []
+            }
+        },
+        "\/me\/followers.json": {
+            "get": {
+                "summary": "Get Me Followers",
+                "description": "Returns a collection of users who follow the logged-in user",
+                "operationId": "GetMeFollowersJson",
+                "deprecated": 0,
+                "parameters": []
+            }
+        },
+        "\/me\/followers\/{contact_id}.json": {
+            "get": {
+                "summary": "Get Me Followers Contact",
+                "description": "Checks if the user with the id contact_id is a follower of the logged-in user",
+                "operationId": "GetMeFollowersContactJson",
+                "deprecated": 0,
+                "parameters": []
+            }
+        },
+        "\/me\/favorites.json": {
+            "get": {
+                "summary": "Get Me Favorites",
+                "description": "Returns a collection of tracks favorited by the logged-in user",
+                "operationId": "GetMeFavoritesJson",
+                "deprecated": 0,
+                "parameters": []
+            }
+        },
+        "\/me\/favorites\/{track_id}.json": {
+            "put": {
+                "summary": "Put Me Favorites Track",
+                "description": "Adds the given track to the logged-in user's list of favorites.",
+                "operationId": "PutMeFavoritesTrackJson",
+                "deprecated": 0,
+                "parameters": []
+            },
+            "delete": {
+                "summary": "Delete Me Favorites Track",
+                "description": "Deletes the given track from the logged-in user's list of favorites.",
+                "operationId": "DeleteMeFavoritesTrackJson",
+                "deprecated": 0,
+                "parameters": []
+            }
+        },
+        "\/me\/groups.json": {
+            "get": {
+                "summary": "Get Me Groups",
+                "description": "Returns a collection of groups joined by logged-in user",
+                "operationId": "GetMeGroupsJson",
+                "deprecated": 0,
+                "parameters": []
+            }
+        },
+        "\/me\/playlists.json": {
+            "get": {
+                "summary": "Get Me Playlists",
+                "description": "Returns a collection of playlists created by the logged-in user",
+                "operationId": "GetMePlaylistsJson",
+                "deprecated": 0,
+                "parameters": []
+            }
+        },
+        "\/playlists.json": {
+            "get": {
+                "summary": "Get Playlists",
+                "description": "Returns a collection of playlists",
+                "operationId": "GetPlaylistsJson",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "consumer_key",
+                        "in": "query",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/playlists\/{playlist_id}.json": {
+            "get": {
+                "summary": "Get Playlists Playlist",
+                "description": "Returns a playlist by playlist id",
+                "operationId": "GetPlaylistsPlaylistJson",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "consumer_key",
+                        "in": "query",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/groups.json": {
+            "get": {
+                "summary": "Get Groups",
+                "description": "Returns a collection of groups",
+                "operationId": "GetGroupsJson",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "consumer_key",
+                        "in": "query",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/groups\/{group_id}.json": {
+            "get": {
+                "summary": "Get Groups",
+                "description": "Returns a group by group id",
+                "operationId": "GetGroupsGroupJson",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "consumer_key",
+                        "in": "query",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/groups\/{group_id}\/users.json": {
+            "get": {
+                "summary": "Get Groups Users",
+                "description": "Returns a combined collection of moderators, members and contributors of the group with group id",
+                "operationId": "GetGroupsGroupUsersJson",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "consumer_key",
+                        "in": "query",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/groups\/{group_id}\/moderators.json": {
+            "get": {
+                "summary": "Get Groups Moderators",
+                "description": "Returns a collection of moderators of the group with group id",
+                "operationId": "GetGroupsGroupModeratorsJson",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "consumer_key",
+                        "in": "query",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/groups\/{group_id}\/members.json": {
+            "get": {
+                "summary": "Get Groups Members",
+                "description": "Returns a collection of members of the group with group id",
+                "operationId": "GetGroupsGroupMembersJson",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "consumer_key",
+                        "in": "query",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/groups\/{group_id}\/contributors.json": {
+            "get": {
+                "summary": "Get Groups Contributors",
+                "description": "Returns a collection of contributors of the group with group id",
+                "operationId": "GetGroupsGroupContributorsJson",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "consumer_key",
+                        "in": "query",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/groups\/{group_id}\/tracks.json": {
+            "get": {
+                "summary": "Get Groups Tracks",
+                "description": "Returns a collection of tracks contributed to the group with group id",
+                "operationId": "GetGroupsGroupTracksJson",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "consumer_key",
+                        "in": "query",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/comments\/{comment_id}.json": {
+            "get": {
+                "summary": "Get Comments",
+                "description": "Returns a comment by comment id",
+                "operationId": "GetCommentsCommentJson",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "consumer_key",
+                        "in": "query",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/resolve.json": {
+            "get": {
+                "summary": "Get Resolve",
+                "description": "Translates a website URI into an API URI",
+                "operationId": "GetResolveJson",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "consumer_key",
+                        "in": "query",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/tracks.{format}": {
+            "get": {
+                "summary": "Get Tracks. Format",
+                "description": "Returns a collection of tracks",
+                "operationId": "GetTracksFormat",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "consumer_key",
+                        "in": "query",
+                        "description": ""
+                    },
+                    {
+                        "name": "q",
+                        "in": "query",
+                        "description": "Access, host, upload, and comment on audio."
+                    },
+                    {
+                        "name": "tags",
+                        "in": "query",
+                        "description": "Access, host, upload, and comment on audio."
+                    },
+                    {
+                        "name": "filter",
+                        "in": "query",
+                        "description": "Access, host, upload, and comment on audio."
+                    },
+                    {
+                        "name": "order",
+                        "in": "query",
+                        "description": "Access, host, upload, and comment on audio."
+                    },
+                    {
+                        "name": "bpm",
+                        "in": "query",
+                        "description": "Access, host, upload, and comment on audio."
+                    },
+                    {
+                        "name": "duration",
+                        "in": "query",
+                        "description": "Access, host, upload, and comment on audio."
+                    },
+                    {
+                        "name": "created_at",
+                        "in": "query",
+                        "description": "Access, host, upload, and comment on audio."
+                    },
+                    {
+                        "name": "ids",
+                        "in": "query",
+                        "description": "Access, host, upload, and comment on audio."
+                    }
+                ]
+            },
+            "post": {
+                "summary": "Post Tracks. Format",
+                "description": "Post tracks. format.",
+                "operationId": "PostTracksFormat",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "title",
+                        "in": "query",
+                        "description": "Access, host, upload, and comment on audio."
+                    },
+                    {
+                        "name": "asset_data",
+                        "in": "query",
+                        "description": "Access, host, upload, and comment on audio."
+                    }
+                ]
+            }
+        },
+        "\/tracks\/{track_id}.{format}": {
+            "get": {
+                "summary": "Get Tracks Track . Format",
+                "description": "Returns a track by track id",
+                "operationId": "GetTracksTrackFormat",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "consumer_key",
+                        "in": "query",
+                        "description": ""
+                    },
+                    {
+                        "name": "track_id",
+                        "in": "path",
+                        "description": "Access, host, upload, and comment on audio."
+                    }
+                ]
+            },
+            "put": {
+                "summary": "Put Tracks Track . Format",
+                "description": "Put tracks track . format.",
+                "operationId": "PutTracksTrackFormat",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "title",
+                        "in": "query",
+                        "description": "Access, host, upload, and comment on audio."
+                    },
+                    {
+                        "name": "asset_data",
+                        "in": "query",
+                        "description": "Access, host, upload, and comment on audio."
+                    }
+                ]
+            },
+            "delete": {
+                "summary": "Delete Tracks Track . Format",
+                "description": "Delete tracks track . format.",
+                "operationId": "DeleteTracksTrackFormat",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "track_id",
+                        "in": "path",
+                        "description": "Access, host, upload, and comment on audio."
+                    }
+                ]
+            }
+        },
+        "\/tracks\/{track_id}\/comments.{format}": {
+            "get": {
+                "summary": "Get Tracks Track Comments. Format",
+                "description": "Returns comments of a track by track id",
+                "operationId": "GetTracksTrackCommentsFormat",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "consumer_key",
+                        "in": "query",
+                        "description": ""
+                    },
+                    {
+                        "name": "track_id",
+                        "in": "path",
+                        "description": "Access, host, upload, and comment on audio."
+                    }
+                ]
+            },
+            "post": {
+                "summary": "Post Tracks Track Comments. Format",
+                "description": "Posts a comments to a track by track id",
+                "operationId": "PostTracksTrackCommentsFormat",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "track_id",
+                        "in": "path",
+                        "description": "Access, host, upload, and comment on audio."
+                    }
+                ]
+            }
+        },
+        "\/tracks\/{track_id}\/permissions.{format}": {
+            "get": {
+                "summary": "Get Tracks Track Permissions. Format",
+                "description": "Returns all users with permission for a track by track id",
+                "operationId": "GetTracksTrackPermissionsFormat",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "consumer_key",
+                        "in": "query",
+                        "description": ""
+                    },
+                    {
+                        "name": "track_id",
+                        "in": "path",
+                        "description": "Access, host, upload, and comment on audio."
+                    }
+                ]
+            },
+            "put": {
+                "summary": "Put Tracks Track Permissions. Format",
+                "description": "Updates the list of permitted users for a track by track id",
+                "operationId": "PutTracksTrackPermissionsFormat",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "track_id",
+                        "in": "path",
+                        "description": "Access, host, upload, and comment on audio."
+                    }
+                ]
+            }
+        },
+        "\/tracks\/{track_id}\/secret-token.{format}": {
+            "get": {
+                "summary": "Get Tracks Track Secret Token. Format",
+                "description": "Returns the secret token for a track by track id. This resource can only be used by the track owner.",
+                "operationId": "GetTracksTrackSecretTokenFormat",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "track_id",
+                        "in": "path",
+                        "description": "Access, host, upload, and comment on audio."
+                    }
+                ]
+            },
+            "put": {
+                "summary": "Put Tracks Track Secret Token. Format",
+                "description": "Resets the secret token for a track by track id. The secret token can not be specified but will be randomly chosen on\n                    the server and returned. This resource can only be used by the track owner.",
+                "operationId": "PutTracksTrackSecretTokenFormat",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "track_id",
+                        "in": "path",
+                        "description": "Access, host, upload, and comment on audio."
+                    }
+                ]
+            }
+        },
+        "\/users.{format}": {
+            "get": {
+                "summary": "Get Users. Format",
+                "description": "Returns a collection of users",
+                "operationId": "GetUsersFormat",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "consumer_key",
+                        "in": "query",
+                        "description": ""
+                    },
+                    {
+                        "name": "q",
+                        "in": "query",
+                        "description": "Access, host, upload, and comment on audio."
+                    }
+                ]
+            }
+        },
+        "\/users\/{user_id}.{format}": {
+            "get": {
+                "summary": "Get Users . Format",
+                "description": "Returns a user by user id",
+                "operationId": "GetUsersUserFormat",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "consumer_key",
+                        "in": "query",
+                        "description": ""
+                    },
+                    {
+                        "name": "user_id",
+                        "in": "path",
+                        "description": "Access, host, upload, and comment on audio."
+                    }
+                ]
+            }
+        },
+        "\/users\/{user_id}\/tracks.{format}": {
+            "get": {
+                "summary": "Get Users Tracks. Format",
+                "description": "Returns a collection of tracks uploaded by user id",
+                "operationId": "GetUsersUserTracksFormat",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "consumer_key",
+                        "in": "query",
+                        "description": ""
+                    },
+                    {
+                        "name": "user_id",
+                        "in": "path",
+                        "description": "Access, host, upload, and comment on audio."
+                    }
+                ]
+            }
+        },
+        "\/users\/{user_id}\/comments.{format}": {
+            "get": {
+                "summary": "Get Users Comments. Format",
+                "description": "Returns a collection of comments made by user id",
+                "operationId": "GetUsersUserCommentsFormat",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "consumer_key",
+                        "in": "query",
+                        "description": ""
+                    },
+                    {
+                        "name": "user_id",
+                        "in": "path",
+                        "description": "Access, host, upload, and comment on audio."
+                    }
+                ]
+            }
+        },
+        "\/users\/{user_id}\/followings.{format}": {
+            "get": {
+                "summary": "Get Users Followings. Format",
+                "description": "Returns a collection of users the user with user id is following",
+                "operationId": "GetUsersUserFollowingsFormat",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "consumer_key",
+                        "in": "query",
+                        "description": ""
+                    },
+                    {
+                        "name": "user_id",
+                        "in": "path",
+                        "description": "Access, host, upload, and comment on audio."
+                    }
+                ]
+            }
+        },
+        "\/users\/{user_id}\/followings\/{contact_id}.{format}": {
+            "get": {
+                "summary": "Get Users Followings Contact . Format",
+                "description": "Checks if the user with the id contact_id is in the givens user's list of contacts.",
+                "operationId": "GetUsersUserFollowingsContactFormat",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "consumer_key",
+                        "in": "query",
+                        "description": ""
+                    },
+                    {
+                        "name": "user_id",
+                        "in": "path",
+                        "description": "Access, host, upload, and comment on audio."
+                    },
+                    {
+                        "name": "contact_id",
+                        "in": "path",
+                        "description": "Access, host, upload, and comment on audio."
+                    }
+                ]
+            },
+            "put": {
+                "summary": "Put Users Followings Contact . Format",
+                "description": "Adds the user with the id contact_id to the givens user's list of contacts.",
+                "operationId": "PutUsersUserFollowingsContactFormat",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "user_id",
+                        "in": "path",
+                        "description": "Access, host, upload, and comment on audio."
+                    },
+                    {
+                        "name": "contact_id",
+                        "in": "path",
+                        "description": "Access, host, upload, and comment on audio."
+                    }
+                ]
+            },
+            "delete": {
+                "summary": "Delete Users Followings Contact . Format",
+                "description": "Removes the user with the id contact_id from the givens user's list of contacts.",
+                "operationId": "DeleteUsersUserFollowingsContactFormat",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "user_id",
+                        "in": "path",
+                        "description": "Access, host, upload, and comment on audio."
+                    },
+                    {
+                        "name": "contact_id",
+                        "in": "path",
+                        "description": "Access, host, upload, and comment on audio."
+                    }
+                ]
+            }
+        },
+        "\/users\/{user_id}\/followers.{format}": {
+            "get": {
+                "summary": "Get Users Followers. Format",
+                "description": "Returns a collection of users who follow the user with user id",
+                "operationId": "GetUsersUserFollowersFormat",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "consumer_key",
+                        "in": "query",
+                        "description": ""
+                    },
+                    {
+                        "name": "user_id",
+                        "in": "path",
+                        "description": "Access, host, upload, and comment on audio."
+                    }
+                ]
+            }
+        },
+        "\/users\/{user_id}\/followers\/{contact_id}.{format}": {
+            "get": {
+                "summary": "Get Users Followers Contact . Format",
+                "description": "Checks if the user with contact_id is a follower of the given user.",
+                "operationId": "GetUsersUserFollowersContactFormat",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "consumer_key",
+                        "in": "query",
+                        "description": ""
+                    },
+                    {
+                        "name": "user_id",
+                        "in": "path",
+                        "description": "Access, host, upload, and comment on audio."
+                    },
+                    {
+                        "name": "contact_id",
+                        "in": "path",
+                        "description": "Access, host, upload, and comment on audio."
+                    }
+                ]
+            }
+        },
+        "\/users\/{user_id}\/favorites.{format}": {
+            "get": {
+                "summary": "Get Users Favorites. Format",
+                "description": "Returns a collection of tracks favorited by the user with user id",
+                "operationId": "GetUsersUserFavoritesFormat",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "consumer_key",
+                        "in": "query",
+                        "description": ""
+                    },
+                    {
+                        "name": "user_id",
+                        "in": "path",
+                        "description": "Access, host, upload, and comment on audio."
+                    }
+                ]
+            }
+        },
+        "\/users\/{user_id}\/favorites\/{track_id}.{format}": {
+            "put": {
+                "summary": "Put Users Favorites Track . Format",
+                "description": "Adds the given track to the given user's list of favorites.",
+                "operationId": "PutUsersUserFavoritesTrackFormat",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "user_id",
+                        "in": "path",
+                        "description": "Access, host, upload, and comment on audio."
+                    },
+                    {
+                        "name": "track_id",
+                        "in": "path",
+                        "description": "Access, host, upload, and comment on audio."
+                    }
+                ]
+            },
+            "delete": {
+                "summary": "Delete Users Favorites Track . Format",
+                "description": "Deletes the given track from the given user's list of favorites.",
+                "operationId": "DeleteUsersUserFavoritesTrackFormat",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "user_id",
+                        "in": "path",
+                        "description": "Access, host, upload, and comment on audio."
+                    },
+                    {
+                        "name": "track_id",
+                        "in": "path",
+                        "description": "Access, host, upload, and comment on audio."
+                    }
+                ]
+            }
+        },
+        "\/users\/{user_id}\/groups.{format}": {
+            "get": {
+                "summary": "Get Users Groups. Format",
+                "description": "Returns a collection of groups joined by user with user id",
+                "operationId": "GetUsersUserGroupsFormat",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "consumer_key",
+                        "in": "query",
+                        "description": ""
+                    },
+                    {
+                        "name": "user_id",
+                        "in": "path",
+                        "description": "Access, host, upload, and comment on audio."
+                    }
+                ]
+            }
+        },
+        "\/users\/{user_id}\/playlists.{format}": {
+            "get": {
+                "summary": "Get Users Playlists. Format",
+                "description": "Returns a collection of playlists created by user with user id",
+                "operationId": "GetUsersUserPlaylistsFormat",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "consumer_key",
+                        "in": "query",
+                        "description": ""
+                    },
+                    {
+                        "name": "user_id",
+                        "in": "path",
+                        "description": "Access, host, upload, and comment on audio."
+                    }
+                ]
+            }
+        },
+        "\/me.{format}": {
+            "get": {
+                "summary": "Get Me. Format",
+                "description": "Returns the logged-in user",
+                "operationId": "GetMeFormat",
+                "deprecated": 0,
+                "parameters": []
+            },
+            "put": {
+                "summary": "Put Me. Format",
+                "description": "Updates the logged-in user",
+                "operationId": "PutMeFormat",
+                "deprecated": 0,
+                "parameters": []
+            }
+        },
+        "\/me\/tracks.{format}": {
+            "get": {
+                "summary": "Get Me Tracks. Format",
+                "description": "Returns a collection of tracks uploaded by logged-in user",
+                "operationId": "GetMeTracksFormat",
+                "deprecated": 0,
+                "parameters": []
+            }
+        },
+        "\/me\/comments.{format}": {
+            "get": {
+                "summary": "Get Me Comments. Format",
+                "description": "Returns a collection of comments made by logged-in user",
+                "operationId": "GetMeCommentsFormat",
+                "deprecated": 0,
+                "parameters": []
+            }
+        },
+        "\/me\/followings.{format}": {
+            "get": {
+                "summary": "Get Me Followings. Format",
+                "description": "Returns a collection of users the logged-in user is following",
+                "operationId": "GetMeFollowingsFormat",
+                "deprecated": 0,
+                "parameters": []
+            }
+        },
+        "\/me\/followings\/{contact_id}.{format}": {
+            "get": {
+                "summary": "Get Me Followings Contact . Format",
+                "description": "Checks if the user with the id contact_id is in the logged-in user's list of contacts.",
+                "operationId": "GetMeFollowingsContactFormat",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "contact_id",
+                        "in": "path",
+                        "description": "Access, host, upload, and comment on audio."
+                    }
+                ]
+            },
+            "put": {
+                "summary": "Put Me Followings Contact . Format",
+                "description": "Adds the user with the id contact_id to the logged-in user's list of contacts.",
+                "operationId": "PutMeFollowingsContactFormat",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "contact_id",
+                        "in": "path",
+                        "description": "Access, host, upload, and comment on audio."
+                    }
+                ]
+            },
+            "delete": {
+                "summary": "Delete Me Followings Contact . Format",
+                "description": "Deletes the user with the id contact_id from the logged-in user's list of contacts.",
+                "operationId": "DeleteMeFollowingsContactFormat",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "contact_id",
+                        "in": "path",
+                        "description": "Access, host, upload, and comment on audio."
+                    }
+                ]
+            }
+        },
+        "\/me\/followers.{format}": {
+            "get": {
+                "summary": "Get Me Followers. Format",
+                "description": "Returns a collection of users who follow the logged-in user",
+                "operationId": "GetMeFollowersFormat",
+                "deprecated": 0,
+                "parameters": []
+            }
+        },
+        "\/me\/followers\/{contact_id}.{format}": {
+            "get": {
+                "summary": "Get Me Followers Contact . Format",
+                "description": "Checks if the user with the id contact_id is a follower of the logged-in user",
+                "operationId": "GetMeFollowersContactFormat",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "contact_id",
+                        "in": "path",
+                        "description": "Access, host, upload, and comment on audio."
+                    }
+                ]
+            }
+        },
+        "\/me\/favorites.{format}": {
+            "get": {
+                "summary": "Get Me Favorites. Format",
+                "description": "Returns a collection of tracks favorited by the logged-in user",
+                "operationId": "GetMeFavoritesFormat",
+                "deprecated": 0,
+                "parameters": []
+            }
+        },
+        "\/me\/favorites\/{track_id}.{format}": {
+            "put": {
+                "summary": "Put Me Favorites Track . Format",
+                "description": "Adds the given track to the logged-in user's list of favorites.",
+                "operationId": "PutMeFavoritesTrackFormat",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "track_id",
+                        "in": "path",
+                        "description": "Access, host, upload, and comment on audio."
+                    }
+                ]
+            },
+            "delete": {
+                "summary": "Delete Me Favorites Track . Format",
+                "description": "Deletes the given track from the logged-in user's list of favorites.",
+                "operationId": "DeleteMeFavoritesTrackFormat",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "track_id",
+                        "in": "path",
+                        "description": "Access, host, upload, and comment on audio."
+                    }
+                ]
+            }
+        },
+        "\/me\/groups.{format}": {
+            "get": {
+                "summary": "Get Me Groups. Format",
+                "description": "Returns a collection of groups joined by logged-in user",
+                "operationId": "GetMeGroupsFormat",
+                "deprecated": 0,
+                "parameters": []
+            }
+        },
+        "\/me\/playlists.{format}": {
+            "get": {
+                "summary": "Get Me Playlists. Format",
+                "description": "Returns a collection of playlists created by the logged-in user",
+                "operationId": "GetMePlaylistsFormat",
+                "deprecated": 0,
+                "parameters": []
+            }
+        },
+        "\/playlists.{format}": {
+            "get": {
+                "summary": "Get Playlists. Format",
+                "description": "Returns a collection of playlists",
+                "operationId": "GetPlaylistsFormat",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "consumer_key",
+                        "in": "query",
+                        "description": ""
+                    },
+                    {
+                        "name": "q",
+                        "in": "query",
+                        "description": "Access, host, upload, and comment on audio."
+                    },
+                    {
+                        "name": "filter",
+                        "in": "query",
+                        "description": "Access, host, upload, and comment on audio."
+                    }
+                ]
+            }
+        },
+        "\/playlists\/{playlist_id}.{format}": {
+            "get": {
+                "summary": "Get Playlists Playlist . Format",
+                "description": "Returns a playlist by playlist id",
+                "operationId": "GetPlaylistsPlaylistFormat",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "consumer_key",
+                        "in": "query",
+                        "description": ""
+                    },
+                    {
+                        "name": "playlist_id",
+                        "in": "path",
+                        "description": "Access, host, upload, and comment on audio."
+                    }
+                ]
+            }
+        },
+        "\/groups.{format}": {
+            "get": {
+                "summary": "Get Groups. Format",
+                "description": "Returns a collection of groups",
+                "operationId": "GetGroupsFormat",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "consumer_key",
+                        "in": "query",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/groups\/{group_id}.{format}": {
+            "get": {
+                "summary": "Get Groups . Format",
+                "description": "Returns a group by group id",
+                "operationId": "GetGroupsGroupFormat",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "consumer_key",
+                        "in": "query",
+                        "description": ""
+                    },
+                    {
+                        "name": "playlist_id",
+                        "in": "query",
+                        "description": "Access, host, upload, and comment on audio."
+                    }
+                ]
+            }
+        },
+        "\/groups\/{group_id}\/users.{format}": {
+            "get": {
+                "summary": "Get Groups Users. Format",
+                "description": "Returns a combined collection of moderators, members and contributors of the group with group id",
+                "operationId": "GetGroupsGroupUsersFormat",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "consumer_key",
+                        "in": "query",
+                        "description": ""
+                    },
+                    {
+                        "name": "playlist_id",
+                        "in": "query",
+                        "description": "Access, host, upload, and comment on audio."
+                    }
+                ]
+            }
+        },
+        "\/groups\/{group_id}\/moderators.{format}": {
+            "get": {
+                "summary": "Get Groups Moderators. Format",
+                "description": "Returns a collection of moderators of the group with group id",
+                "operationId": "GetGroupsGroupModeratorsFormat",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "consumer_key",
+                        "in": "query",
+                        "description": ""
+                    },
+                    {
+                        "name": "playlist_id",
+                        "in": "query",
+                        "description": "Access, host, upload, and comment on audio."
+                    }
+                ]
+            }
+        },
+        "\/groups\/{group_id}\/members.{format}": {
+            "get": {
+                "summary": "Get Groups Members. Format",
+                "description": "Returns a collection of members of the group with group id",
+                "operationId": "GetGroupsGroupMembersFormat",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "consumer_key",
+                        "in": "query",
+                        "description": ""
+                    },
+                    {
+                        "name": "playlist_id",
+                        "in": "query",
+                        "description": "Access, host, upload, and comment on audio."
+                    }
+                ]
+            }
+        },
+        "\/groups\/{group_id}\/contributors.{format}": {
+            "get": {
+                "summary": "Get Groups Contributors. Format",
+                "description": "Returns a collection of contributors of the group with group id",
+                "operationId": "GetGroupsGroupContributorsFormat",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "consumer_key",
+                        "in": "query",
+                        "description": ""
+                    },
+                    {
+                        "name": "playlist_id",
+                        "in": "query",
+                        "description": "Access, host, upload, and comment on audio."
+                    }
+                ]
+            }
+        },
+        "\/groups\/{group_id}\/tracks.{format}": {
+            "get": {
+                "summary": "Get Groups Tracks. Format",
+                "description": "Returns a collection of tracks contributed to the group with group id",
+                "operationId": "GetGroupsGroupTracksFormat",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "consumer_key",
+                        "in": "query",
+                        "description": ""
+                    },
+                    {
+                        "name": "playlist_id",
+                        "in": "query",
+                        "description": "Access, host, upload, and comment on audio."
+                    }
+                ]
+            }
+        },
+        "\/comments\/{comment_id}.{format}": {
+            "get": {
+                "summary": "Get Comments . Format",
+                "description": "Returns a comment by comment id",
+                "operationId": "GetCommentsCommentFormat",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "consumer_key",
+                        "in": "query",
+                        "description": ""
+                    },
+                    {
+                        "name": "playlist_id",
+                        "in": "query",
+                        "description": "Access, host, upload, and comment on audio."
+                    }
+                ]
+            }
+        },
+        "\/resolve.{format}": {
+            "get": {
+                "summary": "Get Resolve. Format",
+                "description": "Translates a website URI into an API URI",
+                "operationId": "GetResolveFormat",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "consumer_key",
+                        "in": "query",
+                        "description": ""
+                    },
+                    {
+                        "name": "url",
+                        "in": "query",
+                        "description": "Access, host, upload, and comment on audio."
+                    }
+                ]
+            }
+        }
+    },
+    "components": {
+        "schemas": []
+    }
+}
