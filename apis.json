@@ -1,0 +1,107 @@
+{
+    "name": "SoundCloud",
+    "description": "SoundCloud is a music and podcast streaming platform that lets you listen to millions of songs from around the world, or upload your own. Start listening now!",
+    "image": "http:\/\/kinlane-productions.s3.amazonaws.com\/screen-capture-api\/252-soundcloud.jpg",
+    "tags": [
+        "api lifeycle",
+        "general data",
+        "have api",
+        "music",
+        "pedestal",
+        "service api",
+        "social",
+        "sound",
+        "streams"
+    ],
+    "created": "2019-12-19",
+    "modified": "2019-12-19",
+    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/soundcloud\/master\/apis.json",
+    "specificationVersion": "0.14",
+    "apis": [
+        {
+            "name": "Sound Cloud",
+            "description": null,
+            "image": "http:\/\/kinlane-productions.s3.amazonaws.com\/screen-capture-api\/252-soundcloud.jpg",
+            "humanURL": "http:\/\/soundcloud.com",
+            "baseURL": "",
+            "tags": [],
+            "properties": [
+                {
+                    "type": "x-openapi",
+                    "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/openapis\/sound-cloud.json"
+                },
+                {
+                    "type": "x-openapi",
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/sound-cloud-openapi.json"
+                }
+            ]
+        }
+    ],
+    "include": [],
+    "x-common": [
+        {
+            "type": "Base",
+            "url": "https:\/\/api.soundcloud.com"
+        },
+        {
+            "type": "Blog",
+            "url": "http:\/\/blog.soundcloud.com"
+        },
+        {
+            "type": "Blog RSS",
+            "url": "http:\/\/blog.soundcloud.com\/feed\/"
+        },
+        {
+            "type": "Console",
+            "url": "https:\/\/developers.soundcloud.com\/console"
+        },
+        {
+            "type": "Crunchbase",
+            "url": "https:\/\/crunchbase.com\/organization\/soundcloud"
+        },
+        {
+            "type": "Crunchbase",
+            "url": "http:\/\/www.crunchbase.com\/company\/soundcloud"
+        },
+        {
+            "type": "Developers",
+            "url": "http:\/\/developers.soundcloud.com"
+        },
+        {
+            "type": "Github",
+            "url": "https:\/\/github.com\/soundcloud"
+        },
+        {
+            "type": "LinkedIn",
+            "url": "https:\/\/www.linkedin.com\/company\/soundcloud\/"
+        },
+        {
+            "type": "Pricing",
+            "url": "https:\/\/on.soundcloud.com\/"
+        },
+        {
+            "type": "Privacy",
+            "url": "https:\/\/soundcloud.com\/pages\/privacy"
+        },
+        {
+            "type": "Support",
+            "url": "https:\/\/soundcloud.com\/imprint"
+        },
+        {
+            "type": "Terms Of Service",
+            "url": "https:\/\/soundcloud.com\/terms-of-use"
+        },
+        {
+            "type": "Twitter",
+            "url": "https:\/\/twitter.com\/soundcloudapi"
+        },
+        {
+            "type": "Twitter",
+            "url": "https:\/\/twitter.com\/SoundCloud"
+        },
+        {
+            "type": "Website",
+            "url": "http:\/\/soundcloud.com"
+        }
+    ]
+}
