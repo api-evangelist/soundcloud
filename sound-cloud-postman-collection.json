@@ -1,5 +1,5 @@
 {
-    "id": "e42f5ca55135c99cef5483411d593af9",
+    "id": "7276b8b49785a1d7a3d1215413568598",
     "name": "Sound Cloud",
     "description": null,
     "auth": null,
@@ -10,7 +10,7 @@
     "folders": [],
     "requests": [
         {
-            "id": "9d827a76f13511853fe206640170a3ec",
+            "id": "ffb6c503bb375046197d5e7c95685111",
             "name": "Get Tracks",
             "url": "httpsapi.soundcloud.com\/\/tracks.json",
             "description": "Returns a collection of tracks",
@@ -37,11 +37,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "collectionId": "7276b8b49785a1d7a3d1215413568598",
             "rawModeData": ""
         },
         {
-            "id": "dff747293957665498dd7d6181186e54",
+            "id": "95001f901ada23946a323c53975a2ac3",
             "name": "Post Tracks",
             "url": "httpsapi.soundcloud.com\/\/tracks.json",
             "description": "Uploads a track",
@@ -60,11 +60,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "collectionId": "7276b8b49785a1d7a3d1215413568598",
             "rawModeData": ""
         },
         {
-            "id": "01e774a21caca88ad44d4c98591a92f6",
+            "id": "dbfa06cf2d20aece838d58b9cee447c0",
             "name": "Get Tracks Track",
             "url": "httpsapi.soundcloud.com\/\/tracks\/{track_id}.json",
             "description": "Returns a track by track id",
@@ -91,11 +91,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "collectionId": "7276b8b49785a1d7a3d1215413568598",
             "rawModeData": ""
         },
         {
-            "id": "d10ac453926a199f4da4e60ca308cc5f",
+            "id": "f5afc293b4b3f1793bbf62bfa60a7622",
             "name": "Put Tracks Track",
             "url": "httpsapi.soundcloud.com\/\/tracks\/{track_id}.json",
             "description": "Updates a given track",
@@ -114,11 +114,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "collectionId": "7276b8b49785a1d7a3d1215413568598",
             "rawModeData": ""
         },
         {
-            "id": "87a077312573a2c9c0d73d56a951aea9",
+            "id": "cc227301ad6fa0f199128dc9eea2cc4e",
             "name": "Delete Tracks Track",
             "url": "httpsapi.soundcloud.com\/\/tracks\/{track_id}.json",
             "description": "Deletes a given track",
@@ -137,11 +137,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "collectionId": "7276b8b49785a1d7a3d1215413568598",
             "rawModeData": ""
         },
         {
-            "id": "4dd46a11f33eba7125e58e911c28f699",
+            "id": "08dd6e140a929bd138f85d0c85ff5d0f",
             "name": "Get Tracks Track Comments",
             "url": "httpsapi.soundcloud.com\/\/tracks\/{track_id}\/comments.json",
             "description": "Returns comments of a track by track id",
@@ -168,11 +168,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "collectionId": "7276b8b49785a1d7a3d1215413568598",
             "rawModeData": ""
         },
         {
-            "id": "464f03930bde5c2c23d719f542e5f75a",
+            "id": "5d51844d28745d14ff432c1368f01a4f",
             "name": "Post Tracks Track Comments",
             "url": "httpsapi.soundcloud.com\/\/tracks\/{track_id}\/comments.json",
             "description": "Posts a comments to a track by track id",
@@ -191,11 +191,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "collectionId": "7276b8b49785a1d7a3d1215413568598",
             "rawModeData": ""
         },
         {
-            "id": "a469cc031bb713802d815143b3a0d577",
+            "id": "9a4726125c7fb805338662edb8272b32",
             "name": "Get Tracks Track Permissions",
             "url": "httpsapi.soundcloud.com\/\/tracks\/{track_id}\/permissions.json",
             "description": "Returns all users with permission for a track by track id",
@@ -222,11 +222,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "collectionId": "7276b8b49785a1d7a3d1215413568598",
             "rawModeData": ""
         },
         {
-            "id": "e6903ff6472fcdcddc38242139e4ff7b",
+            "id": "71b43d580c610ac1b4dc0b52172cf014",
             "name": "Put Tracks Track Permissions",
             "url": "httpsapi.soundcloud.com\/\/tracks\/{track_id}\/permissions.json",
             "description": "Updates the list of permitted users for a track by track id",
@@ -245,11 +245,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "collectionId": "7276b8b49785a1d7a3d1215413568598",
             "rawModeData": ""
         },
         {
-            "id": "60f87d85ffbbb2d8a372d7f1be7cc8b6",
+            "id": "25f35953630021447d70dcc2a7c74cd9",
             "name": "Get Tracks Track Secret Token",
             "url": "httpsapi.soundcloud.com\/\/tracks\/{track_id}\/secret-token.json",
             "description": "Returns the secret token for a track by track id. This resource can only be used by the track owner.",
@@ -268,11 +268,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "collectionId": "7276b8b49785a1d7a3d1215413568598",
             "rawModeData": ""
         },
         {
-            "id": "b1724b4094460d0e27543e038c6cea75",
+            "id": "37f505084b0685bdb3f620a0f0703cef",
             "name": "Put Tracks Track Secret Token",
             "url": "httpsapi.soundcloud.com\/\/tracks\/{track_id}\/secret-token.json",
             "description": "Resets the secret token for a track by track id. The secret token can not be specified but will be randomly chosen on\n          the server and returned. This resource can only be used by the track owner.",
@@ -291,11 +291,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "collectionId": "7276b8b49785a1d7a3d1215413568598",
             "rawModeData": ""
         },
         {
-            "id": "2afc573df8cf7d2f0e4a78ee84063b0d",
+            "id": "38849647d7db8d23375e420c3e100c9c",
             "name": "Get Users",
             "url": "httpsapi.soundcloud.com\/\/users.json",
             "description": "Returns a collection of users",
@@ -322,11 +322,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "collectionId": "7276b8b49785a1d7a3d1215413568598",
             "rawModeData": ""
         },
         {
-            "id": "b41997a113aa692e2dfe5d5d8022d941",
+            "id": "dd9015054a5ba55e5abdebd3523ae662",
             "name": "Get Users",
             "url": "httpsapi.soundcloud.com\/\/users\/{user_id}.json",
             "description": "Returns a user by user id",
@@ -353,11 +353,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "collectionId": "7276b8b49785a1d7a3d1215413568598",
             "rawModeData": ""
         },
         {
-            "id": "e81a22db77b470b0876bdf2f1dafb75f",
+            "id": "3cdf63cafa24b169eae22f9cc51c0fd4",
             "name": "Get Users Tracks",
             "url": "httpsapi.soundcloud.com\/\/users\/{user_id}\/tracks.json",
             "description": "Returns a collection of tracks uploaded by user id",
@@ -384,11 +384,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "collectionId": "7276b8b49785a1d7a3d1215413568598",
             "rawModeData": ""
         },
         {
-            "id": "5877029dd1355de6909ebd123f5fbb83",
+            "id": "84ad6d52e27fcf0a7e0a844e177448e1",
             "name": "Get Users Comments",
             "url": "httpsapi.soundcloud.com\/\/users\/{user_id}\/comments.json",
             "description": "Returns a collection of comments made by user id",
@@ -415,11 +415,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "collectionId": "7276b8b49785a1d7a3d1215413568598",
             "rawModeData": ""
         },
         {
-            "id": "2638bae14979744d17b5afdb03e6c54a",
+            "id": "933e033f7e76b82ea34d67c6627a4b45",
             "name": "Get Users Followings",
             "url": "httpsapi.soundcloud.com\/\/users\/{user_id}\/followings.json",
             "description": "Returns a collection of users the user with user id is following",
@@ -446,11 +446,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "collectionId": "7276b8b49785a1d7a3d1215413568598",
             "rawModeData": ""
         },
         {
-            "id": "108510553980a04ebb37c4ada50de411",
+            "id": "111da36165724431a56a72ece41f175e",
             "name": "Get Users Followings Contact",
             "url": "httpsapi.soundcloud.com\/\/users\/{user_id}\/followings\/{contact_id}.json",
             "description": "Checks if the user with the id contact_id is in the givens user's list of contacts.",
@@ -477,11 +477,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "collectionId": "7276b8b49785a1d7a3d1215413568598",
             "rawModeData": ""
         },
         {
-            "id": "39964b1fbc5422191d184ce1ba740536",
+            "id": "8caae6825fd1f90db1ec8b821abe0a6f",
             "name": "Put Users Followings Contact",
             "url": "httpsapi.soundcloud.com\/\/users\/{user_id}\/followings\/{contact_id}.json",
             "description": "Adds the user with the id contact_id to the givens user's list of contacts.",
@@ -500,11 +500,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "collectionId": "7276b8b49785a1d7a3d1215413568598",
             "rawModeData": ""
         },
         {
-            "id": "71b101141ceee5043bbaa6f1f9347ff3",
+            "id": "058a0acbaa8a64f85ec9a0c89d7b30e9",
             "name": "Delete Users Followings Contact",
             "url": "httpsapi.soundcloud.com\/\/users\/{user_id}\/followings\/{contact_id}.json",
             "description": "Removes the user with the id contact_id from the givens user's list of contacts.",
@@ -523,11 +523,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "collectionId": "7276b8b49785a1d7a3d1215413568598",
             "rawModeData": ""
         },
         {
-            "id": "c37a61dc2062f75d6c2aa0dfcb3e3333",
+            "id": "4e2f587ef531c101cc37ad00677b9332",
             "name": "Get Users Followers",
             "url": "httpsapi.soundcloud.com\/\/users\/{user_id}\/followers.json",
             "description": "Returns a collection of users who follow the user with user id",
@@ -554,11 +554,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "collectionId": "7276b8b49785a1d7a3d1215413568598",
             "rawModeData": ""
         },
         {
-            "id": "126ed59af0829843e3f27539eacd2751",
+            "id": "478fce45945bccad20b335f8c1810938",
             "name": "Get Users Followers Contact",
             "url": "httpsapi.soundcloud.com\/\/users\/{user_id}\/followers\/{contact_id}.json",
             "description": "Checks if the user with contact_id is a follower of the given user.",
@@ -585,11 +585,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "collectionId": "7276b8b49785a1d7a3d1215413568598",
             "rawModeData": ""
         },
         {
-            "id": "a4fcbc59d9e0c3db49439d9a1c33dd62",
+            "id": "6c8e935e34d113a7bced08b237922071",
             "name": "Get Users Favorites",
             "url": "httpsapi.soundcloud.com\/\/users\/{user_id}\/favorites.json",
             "description": "Returns a collection of tracks favorited by the user with user id",
@@ -616,11 +616,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "collectionId": "7276b8b49785a1d7a3d1215413568598",
             "rawModeData": ""
         },
         {
-            "id": "ee2304d85bb7359757dee79e20a81b4d",
+            "id": "50fbcd43dbca4b118bb798a3d5446062",
             "name": "Put Users Favorites Track",
             "url": "httpsapi.soundcloud.com\/\/users\/{user_id}\/favorites\/{track_id}.json",
             "description": "Adds the given track to the given user's list of favorites.",
@@ -639,11 +639,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "collectionId": "7276b8b49785a1d7a3d1215413568598",
             "rawModeData": ""
         },
         {
-            "id": "c57b99218539dc5514e8dae806fc9c96",
+            "id": "b576837c62fc00154414a99b211c40ba",
             "name": "Delete Users Favorites Track",
             "url": "httpsapi.soundcloud.com\/\/users\/{user_id}\/favorites\/{track_id}.json",
             "description": "Deletes the given track from the given user's list of favorites.",
@@ -662,11 +662,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "collectionId": "7276b8b49785a1d7a3d1215413568598",
             "rawModeData": ""
         },
         {
-            "id": "5b177e3ff05cc684d66d129de0a7fb07",
+            "id": "22809c10f6e406a796d1bbaf59bcdb8a",
             "name": "Get Users Groups",
             "url": "httpsapi.soundcloud.com\/\/users\/{user_id}\/groups.json",
             "description": "Returns a collection of groups joined by user with user id",
@@ -693,11 +693,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "collectionId": "7276b8b49785a1d7a3d1215413568598",
             "rawModeData": ""
         },
         {
-            "id": "bf94e1524c81e68e6d5db18a6166d248",
+            "id": "3a5ffa008440bff9411a9835f5435b26",
             "name": "Get Users Playlists",
             "url": "httpsapi.soundcloud.com\/\/users\/{user_id}\/playlists.json",
             "description": "Returns a collection of playlists created by user with user id",
@@ -724,11 +724,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "collectionId": "7276b8b49785a1d7a3d1215413568598",
             "rawModeData": ""
         },
         {
-            "id": "1bda18fe4341d60cc20855d68cd113e8",
+            "id": "a0ff0e80f2e260a656a796d6e75312e9",
             "name": "Get Me",
             "url": "httpsapi.soundcloud.com\/\/me.json",
             "description": "Returns the logged-in user",
@@ -747,11 +747,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "collectionId": "7276b8b49785a1d7a3d1215413568598",
             "rawModeData": ""
         },
         {
-            "id": "f8d888d70385ef1d4bdabfa8a4c3755b",
+            "id": "905449745187f48da9cd170e8c9c3445",
             "name": "Put Me",
             "url": "httpsapi.soundcloud.com\/\/me.json",
             "description": "Updates the logged-in user",
@@ -770,11 +770,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "collectionId": "7276b8b49785a1d7a3d1215413568598",
             "rawModeData": ""
         },
         {
-            "id": "3d4940fac2287c2341d9d0e86735ce10",
+            "id": "38b9ff60ae82060c78a47efb16c2e1b1",
             "name": "Get Me Tracks",
             "url": "httpsapi.soundcloud.com\/\/me\/tracks.json",
             "description": "Returns a collection of tracks uploaded by logged-in user",
@@ -793,11 +793,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "collectionId": "7276b8b49785a1d7a3d1215413568598",
             "rawModeData": ""
         },
         {
-            "id": "c1a168e0e0060a920b2fe86b4c854fdd",
+            "id": "92802cc5d33210f63b7f174b8aacecfa",
             "name": "Get Me Comments",
             "url": "httpsapi.soundcloud.com\/\/me\/comments.json",
             "description": "Returns a collection of comments made by logged-in user",
@@ -816,11 +816,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "collectionId": "7276b8b49785a1d7a3d1215413568598",
             "rawModeData": ""
         },
         {
-            "id": "2ee850d7426fcf255c72e1548bd38162",
+            "id": "a074328dd37a18db52a335354cf6b5a2",
             "name": "Get Me Followings",
             "url": "httpsapi.soundcloud.com\/\/me\/followings.json",
             "description": "Returns a collection of users the logged-in user is following",
@@ -839,11 +839,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "collectionId": "7276b8b49785a1d7a3d1215413568598",
             "rawModeData": ""
         },
         {
-            "id": "b325b9830b0a12508b24a37840fa1da6",
+            "id": "5f41e62e59fcbe6fb5013aab51af20e1",
             "name": "Get Me Followings Contact",
             "url": "httpsapi.soundcloud.com\/\/me\/followings\/{contact_id}.json",
             "description": "Checks if the user with the id contact_id is in the logged-in user's list of contacts.",
@@ -862,11 +862,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "collectionId": "7276b8b49785a1d7a3d1215413568598",
             "rawModeData": ""
         },
         {
-            "id": "7d393200d9fb7f5d0324a56386bf57de",
+            "id": "26570685bd505ad159c4c57e5ece65f5",
             "name": "Put Me Followings Contact",
             "url": "httpsapi.soundcloud.com\/\/me\/followings\/{contact_id}.json",
             "description": "Adds the user with the id contact_id to the logged-in user's list of contacts.",
@@ -885,11 +885,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "collectionId": "7276b8b49785a1d7a3d1215413568598",
             "rawModeData": ""
         },
         {
-            "id": "7485c17d772ca68b31cdadecca3a21bc",
+            "id": "a287e2b7ab2f9c8081148f9656ed2cb5",
             "name": "Delete Me Followings Contact",
             "url": "httpsapi.soundcloud.com\/\/me\/followings\/{contact_id}.json",
             "description": "Deletes the user with the id contact_id from the logged-in user's list of contacts.",
@@ -908,11 +908,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "collectionId": "7276b8b49785a1d7a3d1215413568598",
             "rawModeData": ""
         },
         {
-            "id": "54a9dc499ce11b8e1ba92ac28e0935b1",
+            "id": "6f5d0a1a6a33fb0027caa555960615fd",
             "name": "Get Me Followers",
             "url": "httpsapi.soundcloud.com\/\/me\/followers.json",
             "description": "Returns a collection of users who follow the logged-in user",
@@ -931,11 +931,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "collectionId": "7276b8b49785a1d7a3d1215413568598",
             "rawModeData": ""
         },
         {
-            "id": "6b6f736111df29b95a3c1161d3e25105",
+            "id": "a29856ab7567c74523554613059ad217",
             "name": "Get Me Followers Contact",
             "url": "httpsapi.soundcloud.com\/\/me\/followers\/{contact_id}.json",
             "description": "Checks if the user with the id contact_id is a follower of the logged-in user",
@@ -954,11 +954,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "collectionId": "7276b8b49785a1d7a3d1215413568598",
             "rawModeData": ""
         },
         {
-            "id": "a2fd0703e1df390ba3eaff40a87c70e9",
+            "id": "b0477e9bd2259b76dc3a8eec1106e61a",
             "name": "Get Me Favorites",
             "url": "httpsapi.soundcloud.com\/\/me\/favorites.json",
             "description": "Returns a collection of tracks favorited by the logged-in user",
@@ -977,11 +977,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "collectionId": "7276b8b49785a1d7a3d1215413568598",
             "rawModeData": ""
         },
         {
-            "id": "824536456828dc66c8bffdacaa9a5c38",
+            "id": "2a15fabf9f918feb7ae09831a8cb8b0c",
             "name": "Put Me Favorites Track",
             "url": "httpsapi.soundcloud.com\/\/me\/favorites\/{track_id}.json",
             "description": "Adds the given track to the logged-in user's list of favorites.",
@@ -1000,11 +1000,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "collectionId": "7276b8b49785a1d7a3d1215413568598",
             "rawModeData": ""
         },
         {
-            "id": "6d99339a07f13b34b091f0f1058dfbb2",
+            "id": "3c41d6d34ce5090cf465e3457d1edcf9",
             "name": "Delete Me Favorites Track",
             "url": "httpsapi.soundcloud.com\/\/me\/favorites\/{track_id}.json",
             "description": "Deletes the given track from the logged-in user's list of favorites.",
@@ -1023,11 +1023,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "collectionId": "7276b8b49785a1d7a3d1215413568598",
             "rawModeData": ""
         },
         {
-            "id": "a3e3ff1fdcd37f5b53d99aaf3d8683cc",
+            "id": "eb6563952429909d89919205ebf82d68",
             "name": "Get Me Groups",
             "url": "httpsapi.soundcloud.com\/\/me\/groups.json",
             "description": "Returns a collection of groups joined by logged-in user",
@@ -1046,11 +1046,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "collectionId": "7276b8b49785a1d7a3d1215413568598",
             "rawModeData": ""
         },
         {
-            "id": "e1e081d74268268dc31875bed2d87aaa",
+            "id": "396ed67d1a7b90fc1e70a23b56e4b3b4",
             "name": "Get Me Playlists",
             "url": "httpsapi.soundcloud.com\/\/me\/playlists.json",
             "description": "Returns a collection of playlists created by the logged-in user",
@@ -1069,11 +1069,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "collectionId": "7276b8b49785a1d7a3d1215413568598",
             "rawModeData": ""
         },
         {
-            "id": "21d75b1710918f2d5168b31987b631b0",
+            "id": "53a0d0b7bc3cef4fb16f61a64d99d535",
             "name": "Get Playlists",
             "url": "httpsapi.soundcloud.com\/\/playlists.json",
             "description": "Returns a collection of playlists",
@@ -1100,11 +1100,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "collectionId": "7276b8b49785a1d7a3d1215413568598",
             "rawModeData": ""
         },
         {
-            "id": "f6123a683298bb6047d9a2de3b239cda",
+            "id": "9a4d3bb8de0831934cbf0d54ce98d7b5",
             "name": "Get Playlists Playlist",
             "url": "httpsapi.soundcloud.com\/\/playlists\/{playlist_id}.json",
             "description": "Returns a playlist by playlist id",
@@ -1131,11 +1131,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "collectionId": "7276b8b49785a1d7a3d1215413568598",
             "rawModeData": ""
         },
         {
-            "id": "cade03656f0aecc1c076f83be9a52324",
+            "id": "6404910b491091c32861bb07f86a5f0b",
             "name": "Get Groups",
             "url": "httpsapi.soundcloud.com\/\/groups.json",
             "description": "Returns a collection of groups",
@@ -1162,11 +1162,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "collectionId": "7276b8b49785a1d7a3d1215413568598",
             "rawModeData": ""
         },
         {
-            "id": "3eb3659d470907ddf2458d22fd39b61d",
+            "id": "48e79e8f4124fd471f5229d18eac8b13",
             "name": "Get Groups",
             "url": "httpsapi.soundcloud.com\/\/groups\/{group_id}.json",
             "description": "Returns a group by group id",
@@ -1193,11 +1193,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "collectionId": "7276b8b49785a1d7a3d1215413568598",
             "rawModeData": ""
         },
         {
-            "id": "d218f7fcdc28252730676f9494468be8",
+            "id": "3d2b223a0e449a6b3ad6c17c9fdc47d3",
             "name": "Get Groups Users",
             "url": "httpsapi.soundcloud.com\/\/groups\/{group_id}\/users.json",
             "description": "Returns a combined collection of moderators, members and contributors of the group with group id",
@@ -1224,11 +1224,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "collectionId": "7276b8b49785a1d7a3d1215413568598",
             "rawModeData": ""
         },
         {
-            "id": "a44215afe28ce48027f84cd265e0ef01",
+            "id": "fb9baa628872f1abc0ee313f1023d1e5",
             "name": "Get Groups Moderators",
             "url": "httpsapi.soundcloud.com\/\/groups\/{group_id}\/moderators.json",
             "description": "Returns a collection of moderators of the group with group id",
@@ -1255,11 +1255,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "collectionId": "7276b8b49785a1d7a3d1215413568598",
             "rawModeData": ""
         },
         {
-            "id": "4cb9a856b488d4660d5cf96ecb6b5257",
+            "id": "9fc07e4ac7aca70fe6433111d9db14ae",
             "name": "Get Groups Members",
             "url": "httpsapi.soundcloud.com\/\/groups\/{group_id}\/members.json",
             "description": "Returns a collection of members of the group with group id",
@@ -1286,11 +1286,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "collectionId": "7276b8b49785a1d7a3d1215413568598",
             "rawModeData": ""
         },
         {
-            "id": "d05fc637748f7f05ad457bc06616d425",
+            "id": "3ff7b4c9d1c9e94ae94d01a5e48a197d",
             "name": "Get Groups Contributors",
             "url": "httpsapi.soundcloud.com\/\/groups\/{group_id}\/contributors.json",
             "description": "Returns a collection of contributors of the group with group id",
@@ -1317,11 +1317,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "collectionId": "7276b8b49785a1d7a3d1215413568598",
             "rawModeData": ""
         },
         {
-            "id": "74a6466a084bcc823fccdab5412c7dec",
+            "id": "43dfd2415dc576654523e5e8060de8c4",
             "name": "Get Groups Tracks",
             "url": "httpsapi.soundcloud.com\/\/groups\/{group_id}\/tracks.json",
             "description": "Returns a collection of tracks contributed to the group with group id",
@@ -1348,11 +1348,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "collectionId": "7276b8b49785a1d7a3d1215413568598",
             "rawModeData": ""
         },
         {
-            "id": "b5f6fa6ebf5022007fd5ce40637ae51f",
+            "id": "30aadb27c53f4571bd3263d99f18e614",
             "name": "Get Comments",
             "url": "httpsapi.soundcloud.com\/\/comments\/{comment_id}.json",
             "description": "Returns a comment by comment id",
@@ -1379,11 +1379,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "collectionId": "7276b8b49785a1d7a3d1215413568598",
             "rawModeData": ""
         },
         {
-            "id": "173231b9a1ccd5c87ab26c25b88e5b14",
+            "id": "37ac9b3bc3f1912ce04493a7c84a64d7",
             "name": "Get Resolve",
             "url": "httpsapi.soundcloud.com\/\/resolve.json",
             "description": "Translates a website URI into an API URI",
@@ -1410,11 +1410,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "collectionId": "7276b8b49785a1d7a3d1215413568598",
             "rawModeData": ""
         },
         {
-            "id": "3691b326a6b60a31a831d1e593059868",
+            "id": "5400ae8ec665fe55d0d221da6b92bcc0",
             "name": "Get Tracks. Format",
             "url": "httpsapi.soundcloud.com\/\/tracks.{format}",
             "description": "Returns a collection of tracks",
@@ -1497,11 +1497,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "collectionId": "7276b8b49785a1d7a3d1215413568598",
             "rawModeData": ""
         },
         {
-            "id": "8cebdf788398120ed26de9c6b64a1392",
+            "id": "ef7b5d17da1ac330f952188065378a3e",
             "name": "Post Tracks. Format",
             "url": "httpsapi.soundcloud.com\/\/tracks.{format}",
             "description": "Post tracks. format.",
@@ -1535,11 +1535,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "collectionId": "7276b8b49785a1d7a3d1215413568598",
             "rawModeData": ""
         },
         {
-            "id": "ec33893d62dcc1705d470bdcfc38395f",
+            "id": "0146e904e3d0d8b3ef17c7d4692ab7fe",
             "name": "Get Tracks Track . Format",
             "url": "httpsapi.soundcloud.com\/\/tracks\/{track_id}.{format}",
             "description": "Returns a track by track id",
@@ -1573,11 +1573,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "collectionId": "7276b8b49785a1d7a3d1215413568598",
             "rawModeData": ""
         },
         {
-            "id": "2e1af08b9bdf2ab114a73ca643454456",
+            "id": "01f15ffb7e9ea107d7dc74870c03e3bd",
             "name": "Put Tracks Track . Format",
             "url": "httpsapi.soundcloud.com\/\/tracks\/{track_id}.{format}",
             "description": "Put tracks track . format.",
@@ -1611,11 +1611,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "collectionId": "7276b8b49785a1d7a3d1215413568598",
             "rawModeData": ""
         },
         {
-            "id": "19fa6f900f55b05eb2eb6c4bd8c8e62c",
+            "id": "0c3b798b8f67233a5efb7abb5ab410e3",
             "name": "Delete Tracks Track . Format",
             "url": "httpsapi.soundcloud.com\/\/tracks\/{track_id}.{format}",
             "description": "Delete tracks track . format.",
@@ -1642,11 +1642,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "collectionId": "7276b8b49785a1d7a3d1215413568598",
             "rawModeData": ""
         },
         {
-            "id": "6a26f5c63e4f5b2d143fcb7ff4294859",
+            "id": "cf2e656116e7bf22b499b6154d23089f",
             "name": "Get Tracks Track Comments. Format",
             "url": "httpsapi.soundcloud.com\/\/tracks\/{track_id}\/comments.{format}",
             "description": "Returns comments of a track by track id",
@@ -1680,11 +1680,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "collectionId": "7276b8b49785a1d7a3d1215413568598",
             "rawModeData": ""
         },
         {
-            "id": "5ae1a0ac028183ac74b11a16bc05bb27",
+            "id": "0cd6e4d14496ab95d0f62934c8c50044",
             "name": "Post Tracks Track Comments. Format",
             "url": "httpsapi.soundcloud.com\/\/tracks\/{track_id}\/comments.{format}",
             "description": "Posts a comments to a track by track id",
@@ -1711,11 +1711,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "collectionId": "7276b8b49785a1d7a3d1215413568598",
             "rawModeData": ""
         },
         {
-            "id": "6aeb83b19db034256aab1e0889f7b95b",
+            "id": "6d518bbebfd5ca7dbe5b06c2def5603e",
             "name": "Get Tracks Track Permissions. Format",
             "url": "httpsapi.soundcloud.com\/\/tracks\/{track_id}\/permissions.{format}",
             "description": "Returns all users with permission for a track by track id",
@@ -1749,11 +1749,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "collectionId": "7276b8b49785a1d7a3d1215413568598",
             "rawModeData": ""
         },
         {
-            "id": "7040fa3abd5b55047df4ac1d206c3617",
+            "id": "7a8d01aec16bf575d0d5f00460584519",
             "name": "Put Tracks Track Permissions. Format",
             "url": "httpsapi.soundcloud.com\/\/tracks\/{track_id}\/permissions.{format}",
             "description": "Updates the list of permitted users for a track by track id",
@@ -1780,11 +1780,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "collectionId": "7276b8b49785a1d7a3d1215413568598",
             "rawModeData": ""
         },
         {
-            "id": "b3e22d1d1065bc141430c6bf7cab00f5",
+            "id": "dd9249c88443876a29c0454c899f386d",
             "name": "Get Tracks Track Secret Token. Format",
             "url": "httpsapi.soundcloud.com\/\/tracks\/{track_id}\/secret-token.{format}",
             "description": "Returns the secret token for a track by track id. This resource can only be used by the track owner.",
@@ -1811,11 +1811,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "collectionId": "7276b8b49785a1d7a3d1215413568598",
             "rawModeData": ""
         },
         {
-            "id": "93bbaae993d205ab17479288e30704b1",
+            "id": "a458213ccef83f7249d01fe92344dec0",
             "name": "Put Tracks Track Secret Token. Format",
             "url": "httpsapi.soundcloud.com\/\/tracks\/{track_id}\/secret-token.{format}",
             "description": "Resets the secret token for a track by track id. The secret token can not be specified but will be randomly chosen on\n                    the server and returned. This resource can only be used by the track owner.",
@@ -1842,11 +1842,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "collectionId": "7276b8b49785a1d7a3d1215413568598",
             "rawModeData": ""
         },
         {
-            "id": "ca4707ea5d132123facf17405600f9b6",
+            "id": "d643bfad516f638edbb2d6a3ed82d1dc",
             "name": "Get Users. Format",
             "url": "httpsapi.soundcloud.com\/\/users.{format}",
             "description": "Returns a collection of users",
@@ -1880,11 +1880,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "collectionId": "7276b8b49785a1d7a3d1215413568598",
             "rawModeData": ""
         },
         {
-            "id": "a1882b9104711d2f17d7bdd2ba707b16",
+            "id": "91d546e05fe6c179665c6125fe9a74ca",
             "name": "Get Users . Format",
             "url": "httpsapi.soundcloud.com\/\/users\/{user_id}.{format}",
             "description": "Returns a user by user id",
@@ -1918,11 +1918,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "collectionId": "7276b8b49785a1d7a3d1215413568598",
             "rawModeData": ""
         },
         {
-            "id": "aff1e5b8b8d884d01ce2d96f4f62127c",
+            "id": "0c9699769cdf15f4bcf78243b4f834f8",
             "name": "Get Users Tracks. Format",
             "url": "httpsapi.soundcloud.com\/\/users\/{user_id}\/tracks.{format}",
             "description": "Returns a collection of tracks uploaded by user id",
@@ -1956,11 +1956,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "collectionId": "7276b8b49785a1d7a3d1215413568598",
             "rawModeData": ""
         },
         {
-            "id": "7b2d0a01b72483f517a8bc9985736fc0",
+            "id": "74c81ecdc20a6503116290ee8b18f4de",
             "name": "Get Users Comments. Format",
             "url": "httpsapi.soundcloud.com\/\/users\/{user_id}\/comments.{format}",
             "description": "Returns a collection of comments made by user id",
@@ -1994,11 +1994,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "collectionId": "7276b8b49785a1d7a3d1215413568598",
             "rawModeData": ""
         },
         {
-            "id": "5f02596a1426d2907dee1e39e188a81e",
+            "id": "f56c1be17891ecd7a5f0ad97145543c5",
             "name": "Get Users Followings. Format",
             "url": "httpsapi.soundcloud.com\/\/users\/{user_id}\/followings.{format}",
             "description": "Returns a collection of users the user with user id is following",
@@ -2032,11 +2032,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "collectionId": "7276b8b49785a1d7a3d1215413568598",
             "rawModeData": ""
         },
         {
-            "id": "53803a5dad369987573cc3f8cb418aad",
+            "id": "4b6f4098c040973ab849bc632a1786a8",
             "name": "Get Users Followings Contact . Format",
             "url": "httpsapi.soundcloud.com\/\/users\/{user_id}\/followings\/{contact_id}.{format}",
             "description": "Checks if the user with the id contact_id is in the givens user's list of contacts.",
@@ -2077,11 +2077,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "collectionId": "7276b8b49785a1d7a3d1215413568598",
             "rawModeData": ""
         },
         {
-            "id": "6021d0a84c5260df795ae2b28e9af263",
+            "id": "901c1c625a29042a2d5454a1e22cbb31",
             "name": "Put Users Followings Contact . Format",
             "url": "httpsapi.soundcloud.com\/\/users\/{user_id}\/followings\/{contact_id}.{format}",
             "description": "Adds the user with the id contact_id to the givens user's list of contacts.",
@@ -2115,11 +2115,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "collectionId": "7276b8b49785a1d7a3d1215413568598",
             "rawModeData": ""
         },
         {
-            "id": "3bce2a41e1836eff8accfecad413e575",
+            "id": "2be0928b7718d20f49e4648f6c90e370",
             "name": "Delete Users Followings Contact . Format",
             "url": "httpsapi.soundcloud.com\/\/users\/{user_id}\/followings\/{contact_id}.{format}",
             "description": "Removes the user with the id contact_id from the givens user's list of contacts.",
@@ -2153,11 +2153,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "collectionId": "7276b8b49785a1d7a3d1215413568598",
             "rawModeData": ""
         },
         {
-            "id": "97ca699847f071bc5d2ee2641814d119",
+            "id": "04b4a9a15578c010f0dc37c37160aa83",
             "name": "Get Users Followers. Format",
             "url": "httpsapi.soundcloud.com\/\/users\/{user_id}\/followers.{format}",
             "description": "Returns a collection of users who follow the user with user id",
@@ -2191,11 +2191,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "collectionId": "7276b8b49785a1d7a3d1215413568598",
             "rawModeData": ""
         },
         {
-            "id": "5ff3f904356af49a475fa2922e954c75",
+            "id": "e2540cebddc59ad60e5b9256f6929cfd",
             "name": "Get Users Followers Contact . Format",
             "url": "httpsapi.soundcloud.com\/\/users\/{user_id}\/followers\/{contact_id}.{format}",
             "description": "Checks if the user with contact_id is a follower of the given user.",
@@ -2236,11 +2236,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "collectionId": "7276b8b49785a1d7a3d1215413568598",
             "rawModeData": ""
         },
         {
-            "id": "0da43f8fb2170bedbf2b2d971013799a",
+            "id": "80dd553307260050e56ec968640ff9d6",
             "name": "Get Users Favorites. Format",
             "url": "httpsapi.soundcloud.com\/\/users\/{user_id}\/favorites.{format}",
             "description": "Returns a collection of tracks favorited by the user with user id",
@@ -2274,11 +2274,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "collectionId": "7276b8b49785a1d7a3d1215413568598",
             "rawModeData": ""
         },
         {
-            "id": "749e196ef795240687294e12e4785453",
+            "id": "2b7f51291240f44e6bed20c97e50dbb1",
             "name": "Put Users Favorites Track . Format",
             "url": "httpsapi.soundcloud.com\/\/users\/{user_id}\/favorites\/{track_id}.{format}",
             "description": "Adds the given track to the given user's list of favorites.",
@@ -2312,11 +2312,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "collectionId": "7276b8b49785a1d7a3d1215413568598",
             "rawModeData": ""
         },
         {
-            "id": "6582579d99e10f7527832e756adf0575",
+            "id": "e1f05ecf4009b0847b98fc92476e6f4e",
             "name": "Delete Users Favorites Track . Format",
             "url": "httpsapi.soundcloud.com\/\/users\/{user_id}\/favorites\/{track_id}.{format}",
             "description": "Deletes the given track from the given user's list of favorites.",
@@ -2350,11 +2350,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "collectionId": "7276b8b49785a1d7a3d1215413568598",
             "rawModeData": ""
         },
         {
-            "id": "b4e5510bc9a2c726ba861b3e8ef725fa",
+            "id": "5fc6f4dfd044f7b2dfd5a62ca96ce943",
             "name": "Get Users Groups. Format",
             "url": "httpsapi.soundcloud.com\/\/users\/{user_id}\/groups.{format}",
             "description": "Returns a collection of groups joined by user with user id",
@@ -2388,11 +2388,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "collectionId": "7276b8b49785a1d7a3d1215413568598",
             "rawModeData": ""
         },
         {
-            "id": "9c39ad4887d17ba44c6dfcedbe9b1dc3",
+            "id": "acb28cb0fdb99958a68c2db45aa5ee2d",
             "name": "Get Users Playlists. Format",
             "url": "httpsapi.soundcloud.com\/\/users\/{user_id}\/playlists.{format}",
             "description": "Returns a collection of playlists created by user with user id",
@@ -2426,11 +2426,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "collectionId": "7276b8b49785a1d7a3d1215413568598",
             "rawModeData": ""
         },
         {
-            "id": "979f0d781d687a6f7328d035e0c0d3d1",
+            "id": "9a7d62080af7018de16efde351f6b730",
             "name": "Get Me. Format",
             "url": "httpsapi.soundcloud.com\/\/me.{format}",
             "description": "Returns the logged-in user",
@@ -2449,11 +2449,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "collectionId": "7276b8b49785a1d7a3d1215413568598",
             "rawModeData": ""
         },
         {
-            "id": "87ad597059f17fc2d19da1772fef21d5",
+            "id": "de1fe91efe7ff72fab57e5d2ef21fea7",
             "name": "Put Me. Format",
             "url": "httpsapi.soundcloud.com\/\/me.{format}",
             "description": "Updates the logged-in user",
@@ -2472,11 +2472,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "collectionId": "7276b8b49785a1d7a3d1215413568598",
             "rawModeData": ""
         },
         {
-            "id": "7b43d3d300709e150bfe8211504789c5",
+            "id": "d5cb4c4cbc08d2bb8bff8c2a41387f50",
             "name": "Get Me Tracks. Format",
             "url": "httpsapi.soundcloud.com\/\/me\/tracks.{format}",
             "description": "Returns a collection of tracks uploaded by logged-in user",
@@ -2495,11 +2495,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "collectionId": "7276b8b49785a1d7a3d1215413568598",
             "rawModeData": ""
         },
         {
-            "id": "da0961fc8718a0a8414057bcc6f5e3c4",
+            "id": "1c72e3386b5372cd363b4ae4eddf7ebd",
             "name": "Get Me Comments. Format",
             "url": "httpsapi.soundcloud.com\/\/me\/comments.{format}",
             "description": "Returns a collection of comments made by logged-in user",
@@ -2518,11 +2518,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "collectionId": "7276b8b49785a1d7a3d1215413568598",
             "rawModeData": ""
         },
         {
-            "id": "759ac0bede155dedd7a6ffeec4d6c1f4",
+            "id": "65c6247750a1527335b8abc11d79c4b4",
             "name": "Get Me Followings. Format",
             "url": "httpsapi.soundcloud.com\/\/me\/followings.{format}",
             "description": "Returns a collection of users the logged-in user is following",
@@ -2541,11 +2541,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "collectionId": "7276b8b49785a1d7a3d1215413568598",
             "rawModeData": ""
         },
         {
-            "id": "d11be2dddabd5cdf44a4b3740771ac55",
+            "id": "4af4bbdae8fef9ab3321637f7024a71f",
             "name": "Get Me Followings Contact . Format",
             "url": "httpsapi.soundcloud.com\/\/me\/followings\/{contact_id}.{format}",
             "description": "Checks if the user with the id contact_id is in the logged-in user's list of contacts.",
@@ -2572,11 +2572,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "collectionId": "7276b8b49785a1d7a3d1215413568598",
             "rawModeData": ""
         },
         {
-            "id": "9c441d4a26ff4836b2c8c1d191d7e216",
+            "id": "eb6957bebd9d4c55d4c1d8714bb6fa60",
             "name": "Put Me Followings Contact . Format",
             "url": "httpsapi.soundcloud.com\/\/me\/followings\/{contact_id}.{format}",
             "description": "Adds the user with the id contact_id to the logged-in user's list of contacts.",
@@ -2603,11 +2603,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "collectionId": "7276b8b49785a1d7a3d1215413568598",
             "rawModeData": ""
         },
         {
-            "id": "67edb43c27d0e3bab8ab727802c97708",
+            "id": "48bccdaa0db521d08d21da441ab531c6",
             "name": "Delete Me Followings Contact . Format",
             "url": "httpsapi.soundcloud.com\/\/me\/followings\/{contact_id}.{format}",
             "description": "Deletes the user with the id contact_id from the logged-in user's list of contacts.",
@@ -2634,11 +2634,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "collectionId": "7276b8b49785a1d7a3d1215413568598",
             "rawModeData": ""
         },
         {
-            "id": "e7897e5314ce51facf164f3629fba729",
+            "id": "f1c4f2b7087bcc1c5e0ddb54d6eab1f1",
             "name": "Get Me Followers. Format",
             "url": "httpsapi.soundcloud.com\/\/me\/followers.{format}",
             "description": "Returns a collection of users who follow the logged-in user",
@@ -2657,11 +2657,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "collectionId": "7276b8b49785a1d7a3d1215413568598",
             "rawModeData": ""
         },
         {
-            "id": "b63cc060da4b3ae1a7af7cc87e75af90",
+            "id": "c9842de1ea07a15b15089c62073554da",
             "name": "Get Me Followers Contact . Format",
             "url": "httpsapi.soundcloud.com\/\/me\/followers\/{contact_id}.{format}",
             "description": "Checks if the user with the id contact_id is a follower of the logged-in user",
@@ -2688,11 +2688,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "collectionId": "7276b8b49785a1d7a3d1215413568598",
             "rawModeData": ""
         },
         {
-            "id": "bbebeed3eea5ea552fb69c54f884de35",
+            "id": "cc3932482c84fe617c623ae22c6e4fb2",
             "name": "Get Me Favorites. Format",
             "url": "httpsapi.soundcloud.com\/\/me\/favorites.{format}",
             "description": "Returns a collection of tracks favorited by the logged-in user",
@@ -2711,11 +2711,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "collectionId": "7276b8b49785a1d7a3d1215413568598",
             "rawModeData": ""
         },
         {
-            "id": "0f18a353b805e080af94911c279e07aa",
+            "id": "44c64872a5705921858e6d74a5029549",
             "name": "Put Me Favorites Track . Format",
             "url": "httpsapi.soundcloud.com\/\/me\/favorites\/{track_id}.{format}",
             "description": "Adds the given track to the logged-in user's list of favorites.",
@@ -2742,11 +2742,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "collectionId": "7276b8b49785a1d7a3d1215413568598",
             "rawModeData": ""
         },
         {
-            "id": "649424189c8763afccedc8deb38c82ef",
+            "id": "9f154eb8c97d3c6d61d13c5ab035949b",
             "name": "Delete Me Favorites Track . Format",
             "url": "httpsapi.soundcloud.com\/\/me\/favorites\/{track_id}.{format}",
             "description": "Deletes the given track from the logged-in user's list of favorites.",
@@ -2773,11 +2773,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "collectionId": "7276b8b49785a1d7a3d1215413568598",
             "rawModeData": ""
         },
         {
-            "id": "623ae3ac25c2cedebbb091f85f64dce6",
+            "id": "827ad50905c80f1a53d0eac24f8194a7",
             "name": "Get Me Groups. Format",
             "url": "httpsapi.soundcloud.com\/\/me\/groups.{format}",
             "description": "Returns a collection of groups joined by logged-in user",
@@ -2796,11 +2796,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "collectionId": "7276b8b49785a1d7a3d1215413568598",
             "rawModeData": ""
         },
         {
-            "id": "3dd0d2d54c60002e604bfcea56ac1502",
+            "id": "e61de237bafae1200d050a138b4b488a",
             "name": "Get Me Playlists. Format",
             "url": "httpsapi.soundcloud.com\/\/me\/playlists.{format}",
             "description": "Returns a collection of playlists created by the logged-in user",
@@ -2819,11 +2819,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "collectionId": "7276b8b49785a1d7a3d1215413568598",
             "rawModeData": ""
         },
         {
-            "id": "320d8d77fca7dcd09834801945e996af",
+            "id": "dea1d1c816663b9a87629ca65cf1ba40",
             "name": "Get Playlists. Format",
             "url": "httpsapi.soundcloud.com\/\/playlists.{format}",
             "description": "Returns a collection of playlists",
@@ -2864,11 +2864,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "collectionId": "7276b8b49785a1d7a3d1215413568598",
             "rawModeData": ""
         },
         {
-            "id": "d5bdfd4dc9f28cb0d8b48eb5f40c7a5a",
+            "id": "00b0370b050189004c074e8b88d761a5",
             "name": "Get Playlists Playlist . Format",
             "url": "httpsapi.soundcloud.com\/\/playlists\/{playlist_id}.{format}",
             "description": "Returns a playlist by playlist id",
@@ -2902,11 +2902,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "collectionId": "7276b8b49785a1d7a3d1215413568598",
             "rawModeData": ""
         },
         {
-            "id": "4dd32c18d4f89fd3ce348e35b2cb8fec",
+            "id": "220bb38aed2532fa828c759ee9de695e",
             "name": "Get Groups. Format",
             "url": "httpsapi.soundcloud.com\/\/groups.{format}",
             "description": "Returns a collection of groups",
@@ -2933,11 +2933,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "collectionId": "7276b8b49785a1d7a3d1215413568598",
             "rawModeData": ""
         },
         {
-            "id": "131d8825b623532931a39ffbbef30ac0",
+            "id": "6936ddacd31e97aba0f1394e0a238c21",
             "name": "Get Groups . Format",
             "url": "httpsapi.soundcloud.com\/\/groups\/{group_id}.{format}",
             "description": "Returns a group by group id",
@@ -2971,11 +2971,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "collectionId": "7276b8b49785a1d7a3d1215413568598",
             "rawModeData": ""
         },
         {
-            "id": "76cdb169379b72418ba9220f12bed685",
+            "id": "b5dd199d7e05e3964208cf4b4dbf6f7b",
             "name": "Get Groups Users. Format",
             "url": "httpsapi.soundcloud.com\/\/groups\/{group_id}\/users.{format}",
             "description": "Returns a combined collection of moderators, members and contributors of the group with group id",
@@ -3009,11 +3009,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "collectionId": "7276b8b49785a1d7a3d1215413568598",
             "rawModeData": ""
         },
         {
-            "id": "5021f29a40b815f139845601c3795316",
+            "id": "056d600c5d06652016052dddb09ce854",
             "name": "Get Groups Moderators. Format",
             "url": "httpsapi.soundcloud.com\/\/groups\/{group_id}\/moderators.{format}",
             "description": "Returns a collection of moderators of the group with group id",
@@ -3047,11 +3047,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "collectionId": "7276b8b49785a1d7a3d1215413568598",
             "rawModeData": ""
         },
         {
-            "id": "87b0077bd9bedcad618798b590823aae",
+            "id": "3b5e27c1e4b2b30ab7ad280f2684e1c2",
             "name": "Get Groups Members. Format",
             "url": "httpsapi.soundcloud.com\/\/groups\/{group_id}\/members.{format}",
             "description": "Returns a collection of members of the group with group id",
@@ -3085,11 +3085,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "collectionId": "7276b8b49785a1d7a3d1215413568598",
             "rawModeData": ""
         },
         {
-            "id": "a7f9e76c5a15ee7bb22f460200961af8",
+            "id": "7c6dcc5e3f588c9690d14b0496cfe4ad",
             "name": "Get Groups Contributors. Format",
             "url": "httpsapi.soundcloud.com\/\/groups\/{group_id}\/contributors.{format}",
             "description": "Returns a collection of contributors of the group with group id",
@@ -3123,11 +3123,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "collectionId": "7276b8b49785a1d7a3d1215413568598",
             "rawModeData": ""
         },
         {
-            "id": "84142c080e4a3a287a645080727b480c",
+            "id": "56ca6f2018110616554d47cd47b35995",
             "name": "Get Groups Tracks. Format",
             "url": "httpsapi.soundcloud.com\/\/groups\/{group_id}\/tracks.{format}",
             "description": "Returns a collection of tracks contributed to the group with group id",
@@ -3161,11 +3161,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "collectionId": "7276b8b49785a1d7a3d1215413568598",
             "rawModeData": ""
         },
         {
-            "id": "c9f9ce310eb2b95cb653344516ccb415",
+            "id": "beb9e213a778e242c6c5a819520f8aa9",
             "name": "Get Comments . Format",
             "url": "httpsapi.soundcloud.com\/\/comments\/{comment_id}.{format}",
             "description": "Returns a comment by comment id",
@@ -3199,11 +3199,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "collectionId": "7276b8b49785a1d7a3d1215413568598",
             "rawModeData": ""
         },
         {
-            "id": "f01ffccafeb7059ee24c3fa24d28e3d6",
+            "id": "764f0e2c1da19397fbdbede4c3158c56",
             "name": "Get Resolve. Format",
             "url": "httpsapi.soundcloud.com\/\/resolve.{format}",
             "description": "Translates a website URI into an API URI",
@@ -3237,7 +3237,7 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e42f5ca55135c99cef5483411d593af9",
+            "collectionId": "7276b8b49785a1d7a3d1215413568598",
             "rawModeData": ""
         }
     ]
