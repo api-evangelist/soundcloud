@@ -3,21 +3,47 @@ url: https://raw.githubusercontent.com/api-evangelist/soundcloud/refs/heads/main
 name: SoundCloud
 x-type: company
 description: >-
-  SoundCloud is an audio streaming platform with APIs for tracks, playlists, users, comments, and uploads — focused on independent creators.
+  SoundCloud is a music and audio streaming platform with a developer REST API for tracks, users,
+  playlists, search, comments, likes, and uploads. Authentication is OAuth 2.1 with PKCE; access
+  tokens expire approximately every hour.
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 tags:
   - Music
   - Streaming
-  - Creator
   - Audio
-  - API
+  - OAuth
+  - Tracks
+  - Playlists
 created: '2026-05-08'
 modified: '2026-05-08'
 specificationVersion: '0.19'
-apis: []
+apis:
+  - aid: soundcloud:platform
+    name: SoundCloud API
+    description: >-
+      REST API for SoundCloud covering tracks (upload, metadata, stream), users (/me, profiles), playlists
+      (CRUD), search (title/username/description), social (follow, like, comment), and audio playback.
+      OAuth 2.1 with PKCE; supports Authorization Code and Client Credentials flows.
+    humanURL: https://developers.soundcloud.com/docs/api/guide
+    baseURL: https://api.soundcloud.com
+    tags:
+      - Tracks
+      - Users
+      - Playlists
+      - Search
+      - Social
+    properties:
+      - type: Documentation
+        url: https://developers.soundcloud.com/docs/api/guide
+      - type: Authentication
+        url: https://developers.soundcloud.com/docs/api/guide#authentication
+      - type: RateLimits
+        url: https://developers.soundcloud.com/docs/api/rate-limits
 common:
   - type: Website
     url: https://soundcloud.com/
+  - type: DeveloperPortal
+    url: https://developers.soundcloud.com/
   - type: Plans
     url: plans/soundcloud-plans-pricing.yml
   - type: RateLimits

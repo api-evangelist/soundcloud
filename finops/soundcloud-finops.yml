@@ -5,21 +5,25 @@ provider: SoundCloud
 providerId: soundcloud
 created: '2026-05-08'
 modified: '2026-05-08'
-reconciled: false
+reconciled: true
 tags:
 - Music
 - Streaming
-- Creator
 - Audio
-- API
+- OAuth
+- Tracks
+- Playlists
 - FinOps
 - Cost Management
 - FOCUS
-description: FOCUS-aligned FinOps placeholder for SoundCloud. Pipeline will replace with real billing details.
-notes: Initial scaffold — billing model has not yet been reconciled.
+description: >-
+  FOCUS-aligned FinOps profile for SoundCloud. The API itself has no per-call charge for approved
+  partners; cost concentration is on the consumer subscription side (Go, Go+, Artist Pro, Pro
+  Unlimited) and on creator tooling. Treat the API as a free dependency once approved.
+notes: API is free; consumer/creator subscriptions are billed separately by SoundCloud.
 sources:
-- https://soundcloud.com/
-- https://focus.finops.org/focus-specification/v1-3/
+- https://developers.soundcloud.com/
+- https://soundcloud.com/pricing
 alignedWith:
   framework: FinOps Foundation Framework
   frameworkUrl: https://www.finops.org/framework/
@@ -27,40 +31,44 @@ alignedWith:
   dataSpecVersion: '1.3'
   dataSpecUrl: https://focus.finops.org/focus-specification/v1-3/
 publisherName: SoundCloud
-serviceCategory: Music
+serviceCategory: Music Streaming
 billingModel:
-  pricingCategory: To Be Reconciled
-  billingFrequency: Monthly
+  pricingCategory: Free / Subscription
+  billingFrequency: Monthly (consumer)
   billingCurrency: USD
   chargeCategories:
-  - Usage
-  - Purchase
-  - Adjustment
+  - Subscription
 focusColumns:
-  ServiceName: SoundCloud
-  ServiceCategory: Music
+  ServiceName: SoundCloud API
+  ServiceCategory: Music Streaming
   ProviderName: SoundCloud
   PublisherName: SoundCloud
   InvoiceIssuerName: SoundCloud
   BillingCurrency: USD
-  ChargeCategory: Usage
+  ChargeCategory: Subscription
 meters:
-- name: api_usage
-  description: Catch-all meter pending reconciliation.
-  unit: varies
+- name: api_requests
+  description: API request count (free; observability only).
+  unit: request
   aggregation: sum
   dimensions:
-  - account
-  - resource
+  - app
+  - endpoint
+- name: consumer_subscription
+  description: Consumer (listener/creator) subscription tier billing.
+  unit: month
+  aggregation: count
+  dimensions:
+  - tier
 principles:
 - name: Visibility
-  description: Pull provider invoices or usage exports until a self-serve usage feed is documented.
+  description: Track API usage via internal logs; consumer subscriptions are billed separately.
 - name: Allocation
-  description: Tag invoice line items to consuming business units in your FinOps store.
+  description: Allocate creator tooling subscriptions (Artist Pro, Pro Unlimited) to the team or artist that owns the SoundCloud account.
 - name: Optimization
-  description: Levers depend on the provider's billing model; review at renewal once reconciled.
+  description: Cache stream URLs and metadata; avoid burning play-count quota on duplicate requests.
 - name: Accountability
-  description: Assign a contract owner to review billing against negotiated terms.
+  description: Single team owns the SoundCloud app credentials and any creator subscriptions.
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com

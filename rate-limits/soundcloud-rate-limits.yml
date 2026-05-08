@@ -5,31 +5,53 @@ provider: SoundCloud
 providerId: soundcloud
 created: '2026-05-08'
 modified: '2026-05-08'
-reconciled: false
+reconciled: true
 tags:
 - Music
 - Streaming
-- Creator
 - Audio
-- API
+- OAuth
+- Tracks
+- Playlists
 - Rate Limiting
 - Quotas
 - Throttling
-description: Placeholder rate-limit artifact for SoundCloud. Replace with real limits once researched.
-notes: Initial scaffold — limits have not yet been reconciled.
+description: >-
+  SoundCloud applies rate limits on token issuance and on streaming/play counts. Client Credentials
+  tokens are limited to 50 tokens per 12 hours per app and 30 tokens per hour per IP. Play count
+  limits are 15,000 total plays/24h and 1,000 plays per track/24h. The API returns HTTP 429 with
+  X-RateLimit headers.
+notes: Play-count-based throttling is unusual; cache stream URLs and tokens accordingly.
 sources:
-- https://soundcloud.com/
+- https://developers.soundcloud.com/docs/api/rate-limits
 responseCodes:
   throttled: 429
 limits:
-- name: Default
-  scope: account
-  metric: varies
-  limit: see provider documentation
-  notes: Pending reconciliation.
+- name: Token issuance per app
+  scope: application
+  metric: tokens
+  limit: 50 per 12 hours
+  notes: Client Credentials flow.
+- name: Token issuance per IP
+  scope: ip
+  metric: tokens
+  limit: 30 per 1 hour
+  notes: Token endpoint.
+- name: Plays per track
+  scope: application
+  metric: plays
+  limit: 1000 per 24 hours per track
+  notes: Per-track stream cap.
+- name: Total plays
+  scope: application
+  metric: plays
+  limit: 15000 per 24 hours
+  notes: App-wide stream cap.
 policies:
 - name: Backoff Strategy
-  description: Clients should implement exponential backoff with jitter and honor any Retry-After header.
+  description: On 429, honor X-RateLimit-Reset and apply exponential backoff with jitter.
+- name: Token Caching
+  description: Cache and reuse tokens; do not re-issue on every call.
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com

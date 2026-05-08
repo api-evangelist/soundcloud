@@ -5,37 +5,61 @@ provider: SoundCloud
 providerId: soundcloud
 created: '2026-05-08'
 modified: '2026-05-08'
-reconciled: false
+reconciled: true
 tags:
 - Music
 - Streaming
-- Creator
 - Audio
-- API
+- OAuth
+- Tracks
+- Playlists
 - Plans
-description: Placeholder plans/pricing artifact for SoundCloud. Replace with real published pricing once
-  the pipeline researches the provider's plans page.
-notes: Initial scaffold — plans/pricing have not yet been reconciled.
+description: >-
+  SoundCloud's API is free for registered apps. New API access is currently gated; SoundCloud paused
+  new API key registrations and accepts requests on a case-by-case basis. Consumer plans (SoundCloud
+  Free, Go, Go+, Artist Pro, Pro Unlimited) are separate and apply to listeners and creators, not API
+  consumers.
+notes: API access requires application approval; SoundCloud paused public API key signups in 2021 and accepts case-by-case requests.
 sources:
-- https://soundcloud.com/
+- https://developers.soundcloud.com/
+- https://developers.soundcloud.com/docs/api/guide
 plans:
-- id: soundcloud-default
-  name: To Be Reconciled
-  type: enterprise
-  description: Initial scaffold; replace with provider plan tiers once pricing is reconciled.
+- id: soundcloud-developer
+  name: Developer (API)
+  type: free
+  description: Free OAuth-based API access for approved applications.
   entries:
   - label: API Access
     name: api_access
     type: flat
-    metric: varies
+    metric: requests
     limit: -1
     timeFrame: usage
     geo: global
     unit: 1
-    price: see https://soundcloud.com/
+    price: 0
     userMultiplied: false
   elements:
-  - name: Pending Reconciliation
+  - name: Approval required
+  - name: OAuth 2.1 with PKCE
+- id: soundcloud-consumer
+  name: Consumer Subscriptions (Listener / Creator)
+  type: subscription
+  description: Consumer plans (Go, Go+, Artist Pro, Pro Unlimited) apply to listeners and creators on the platform; not required for API access.
+  entries:
+  - label: Subscription
+    name: consumer_sub
+    type: flat
+    metric: month
+    limit: -1
+    timeFrame: monthly
+    geo: global
+    unit: 1
+    price: see https://soundcloud.com/pricing
+    userMultiplied: false
+  elements:
+  - name: Listener tiers (Go, Go+)
+  - name: Creator tiers (Artist Pro, Pro Unlimited)
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
