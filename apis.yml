@@ -50,6 +50,15 @@ common:
     url: rate-limits/soundcloud-rate-limits.yml
   - type: FinOps
     url: finops/soundcloud-finops.yml
+  - type: Integrations
+    url: https://soundcloud.com/marketplace
+integrations:
+  - name: MP Tech outtake - counterpart
+  - name: Finding your dream career
+  - name: 'Marketplace''s likes'
+  - name: 'Marketplace''s playlists'
+  - name: 'Marketplace''s tracks'
+  - name: 'Marketplace''s comments'
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
