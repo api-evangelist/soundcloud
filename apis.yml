@@ -1,7 +1,7 @@
 aid: soundcloud
 url: https://raw.githubusercontent.com/api-evangelist/soundcloud/refs/heads/main/apis.yml
 name: SoundCloud
-x-type: company
+kind: company
 description: >-
   SoundCloud is a music and audio streaming platform with a developer REST API for tracks, users,
   playlists, search, comments, likes, and uploads. Authentication is OAuth 2.1 with PKCE; access
