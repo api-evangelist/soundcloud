@@ -1,0 +1,134 @@
+aid: soundcloud
+reviewed: '2026-05-30'
+reviewer: API Evangelist
+scope: Public webhook surface assessment
+summary: >-
+  SoundCloud does not expose a documented public webhook surface. The
+  SoundCloud Developer platform publishes a synchronous REST API at
+  https://api.soundcloud.com with OAuth 2.1 authentication, documented
+  via an OpenAPI specification served through the Swagger UI Explorer at
+  https://developers.soundcloud.com/docs/api/explorer/open-api. Neither
+  the API Guide, the API Reference, the published OpenAPI document, nor
+  the rate-limits documentation describe webhook subscriptions, event
+  callbacks, push notifications, or any other server-initiated delivery
+  channel. The only "subscription" references in the OpenAPI document
+  describe a user's SoundCloud product/plan tier on the User schema,
+  not event subscriptions. The only "callback" concept present is the
+  OAuth 2.1 redirect_uri used during authorization code exchange and an
+  optional JSONP callback query parameter on REST responses - neither
+  is an event-delivery webhook.
+webhooks:
+  hasPublicWebhookSurface: false
+  webhookSpecModelable: false
+  reason: >-
+    SoundCloud's public API is a request/response REST control plane
+    for tracks, users, playlists, search, social interactions, and
+    audio playback. There is no documented endpoint for registering a
+    callback URL to receive events, no documented event catalog
+    (e.g. track.uploaded, user.followed, comment.created), no
+    documented signature/verification scheme for inbound deliveries,
+    no documented retry or delivery semantics, and no documented
+    transport (HTTP POST, WebSub, EventGrid, etc.) carrying
+    SoundCloud-originated events. State changes are observed by
+    polling REST endpoints such as /me/activities, /me/feed,
+    /tracks/{track_urn}/comments, and the various followers /
+    reposters / favoriters collections.
+surfaces:
+  - name: SoundCloud REST API
+    transport: HTTPS REST
+    baseURL: https://api.soundcloud.com
+    public: true
+    webhookCapable: false
+    notes: >-
+      Synchronous JSON over HTTPS with OAuth 2.1 (PKCE) for
+      Authorization Code flow and Client Credentials for app-only
+      access. Documented via OpenAPI at
+      https://developers.soundcloud.com/docs/api/explorer/open-api.
+      Endpoints cover /me, /tracks, /playlists, /users, /resolve,
+      /me/activities, /me/feed, likes/reposts/comments, and related
+      social and metadata operations. No path in the published spec
+      registers, lists, or deletes a webhook subscription, and the
+      spec contains no OpenAPI `webhooks` or `callbacks` objects.
+    references:
+      - https://developers.soundcloud.com/docs/api/guide
+      - https://developers.soundcloud.com/docs/api/reference
+      - https://developers.soundcloud.com/docs/api/explorer/open-api
+      - https://developers.soundcloud.com/docs/api/rate-limits
+  - name: OAuth 2.1 redirect_uri
+    transport: HTTPS GET (browser redirect)
+    public: true
+    webhookCapable: false
+    notes: >-
+      The OAuth 2.1 Authorization Code with PKCE flow uses a
+      developer-registered redirect_uri to return the authorization
+      code to the application. This is an auth-flow callback, not an
+      event delivery channel. It fires once per user-consent
+      interaction and carries no resource-event payload.
+    references:
+      - https://developers.soundcloud.com/docs/api/guide#authentication
+  - name: JSONP callback parameter
+    transport: HTTPS GET with `callback` query parameter
+    public: true
+    webhookCapable: false
+    notes: >-
+      The SoundCloud REST API historically supports a `callback` query
+      parameter for JSONP-wrapped responses to support cross-origin
+      browser usage. This is a client-initiated request/response
+      pattern, not a server-initiated webhook.
+    references:
+      - https://developers.soundcloud.com/docs/api/guide
+  - name: Activities and feed polling
+    transport: HTTPS REST (polled)
+    public: true
+    webhookCapable: false
+    notes: >-
+      /me/activities, /me/activities/all/own, /me/activities/tracks,
+      /me/feed, and /me/feed/tracks return recent events affecting
+      the authenticated user (new tracks from followed users, new
+      comments, etc.) but they are pull-only collections paginated
+      via cursors. SoundCloud does not push these events to
+      developer-supplied URLs.
+    references:
+      - https://developers.soundcloud.com/docs/api/explorer/open-api
+  - name: Webhooks / event subscriptions
+    transport: None
+    public: false
+    webhookCapable: false
+    notes: >-
+      No public webhook registration endpoint, event catalog,
+      signature scheme, retry policy, or delivery contract is
+      documented for SoundCloud-originated events (track uploads,
+      plays, likes, comments, follows, reposts, playlist changes,
+      monetization or rights events, etc.). Third-party automation
+      platforms (Zapier, Make, IFTTT) advertise SoundCloud "triggers"
+      but those are implemented by the platform polling SoundCloud's
+      REST API on the user's behalf, not by SoundCloud delivering
+      webhooks.
+    references:
+      - https://developers.soundcloud.com/docs/api/guide
+      - https://developers.soundcloud.com/docs/api/explorer/open-api
+decisions:
+  - action: Do not create a webhook OpenAPI/AsyncAPI specification for SoundCloud
+    rationale: >-
+      Modeling a webhook surface requires a provider-owned, documented
+      event delivery contract: registration endpoint(s) or static
+      subscription configuration, an enumerated event catalog with
+      payload schemas, a signing/verification scheme, and delivery
+      semantics. SoundCloud publishes none of these. Producing a
+      speculative webhook spec would fabricate a surface that does not
+      exist and would misrepresent SoundCloud's developer contract.
+  - action: Leave apis.yml unchanged with respect to webhook properties
+    rationale: >-
+      The existing apis.yml accurately catalogs the SoundCloud REST
+      API, its OAuth authentication, rate limits, plans, and FinOps
+      context. No webhook artifact was produced, so no webhook
+      property, link, or sub-API entry is warranted. The `modified`
+      date is bumped to reflect that the webhook surface was reviewed
+      on 2026-05-30 and found to be absent.
+notes: >-
+  Revisit if SoundCloud publishes a first-party webhook contract -
+  for example, registration endpoints for upload, play, like,
+  comment, follow, repost, or playlist-change events; a signed
+  delivery scheme (HMAC or similar); a documented retry policy; or
+  if they adopt WebSub on their RSS/Atom feeds or expose an
+  OpenAPI 3.1 `webhooks` block on developers.soundcloud.com.
