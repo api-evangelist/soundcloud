@@ -2,67 +2,68 @@ aid: soundcloud
 url: https://raw.githubusercontent.com/api-evangelist/soundcloud/refs/heads/main/apis.yml
 name: SoundCloud
 kind: company
-description: >-
-  SoundCloud is a music and audio streaming platform with a developer REST API for tracks, users,
-  playlists, search, comments, likes, and uploads. Authentication is OAuth 2.1 with PKCE; access
-  tokens expire approximately every hour.
+description: SoundCloud is a music and audio streaming platform with a developer REST
+  API for tracks, users, playlists, search, comments, likes, and uploads. Authentication
+  is OAuth 2.1 with PKCE; access tokens expire approximately every hour.
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 tags:
-  - Music
-  - Streaming
-  - Audio
-  - OAuth
-  - Tracks
-  - Playlists
+- Music
+- Streaming
+- Audio
+- OAuth
+- Tracks
+- Playlists
 created: '2026-05-08'
 modified: '2026-05-30'
 specificationVersion: '0.19'
 apis:
-  - aid: soundcloud:platform
-    name: SoundCloud API
-    description: >-
-      REST API for SoundCloud covering tracks (upload, metadata, stream), users (/me, profiles), playlists
-      (CRUD), search (title/username/description), social (follow, like, comment), and audio playback.
-      OAuth 2.1 with PKCE; supports Authorization Code and Client Credentials flows.
-    humanURL: https://developers.soundcloud.com/docs/api/guide
-    baseURL: https://api.soundcloud.com
-    tags:
-      - Tracks
-      - Users
-      - Playlists
-      - Search
-      - Social
-    properties:
-      - type: Documentation
-        url: https://developers.soundcloud.com/docs/api/guide
-      - type: Authentication
-        url: https://developers.soundcloud.com/docs/api/guide#authentication
-      - type: RateLimits
-        url: https://developers.soundcloud.com/docs/api/rate-limits
-common:
-  - type: GitHubOrganization
-    url: https://github.com/soundcloud
-  - type: LinkedIn
-    url: https://www.linkedin.com/company/soundcloud
-  - type: Website
-    url: https://soundcloud.com/
-  - type: DeveloperPortal
-    url: https://developers.soundcloud.com/
-  - type: Plans
-    url: plans/soundcloud-plans-pricing.yml
+- aid: soundcloud:platform
+  name: SoundCloud API
+  description: REST API for SoundCloud covering tracks (upload, metadata, stream),
+    users (/me, profiles), playlists (CRUD), search (title/username/description),
+    social (follow, like, comment), and audio playback. OAuth 2.1 with PKCE; supports
+    Authorization Code and Client Credentials flows.
+  humanURL: https://developers.soundcloud.com/docs/api/guide
+  baseURL: https://api.soundcloud.com
+  tags:
+  - Tracks
+  - Users
+  - Playlists
+  - Search
+  - Social
+  properties:
+  - type: Documentation
+    url: https://developers.soundcloud.com/docs/api/guide
+  - type: Authentication
+    url: https://developers.soundcloud.com/docs/api/guide#authentication
   - type: RateLimits
-    url: rate-limits/soundcloud-rate-limits.yml
-  - type: FinOps
-    url: finops/soundcloud-finops.yml
-  - type: Integrations
-    url: https://soundcloud.com/marketplace
+    url: https://developers.soundcloud.com/docs/api/rate-limits
+  - url: graphql/soundcloud-graphql.md
+    type: GraphQL
+common:
+- type: GitHubOrganization
+  url: https://github.com/soundcloud
+- type: LinkedIn
+  url: https://www.linkedin.com/company/soundcloud
+- type: Website
+  url: https://soundcloud.com/
+- type: DeveloperPortal
+  url: https://developers.soundcloud.com/
+- type: Plans
+  url: plans/soundcloud-plans-pricing.yml
+- type: RateLimits
+  url: rate-limits/soundcloud-rate-limits.yml
+- type: FinOps
+  url: finops/soundcloud-finops.yml
+- type: Integrations
+  url: https://soundcloud.com/marketplace
 integrations:
-  - name: MP Tech outtake - counterpart
-  - name: Finding your dream career
-  - name: 'Marketplace''s likes'
-  - name: 'Marketplace''s playlists'
-  - name: 'Marketplace''s tracks'
-  - name: 'Marketplace''s comments'
+- name: MP Tech outtake - counterpart
+- name: Finding your dream career
+- name: Marketplace's likes
+- name: Marketplace's playlists
+- name: Marketplace's tracks
+- name: Marketplace's comments
 maintainers:
-  - FN: Kin Lane
-    email: kin@apievangelist.com
+- FN: Kin Lane
+  email: kin@apievangelist.com

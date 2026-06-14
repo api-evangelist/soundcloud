@@ -1,0 +1,921 @@
+# SoundCloud GraphQL Schema
+# Conceptual schema mapping the SoundCloud REST API v2 to GraphQL types.
+# Provider: SoundCloud | Base URL: https://api.soundcloud.com
+# Auth: OAuth 2.1 with PKCE
+
+# ─── Scalars ───────────────────────────────────────────────────────────────────
+
+scalar DateTime
+scalar URL
+scalar JSON
+
+# ─── Enums ─────────────────────────────────────────────────────────────────────
+
+enum TrackType {
+  ORIGINAL
+  REMIX
+  LIVE
+  RECORDING
+  SPOKEN_WORD
+  PODCAST
+  OTHER
+}
+
+enum PlaylistType {
+  PLAYLIST
+  ALBUM
+  EP
+  SINGLE
+  COMPILATION
+}
+
+enum PlaylistSharingType {
+  PUBLIC
+  PRIVATE
+  UNLISTED
+}
+
+enum TierType {
+  FREE
+  GO
+  GO_PLUS
+  PRO
+  PRO_UNLIMITED
+}
+
+enum ActivityEventType {
+  TRACK_POSTED
+  TRACK_REPOSTED
+  PLAYLIST_POSTED
+  PLAYLIST_REPOSTED
+  TRACK_LIKED
+  USER_FOLLOWED
+}
+
+enum SearchKind {
+  TRACKS
+  USERS
+  PLAYLISTS
+  ALL
+}
+
+enum TranscodingProtocol {
+  HLS
+  PROGRESSIVE
+}
+
+enum ChartKind {
+  TOP
+  TRENDING
+}
+
+# ─── Interfaces ────────────────────────────────────────────────────────────────
+
+interface Node {
+  id: ID!
+}
+
+interface Timestamped {
+  createdAt: DateTime!
+  updatedAt: DateTime
+}
+
+# ─── Track Types ───────────────────────────────────────────────────────────────
+
+"""
+Core track entity representing an audio upload on SoundCloud.
+"""
+type Track implements Node & Timestamped {
+  id: ID!
+  title: String!
+  description: String
+  genre: TrackGenre
+  tags: [TrackTag!]
+  trackType: TrackType
+  license: TrackLicense
+  bpm: TrackBPM
+  keySignature: TrackKeySignature
+  waveform: TrackWaveform
+  duration: Int
+  artworkUrl: URL
+  permalinkUrl: URL
+  streamable: Boolean!
+  downloadable: Boolean!
+  sharing: PlaylistSharingType!
+  user: User!
+  stats: TrackStats!
+  media: TrackMedia
+  createdAt: DateTime!
+  updatedAt: DateTime
+}
+
+"""
+Extended metadata for a track including recording and release details.
+"""
+type TrackDetails implements Node {
+  id: ID!
+  track: Track!
+  releaseDay: Int
+  releaseMonth: Int
+  releaseYear: Int
+  isrc: String
+  labelName: String
+  purchaseUrl: URL
+  purchaseTitle: String
+  videoUrl: URL
+  commentable: Boolean!
+  embeddable: Boolean!
+}
+
+"""
+Audio media payload for a track including stream transcodings.
+"""
+type TrackMedia {
+  transcodings: [Transcoding!]!
+}
+
+"""
+A single transcoding of a track in a given format and protocol.
+"""
+type Transcoding {
+  url: URL!
+  preset: String!
+  duration: Int
+  format: TranscodingFormat!
+  quality: String
+  snipped: Boolean
+}
+
+"""
+Format descriptor for a transcoding.
+"""
+type TranscodingFormat {
+  protocol: TranscodingProtocol!
+  mimeType: String!
+}
+
+"""
+A tag string attached to a track for discovery and filtering.
+"""
+type TrackTag {
+  value: String!
+}
+
+"""
+Genre classification for a track.
+"""
+type TrackGenre {
+  name: String!
+  slug: String!
+}
+
+"""
+Creative Commons or all-rights-reserved license for a track.
+"""
+type TrackLicense {
+  id: ID!
+  name: String!
+  spdxId: String
+  url: URL
+  allowsDerivatives: Boolean!
+  allowsCommercial: Boolean!
+  requiresShareAlike: Boolean!
+}
+
+"""
+Beats-per-minute value for a track.
+"""
+type TrackBPM {
+  value: Float
+}
+
+"""
+Musical key and mode for a track.
+"""
+type TrackKeySignature {
+  key: String
+  mode: String
+}
+
+"""
+Waveform data URL for rendering the audio scrubber in a player.
+"""
+type TrackWaveform {
+  url: URL!
+  width: Int
+  height: Int
+}
+
+"""
+Aggregate engagement statistics for a track.
+"""
+type TrackStats {
+  playbackCount: Int!
+  likesCount: Int!
+  repostsCount: Int!
+  commentsCount: Int!
+  downloadsCount: Int!
+}
+
+"""
+Scoped playback counter with optional time-range breakdown.
+"""
+type PlaybackCount {
+  total: Int!
+  period: String
+  region: String
+  count: Int!
+}
+
+# ─── Social Interaction Types ──────────────────────────────────────────────────
+
+"""
+Paginated collection of likes on a track or playlist.
+"""
+type Likes {
+  items: [Like!]!
+  totalCount: Int!
+  nextCursor: String
+}
+
+"""
+Paginated collection of reposts for a track or playlist.
+"""
+type Reposts {
+  items: [RePost!]!
+  totalCount: Int!
+  nextCursor: String
+}
+
+"""
+Paginated collection of comments on a track.
+"""
+type Comments {
+  items: [Comment!]!
+  totalCount: Int!
+  nextCursor: String
+}
+
+"""
+Download permission and count for a track.
+"""
+type Downloads {
+  downloadable: Boolean!
+  downloadsCount: Int!
+  downloadUrl: URL
+}
+
+"""
+A repost action: who reposted, what was reposted, and when.
+"""
+type RePost implements Node & Timestamped {
+  id: ID!
+  user: User!
+  track: Track
+  playlist: Playlist
+  createdAt: DateTime!
+  updatedAt: DateTime
+}
+
+"""
+A like action on a track or playlist.
+"""
+type Like implements Node & Timestamped {
+  id: ID!
+  user: User!
+  track: Track
+  playlist: Playlist
+  createdAt: DateTime!
+  updatedAt: DateTime
+}
+
+"""
+A single comment left on a track.
+"""
+type Comment implements Node & Timestamped {
+  id: ID!
+  body: CommentBody!
+  timestamp: CommentTimestamp
+  user: User!
+  track: Track!
+  createdAt: DateTime!
+  updatedAt: DateTime
+}
+
+"""
+Text content of a comment.
+"""
+type CommentBody {
+  text: String!
+}
+
+"""
+Seconds offset into the track where a timed comment is anchored.
+"""
+type CommentTimestamp {
+  seconds: Float
+}
+
+# ─── Playlist Types ────────────────────────────────────────────────────────────
+
+"""
+A playlist or album entity grouping ordered tracks.
+"""
+type Playlist implements Node & Timestamped {
+  id: ID!
+  title: String!
+  description: String
+  artworkUrl: URL
+  permalinkUrl: URL
+  playlistType: PlaylistType!
+  sharing: PlaylistSharingType!
+  trackCount: Int!
+  duration: Int!
+  user: User!
+  tracks: PlaylistTracks!
+  details: PlaylistDetails
+  likesCount: Int!
+  repostsCount: Int!
+  createdAt: DateTime!
+  updatedAt: DateTime
+}
+
+"""
+Extended metadata for a playlist or album.
+"""
+type PlaylistDetails implements Node {
+  id: ID!
+  releaseDay: Int
+  releaseMonth: Int
+  releaseYear: Int
+  labelName: String
+  ean: String
+  purchaseUrl: URL
+  purchaseTitle: String
+}
+
+"""
+Ordered list of tracks within a playlist.
+"""
+type PlaylistTracks {
+  items: [PlaylistTrackEntry!]!
+  totalCount: Int!
+}
+
+"""
+A track entry in a playlist with its position index.
+"""
+type PlaylistTrackEntry {
+  position: Int!
+  track: Track!
+}
+
+# ─── User and Profile Types ────────────────────────────────────────────────────
+
+"""
+Core SoundCloud user account.
+"""
+type User implements Node & Timestamped {
+  id: ID!
+  username: String!
+  displayName: String
+  avatarUrl: URL
+  permalinkUrl: URL
+  followersCount: Int!
+  followingsCount: Int!
+  tracksCount: Int!
+  playlistsCount: Int!
+  likesCount: Int!
+  repostsCount: Int!
+  subscription: SoundCloudPro
+  createdAt: DateTime!
+  updatedAt: DateTime
+}
+
+"""
+Extended public profile data for a SoundCloud user.
+"""
+type UserDetails implements Node {
+  id: ID!
+  city: String
+  country: String
+  website: URL
+  websiteTitle: String
+  bio: String
+  twitterName: String
+  myspaceName: String
+  visuals: [UserVisual!]
+}
+
+"""
+Visual banner image for a user profile.
+"""
+type UserVisual {
+  url: URL!
+  width: Int
+  height: Int
+}
+
+"""
+Combined public user profile view.
+"""
+type UserProfile {
+  user: User!
+  details: UserDetails!
+  artistProfile: ArtistProfile
+  spotlight: [Track!]
+}
+
+"""
+Directed follow relationship between two users.
+"""
+type FollowRelation implements Node & Timestamped {
+  id: ID!
+  followerId: ID!
+  followeeId: ID!
+  follower: User!
+  followee: User!
+  createdAt: DateTime!
+  updatedAt: DateTime
+}
+
+"""
+A user who follows the target account.
+"""
+type Follower {
+  user: User!
+  followedAt: DateTime!
+}
+
+"""
+A user that the target account follows.
+"""
+type Following {
+  user: User!
+  followedAt: DateTime!
+}
+
+"""
+Creator-tier profile augmented with upload statistics and spotlight.
+"""
+type CreatorProfile {
+  user: User!
+  uploadQuota: Int
+  uploadUsed: Int
+  spotlightTracks: [Track!]
+  isVerified: Boolean!
+}
+
+"""
+Artist-verified profile with spotlight content and station link.
+"""
+type ArtistProfile {
+  user: User!
+  isVerified: Boolean!
+  spotlightItems: [Track!]
+  station: ArtistStation
+  websiteUrl: URL
+  websiteTitle: String
+}
+
+"""
+SoundCloud Pro subscription status for a user.
+"""
+type SoundCloudPro {
+  tier: TierType!
+  startedAt: DateTime
+  expiresAt: DateTime
+  features: [String!]!
+}
+
+# ─── Stream and Discovery Types ────────────────────────────────────────────────
+
+"""
+An artist or track radio station delivering related tracks.
+"""
+type StationStream {
+  id: ID!
+  title: String!
+  artworkUrl: URL
+  tracks: [Track!]!
+  nextCursor: String
+}
+
+"""
+Station seeded from a specific artist with related tracks.
+"""
+type ArtistStation {
+  id: ID!
+  artist: User!
+  seedTrack: Track
+  tracks: [Track!]!
+  nextCursor: String
+}
+
+"""
+Genre or category chart with ranked tracks.
+"""
+type ChartsPlaylist {
+  id: ID!
+  kind: ChartKind!
+  genre: TrackGenre!
+  lastUpdated: DateTime!
+  entries: [ChartEntry!]!
+}
+
+"""
+A ranked entry in a chart.
+"""
+type ChartEntry {
+  rank: Int!
+  track: Track!
+  score: Float
+}
+
+"""
+Trending tracks collection scoped by genre and region.
+"""
+type Trending {
+  genre: TrackGenre
+  region: String
+  tracks: [Track!]!
+  fetchedAt: DateTime!
+}
+
+"""
+A single event in the authenticated user's activity feed.
+"""
+type Activity implements Node & Timestamped {
+  id: ID!
+  eventType: ActivityEventType!
+  user: User!
+  track: Track
+  playlist: Playlist
+  createdAt: DateTime!
+  updatedAt: DateTime
+}
+
+"""
+Paginated list of activity events for the authenticated user.
+"""
+type ActivityHistory {
+  items: [Activity!]!
+  nextCursor: String
+}
+
+"""
+Personalised home stream for the authenticated user.
+"""
+type Stream {
+  items: [StreamItem!]!
+  nextCursor: String
+}
+
+"""
+A single item in the user's home stream (track or playlist).
+"""
+union StreamItem = Track | Playlist
+
+"""
+Discovery page payload with recommended content buckets.
+"""
+type Discovery {
+  buckets: [DiscoveryBucket!]!
+  fetchedAt: DateTime!
+}
+
+"""
+A named bucket of recommended tracks or playlists on the discovery page.
+"""
+type DiscoveryBucket {
+  id: ID!
+  title: String!
+  description: String
+  kind: String!
+  tracks: [Track!]
+  playlists: [Playlist!]
+}
+
+# ─── Auth and Identity Types ──────────────────────────────────────────────────
+
+"""
+OAuth 2.1 access and refresh token pair returned from the token endpoint.
+"""
+type OAuthToken {
+  accessToken: String!
+  refreshToken: String
+  tokenType: String!
+  expiresIn: Int!
+  scope: String
+  issuedAt: DateTime!
+}
+
+"""
+Client credentials (ID and secret) used to identify an application.
+"""
+type APIKey {
+  clientId: String!
+  clientSecret: String!
+  redirectUri: URL
+  scopes: [String!]!
+}
+
+"""
+Generic bearer token wrapper.
+"""
+type Token {
+  value: String!
+  tokenType: String!
+  expiresAt: DateTime
+}
+
+"""
+Authenticated user context with subscription, upload quota, and settings.
+"""
+type Me {
+  user: User!
+  email: String!
+  subscription: SoundCloudPro
+  uploadQuota: UploadQuota!
+  settings: UserSettings!
+}
+
+"""
+Upload quota status for the authenticated user.
+"""
+type UploadQuota {
+  unlimited: Boolean!
+  uploadSecondsUsed: Int!
+  uploadSecondsLeft: Int
+}
+
+"""
+Application-level settings for the authenticated user.
+"""
+type UserSettings {
+  privateTracksCount: Int!
+  publicTracksCount: Int!
+  notifications: Boolean
+}
+
+# ─── Search Types ─────────────────────────────────────────────────────────────
+
+"""
+A search result which may be a Track, Playlist, or User.
+"""
+union SearchResult = Track | Playlist | User
+
+"""
+Paginated search results with total count and cursor for pagination.
+"""
+type SearchResultPage {
+  items: [SearchResult!]!
+  totalResults: Int!
+  nextCursor: String
+}
+
+# ─── Messaging Types ─────────────────────────────────────────────────────────
+
+"""
+A direct message thread between SoundCloud users.
+"""
+type MessageThread implements Node & Timestamped {
+  id: ID!
+  participants: [User!]!
+  messages: [Message!]!
+  lastMessageAt: DateTime
+  unreadCount: Int!
+  createdAt: DateTime!
+  updatedAt: DateTime
+}
+
+"""
+A single direct message within a thread.
+"""
+type Message implements Node & Timestamped {
+  id: ID!
+  sender: User!
+  body: String!
+  readAt: DateTime
+  createdAt: DateTime!
+  updatedAt: DateTime
+}
+
+# ─── Webhook Types ────────────────────────────────────────────────────────────
+
+"""
+A registered webhook endpoint for SoundCloud event delivery.
+"""
+type Webhook implements Node & Timestamped {
+  id: ID!
+  url: URL!
+  eventTypes: [String!]!
+  secret: String
+  active: Boolean!
+  lastDeliveredAt: DateTime
+  failureCount: Int!
+  createdAt: DateTime!
+  updatedAt: DateTime
+}
+
+# ─── Subscription and Tier Types ─────────────────────────────────────────────
+
+"""
+An active SoundCloud subscription record for a user.
+"""
+type Subscription implements Node & Timestamped {
+  id: ID!
+  user: User!
+  tier: TierType!
+  startedAt: DateTime!
+  renewsAt: DateTime
+  cancelledAt: DateTime
+  createdAt: DateTime!
+  updatedAt: DateTime
+}
+
+# ─── Root Types ──────────────────────────────────────────────────────────────
+
+type Query {
+  """Fetch a single track by ID."""
+  track(id: ID!): Track
+
+  """Fetch multiple tracks by IDs."""
+  tracks(ids: [ID!]!): [Track!]!
+
+  """Fetch a single playlist by ID."""
+  playlist(id: ID!): Playlist
+
+  """Fetch a single user by ID or permalink."""
+  user(id: ID, permalink: String): User
+
+  """Fetch the public profile for a user."""
+  userProfile(id: ID!): UserProfile
+
+  """Fetch the authenticated user context."""
+  me: Me
+
+  """Fetch the authenticated user's personalised stream."""
+  stream(limit: Int, cursor: String): Stream
+
+  """Fetch the discovery page for the authenticated user."""
+  discovery: Discovery
+
+  """Search tracks, users, playlists, or all content."""
+  search(q: String!, kind: SearchKind, limit: Int, cursor: String): SearchResultPage!
+
+  """Fetch comments for a track."""
+  trackComments(trackId: ID!, limit: Int, cursor: String): Comments!
+
+  """Fetch likes for a track."""
+  trackLikes(trackId: ID!, limit: Int, cursor: String): Likes!
+
+  """Fetch reposts for a track."""
+  trackReposts(trackId: ID!, limit: Int, cursor: String): Reposts!
+
+  """Fetch followers for a user."""
+  followers(userId: ID!, limit: Int, cursor: String): [Follower!]!
+
+  """Fetch users that a user follows."""
+  followings(userId: ID!, limit: Int, cursor: String): [Following!]!
+
+  """Fetch the activity history for the authenticated user."""
+  activityHistory(limit: Int, cursor: String): ActivityHistory!
+
+  """Fetch chart tracks by genre and kind."""
+  charts(genreSlug: String, kind: ChartKind, limit: Int): ChartsPlaylist
+
+  """Fetch trending tracks by genre and region."""
+  trending(genreSlug: String, region: String, limit: Int): Trending!
+
+  """Fetch an artist station."""
+  artistStation(artistId: ID!): ArtistStation
+
+  """Fetch a station stream by ID."""
+  stationStream(id: ID!): StationStream
+
+  """Fetch message threads for the authenticated user."""
+  messageThreads(limit: Int, cursor: String): [MessageThread!]!
+
+  """Fetch registered webhooks for the authenticated app."""
+  webhooks: [Webhook!]!
+}
+
+type Mutation {
+  """Like a track."""
+  likeTrack(trackId: ID!): LikePayload!
+
+  """Unlike a track."""
+  unlikeTrack(trackId: ID!): UnlikePayload!
+
+  """Like a playlist."""
+  likePlaylist(playlistId: ID!): LikePayload!
+
+  """Unlike a playlist."""
+  unlikePlaylist(playlistId: ID!): UnlikePayload!
+
+  """Repost a track."""
+  repostTrack(trackId: ID!): RepostPayload!
+
+  """Remove a repost of a track."""
+  unrepostTrack(trackId: ID!): RepostPayload!
+
+  """Post a comment on a track."""
+  createComment(trackId: ID!, body: String!, timestamp: Float): CommentPayload!
+
+  """Delete a comment."""
+  deleteComment(commentId: ID!): DeletePayload!
+
+  """Follow a user."""
+  followUser(userId: ID!): FollowPayload!
+
+  """Unfollow a user."""
+  unfollowUser(userId: ID!): FollowPayload!
+
+  """Create a playlist."""
+  createPlaylist(input: CreatePlaylistInput!): PlaylistPayload!
+
+  """Update a playlist."""
+  updatePlaylist(id: ID!, input: UpdatePlaylistInput!): PlaylistPayload!
+
+  """Delete a playlist."""
+  deletePlaylist(id: ID!): DeletePayload!
+
+  """Add a track to a playlist."""
+  addTrackToPlaylist(playlistId: ID!, trackId: ID!, position: Int): PlaylistPayload!
+
+  """Remove a track from a playlist."""
+  removeTrackFromPlaylist(playlistId: ID!, trackId: ID!): PlaylistPayload!
+
+  """Register a webhook."""
+  createWebhook(url: URL!, eventTypes: [String!]!, secret: String): WebhookPayload!
+
+  """Delete a webhook."""
+  deleteWebhook(id: ID!): DeletePayload!
+}
+
+# ─── Input Types ─────────────────────────────────────────────────────────────
+
+input CreatePlaylistInput {
+  title: String!
+  description: String
+  sharing: PlaylistSharingType
+  playlistType: PlaylistType
+  trackIds: [ID!]
+}
+
+input UpdatePlaylistInput {
+  title: String
+  description: String
+  sharing: PlaylistSharingType
+  artworkData: String
+}
+
+# ─── Payload Types ────────────────────────────────────────────────────────────
+
+type LikePayload {
+  success: Boolean!
+  like: Like
+  error: String
+}
+
+type UnlikePayload {
+  success: Boolean!
+  error: String
+}
+
+type RepostPayload {
+  success: Boolean!
+  repost: RePost
+  error: String
+}
+
+type CommentPayload {
+  success: Boolean!
+  comment: Comment
+  error: String
+}
+
+type FollowPayload {
+  success: Boolean!
+  relation: FollowRelation
+  error: String
+}
+
+type PlaylistPayload {
+  success: Boolean!
+  playlist: Playlist
+  error: String
+}
+
+type WebhookPayload {
+  success: Boolean!
+  webhook: Webhook
+  error: String
+}
+
+type DeletePayload {
+  success: Boolean!
+  deletedId: ID
+  error: String
+}
