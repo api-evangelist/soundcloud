@@ -1,0 +1,413 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "SoundCloud API",
+    "version": "1.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "oauth2",
+      "flow": "client_credentials",
+      "accessTokenUrl": "https://secure.soundcloud.com/oauth/token",
+      "credentials": {
+        "clientId": "{{clientId}}",
+        "clientSecret": "{{clientSecret}}"
+      }
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Users",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Obtain or refresh an OAuth 2.1 access token (PKCE)",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.soundcloud.com/oauth/token"
+          },
+          "docs": "Obtain or refresh an OAuth 2.1 access token (PKCE)"
+        },
+        {
+          "info": {
+            "name": "Get the authenticated user's profile",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.soundcloud.com/me"
+          },
+          "docs": "Get the authenticated user's profile"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Tracks",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Search tracks",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.soundcloud.com/tracks",
+            "params": [
+              {
+                "name": "q",
+                "value": "",
+                "type": "query",
+                "description": "Free-text query against title and description"
+              },
+              {
+                "name": "genres",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "access",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "bpm",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "duration",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "ids",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "linked_partitioning",
+                "value": "",
+                "type": "query",
+                "description": "Enable cursor pagination via next_href"
+              }
+            ]
+          },
+          "docs": "Search tracks"
+        },
+        {
+          "info": {
+            "name": "Upload audio file with metadata",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.soundcloud.com/tracks"
+          },
+          "docs": "Upload audio file with metadata"
+        },
+        {
+          "info": {
+            "name": "Retrieve track",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.soundcloud.com/tracks/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Retrieve track"
+        },
+        {
+          "info": {
+            "name": "Update track metadata and artwork",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://api.soundcloud.com/tracks/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Update track metadata and artwork"
+        },
+        {
+          "info": {
+            "name": "Access transcoded streaming formats for a track",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.soundcloud.com/tracks/:id/stream",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Access transcoded streaming formats for a track"
+        },
+        {
+          "info": {
+            "name": "List comments on a track",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.soundcloud.com/tracks/:id/comments",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "List comments on a track"
+        },
+        {
+          "info": {
+            "name": "Add a timed or non-timed comment to a track",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.soundcloud.com/tracks/:id/comments",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Add a timed or non-timed comment to a track"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Playlists",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Create a playlist",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.soundcloud.com/playlists"
+          },
+          "docs": "Create a playlist"
+        },
+        {
+          "info": {
+            "name": "Get playlist (with optional tracks)",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.soundcloud.com/playlists/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "show_tracks",
+                "value": "",
+                "type": "query",
+                "description": "Set to false to exclude tracks from the response"
+              }
+            ]
+          },
+          "docs": "Get playlist (with optional tracks)"
+        },
+        {
+          "info": {
+            "name": "Update playlist metadata or tracks",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://api.soundcloud.com/playlists/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Update playlist metadata or tracks"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Search",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Resolve a SoundCloud URL to an API resource representation",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.soundcloud.com/resolve",
+            "params": [
+              {
+                "name": "url",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Resolve a SoundCloud URL to an API resource representation"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Social",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Follow a user",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://api.soundcloud.com/me/followings/:userId",
+            "params": [
+              {
+                "name": "userId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Follow a user"
+        },
+        {
+          "info": {
+            "name": "Unfollow a user",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api.soundcloud.com/me/followings/:userId",
+            "params": [
+              {
+                "name": "userId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Unfollow a user"
+        },
+        {
+          "info": {
+            "name": "Like a track",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.soundcloud.com/likes/tracks/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Like a track"
+        },
+        {
+          "info": {
+            "name": "Unlike a track",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api.soundcloud.com/likes/tracks/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Unlike a track"
+        },
+        {
+          "info": {
+            "name": "Like a playlist",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.soundcloud.com/likes/playlists/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Like a playlist"
+        },
+        {
+          "info": {
+            "name": "Unlike a playlist",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api.soundcloud.com/likes/playlists/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Unlike a playlist"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
