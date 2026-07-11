@@ -41,6 +41,10 @@ apis:
   - url: graphql/soundcloud-graphql.md
     type: GraphQL
 common:
+- type: VulnerabilityDisclosure
+  url: security/soundcloud-vulnerability-disclosure.yml
+- type: DomainSecurity
+  url: security/soundcloud-domain-security.yml
 - type: Authentication
   url: authentication/soundcloud-authentication.yml
 - type: OAuthScopes
