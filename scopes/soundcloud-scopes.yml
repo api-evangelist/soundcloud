@@ -1,0 +1,22 @@
+generated: '2026-07-11'
+method: derived
+source: openapi/soundcloud-openapi.yml
+schemes:
+- name: oauth2
+  source: openapi/soundcloud-openapi.yml
+  flows:
+  - flow: authorizationCode
+    authorizationUrl: https://secure.soundcloud.com/authorize
+    tokenUrl: https://secure.soundcloud.com/oauth/token
+  - flow: clientCredentials
+    tokenUrl: https://secure.soundcloud.com/oauth/token
+  description: |-
+    OAuth 2.1 with PKCE. Access tokens are short-lived (~1 hour). Use
+    Authorization: OAuth {ACCESS_TOKEN} on each request.
+scopes:
+- scope: non-expiring
+  description: Non-expiring refresh-token grant
+  flows:
+  - authorizationCode
+  sources:
+  - openapi/soundcloud-openapi.yml

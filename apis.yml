@@ -41,6 +41,10 @@ apis:
   - url: graphql/soundcloud-graphql.md
     type: GraphQL
 common:
+- type: Authentication
+  url: authentication/soundcloud-authentication.yml
+- type: OAuthScopes
+  url: scopes/soundcloud-scopes.yml
 - type: GitHubOrganization
   url: https://github.com/soundcloud
 - type: LinkedIn
@@ -57,6 +61,8 @@ common:
   url: finops/soundcloud-finops.yml
 - type: Integrations
   url: https://soundcloud.com/marketplace
+- url: https://developers.soundcloud.com/blog/blog.rss
+  type: Blog
 integrations:
 - name: MP Tech outtake - counterpart
 - name: Finding your dream career
