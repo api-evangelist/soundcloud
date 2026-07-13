@@ -1,0 +1,14 @@
+{
+  "repo": "soundcloud",
+  "feeds": [
+    {
+      "source": "https://developers.soundcloud.com/blog/blog.rss",
+      "feed_url": "https://developers.soundcloud.com/blog/blog.rss",
+      "title": "",
+      "saved": 0,
+      "method": "feed"
+    }
+  ],
+  "fetched": "2026-07-11T11:50:51Z",
+  "post_count": 53
+}
