@@ -41,6 +41,8 @@ apis:
   - url: graphql/soundcloud-graphql.md
     type: GraphQL
 common:
+- type: AgenticAccess
+  url: agentic-access/soundcloud-agentic-access.yml
 - type: VulnerabilityDisclosure
   url: security/soundcloud-vulnerability-disclosure.yml
 - type: DomainSecurity
