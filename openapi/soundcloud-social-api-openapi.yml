@@ -1,0 +1,118 @@
+openapi: 3.1.0
+info:
+  title: SoundCloud Playlists Social API
+  version: 1.0.0
+  summary: SoundCloud REST API for tracks, users, playlists, search, social actions, and streaming.
+  description: 'The SoundCloud HTTP API exposes endpoints for tracks (upload, metadata,
+
+    streaming, comments), users (/me, profile actions), playlists (CRUD),
+
+    search/discovery, and social actions (follow, like). Authentication uses
+
+    OAuth 2.1 with PKCE. Access tokens expire approximately every hour.
+
+
+    The token endpoint is on secure.soundcloud.com; all resource endpoints are
+
+    on api.soundcloud.com.
+
+    '
+  contact:
+    name: SoundCloud Developers
+    url: https://developers.soundcloud.com/docs/api/guide
+servers:
+- url: https://api.soundcloud.com
+  description: SoundCloud REST API
+security:
+- oauth2:
+  - non-expiring
+tags:
+- name: Social
+  description: Follow and like actions
+paths:
+  /me/followings/{userId}:
+    parameters:
+    - name: userId
+      in: path
+      required: true
+      schema:
+        type: string
+    put:
+      tags:
+      - Social
+      summary: Follow a user
+      operationId: followUser
+      responses:
+        '200':
+          description: Following created
+    delete:
+      tags:
+      - Social
+      summary: Unfollow a user
+      operationId: unfollowUser
+      responses:
+        '200':
+          description: Following removed
+  /likes/tracks/{id}:
+    parameters:
+    - $ref: '#/components/parameters/Id'
+    post:
+      tags:
+      - Social
+      summary: Like a track
+      operationId: likeTrack
+      responses:
+        '201':
+          description: Like created
+    delete:
+      tags:
+      - Social
+      summary: Unlike a track
+      operationId: unlikeTrack
+      responses:
+        '200':
+          description: Like removed
+  /likes/playlists/{id}:
+    parameters:
+    - $ref: '#/components/parameters/Id'
+    post:
+      tags:
+      - Social
+      summary: Like a playlist
+      operationId: likePlaylist
+      responses:
+        '201':
+          description: Like created
+    delete:
+      tags:
+      - Social
+      summary: Unlike a playlist
+      operationId: unlikePlaylist
+      responses:
+        '200':
+          description: Like removed
+components:
+  parameters:
+    Id:
+      name: id
+      in: path
+      required: true
+      schema:
+        type: string
+  securitySchemes:
+    oauth2:
+      type: oauth2
+      description: 'OAuth 2.1 with PKCE. Access tokens are short-lived (~1 hour). Use
+
+        Authorization: OAuth {ACCESS_TOKEN} on each request.
+
+        '
+      flows:
+        authorizationCode:
+          authorizationUrl: https://secure.soundcloud.com/authorize
+          tokenUrl: https://secure.soundcloud.com/oauth/token
+          scopes:
+            non-expiring: Non-expiring refresh-token grant
+        clientCredentials:
+          tokenUrl: https://secure.soundcloud.com/oauth/token
+          scopes: {}

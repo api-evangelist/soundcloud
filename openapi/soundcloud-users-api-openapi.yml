@@ -1,0 +1,71 @@
+openapi: 3.1.0
+info:
+  title: SoundCloud Playlists Users API
+  version: 1.0.0
+  summary: SoundCloud REST API for tracks, users, playlists, search, social actions, and streaming.
+  description: 'The SoundCloud HTTP API exposes endpoints for tracks (upload, metadata,
+
+    streaming, comments), users (/me, profile actions), playlists (CRUD),
+
+    search/discovery, and social actions (follow, like). Authentication uses
+
+    OAuth 2.1 with PKCE. Access tokens expire approximately every hour.
+
+
+    The token endpoint is on secure.soundcloud.com; all resource endpoints are
+
+    on api.soundcloud.com.
+
+    '
+  contact:
+    name: SoundCloud Developers
+    url: https://developers.soundcloud.com/docs/api/guide
+servers:
+- url: https://api.soundcloud.com
+  description: SoundCloud REST API
+security:
+- oauth2:
+  - non-expiring
+tags:
+- name: Users
+  description: Authenticated user and profile actions
+paths:
+  /oauth/token:
+    servers:
+    - url: https://secure.soundcloud.com
+    post:
+      tags:
+      - Users
+      summary: Obtain or refresh an OAuth 2.1 access token (PKCE)
+      operationId: createOAuthToken
+      security: []
+      responses:
+        '200':
+          description: Access token response
+  /me:
+    get:
+      tags:
+      - Users
+      summary: Get the authenticated user's profile
+      operationId: getMe
+      responses:
+        '200':
+          description: User profile
+components:
+  securitySchemes:
+    oauth2:
+      type: oauth2
+      description: 'OAuth 2.1 with PKCE. Access tokens are short-lived (~1 hour). Use
+
+        Authorization: OAuth {ACCESS_TOKEN} on each request.
+
+        '
+      flows:
+        authorizationCode:
+          authorizationUrl: https://secure.soundcloud.com/authorize
+          tokenUrl: https://secure.soundcloud.com/oauth/token
+          scopes:
+            non-expiring: Non-expiring refresh-token grant
+        clientCredentials:
+          tokenUrl: https://secure.soundcloud.com/oauth/token
+          scopes: {}

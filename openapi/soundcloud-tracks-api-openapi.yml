@@ -1,0 +1,154 @@
+openapi: 3.1.0
+info:
+  title: SoundCloud Playlists Tracks API
+  version: 1.0.0
+  summary: SoundCloud REST API for tracks, users, playlists, search, social actions, and streaming.
+  description: 'The SoundCloud HTTP API exposes endpoints for tracks (upload, metadata,
+
+    streaming, comments), users (/me, profile actions), playlists (CRUD),
+
+    search/discovery, and social actions (follow, like). Authentication uses
+
+    OAuth 2.1 with PKCE. Access tokens expire approximately every hour.
+
+
+    The token endpoint is on secure.soundcloud.com; all resource endpoints are
+
+    on api.soundcloud.com.
+
+    '
+  contact:
+    name: SoundCloud Developers
+    url: https://developers.soundcloud.com/docs/api/guide
+servers:
+- url: https://api.soundcloud.com
+  description: SoundCloud REST API
+security:
+- oauth2:
+  - non-expiring
+tags:
+- name: Tracks
+  description: Track CRUD, streaming, and comments
+paths:
+  /tracks:
+    get:
+      tags:
+      - Tracks
+      summary: Search tracks
+      operationId: searchTracks
+      parameters:
+      - name: q
+        in: query
+        schema:
+          type: string
+        description: Free-text query against title and description
+      - name: genres
+        in: query
+        schema:
+          type: string
+      - name: access
+        in: query
+        schema:
+          type: string
+      - name: bpm
+        in: query
+        schema:
+          type: string
+      - name: duration
+        in: query
+        schema:
+          type: string
+      - name: ids
+        in: query
+        schema:
+          type: string
+      - name: linked_partitioning
+        in: query
+        schema:
+          type: boolean
+        description: Enable cursor pagination via next_href
+      responses:
+        '200':
+          description: Track collection
+    post:
+      tags:
+      - Tracks
+      summary: Upload audio file with metadata
+      operationId: createTrack
+      responses:
+        '201':
+          description: Track created
+  /tracks/{id}:
+    parameters:
+    - $ref: '#/components/parameters/Id'
+    get:
+      tags:
+      - Tracks
+      summary: Retrieve track
+      operationId: getTrack
+      responses:
+        '200':
+          description: Track details
+    put:
+      tags:
+      - Tracks
+      summary: Update track metadata and artwork
+      operationId: updateTrack
+      responses:
+        '200':
+          description: Track updated
+  /tracks/{id}/stream:
+    parameters:
+    - $ref: '#/components/parameters/Id'
+    get:
+      tags:
+      - Tracks
+      summary: Access transcoded streaming formats for a track
+      operationId: getTrackStream
+      responses:
+        '302':
+          description: Redirect to stream URL
+  /tracks/{id}/comments:
+    parameters:
+    - $ref: '#/components/parameters/Id'
+    get:
+      tags:
+      - Tracks
+      summary: List comments on a track
+      operationId: listTrackComments
+      responses:
+        '200':
+          description: Comment collection
+    post:
+      tags:
+      - Tracks
+      summary: Add a timed or non-timed comment to a track
+      operationId: createTrackComment
+      responses:
+        '201':
+          description: Comment created
+components:
+  parameters:
+    Id:
+      name: id
+      in: path
+      required: true
+      schema:
+        type: string
+  securitySchemes:
+    oauth2:
+      type: oauth2
+      description: 'OAuth 2.1 with PKCE. Access tokens are short-lived (~1 hour). Use
+
+        Authorization: OAuth {ACCESS_TOKEN} on each request.
+
+        '
+      flows:
+        authorizationCode:
+          authorizationUrl: https://secure.soundcloud.com/authorize
+          tokenUrl: https://secure.soundcloud.com/oauth/token
+          scopes:
+            non-expiring: Non-expiring refresh-token grant
+        clientCredentials:
+          tokenUrl: https://secure.soundcloud.com/oauth/token
+          scopes: {}
