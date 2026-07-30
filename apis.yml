@@ -5,7 +5,20 @@ kind: company
 description: SoundCloud is a music and audio streaming platform with a developer REST
   API for tracks, users, playlists, search, comments, likes, and uploads. Authentication
   is OAuth 2.1 with PKCE; access tokens expire approximately every hour.
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: free
+  onboarding: self-serve
+  trial: false
+  try_now: true
+  public: false
+  label: Free · Self-serve signup
+  confidence: high
+  source:
+  - plans
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/soundcloud.png
 tags:
 - Music
 - Streaming
@@ -19,10 +32,10 @@ specificationVersion: '0.19'
 apis:
 - aid: soundcloud:platform
   name: SoundCloud API
-  description: REST API for SoundCloud covering tracks (upload, metadata, stream),
-    users (/me, profiles), playlists (CRUD), search (title/username/description),
-    social (follow, like, comment), and audio playback. OAuth 2.1 with PKCE; supports
-    Authorization Code and Client Credentials flows.
+  description: >-
+    REST API for SoundCloud covering tracks (upload, metadata, stream), users (/me, profiles), playlists
+    (CRUD), search (title/username/description), social (follow, like, comment), and audio playback. OAuth
+    2.1 with PKCE; supports Authorization Code and Client Credentials flows.
   humanURL: https://developers.soundcloud.com/docs/api/guide
   baseURL: https://api.soundcloud.com
   tags:
@@ -40,6 +53,56 @@ apis:
     url: https://developers.soundcloud.com/docs/api/rate-limits
   - url: graphql/soundcloud-graphql.md
     type: GraphQL
+- aid: soundcloud:soundcloud-playlists-api
+  name: SoundCloud Playlists API
+  description: Playlist CRUD
+  humanURL: https://developers.soundcloud.com/docs/api/guide
+  baseURL: https://api.soundcloud.com
+  tags:
+  - Playlists
+  properties:
+  - type: OpenAPI
+    url: openapi/soundcloud-playlists-api-openapi.yml
+- aid: soundcloud:soundcloud-search-api
+  name: SoundCloud Search API
+  description: Search and resolution
+  humanURL: https://developers.soundcloud.com/docs/api/guide
+  baseURL: https://api.soundcloud.com
+  tags:
+  - Search
+  properties:
+  - type: OpenAPI
+    url: openapi/soundcloud-search-api-openapi.yml
+- aid: soundcloud:soundcloud-social-api
+  name: SoundCloud Social API
+  description: Follow and like actions
+  humanURL: https://developers.soundcloud.com/docs/api/guide
+  baseURL: https://api.soundcloud.com
+  tags:
+  - Social
+  properties:
+  - type: OpenAPI
+    url: openapi/soundcloud-social-api-openapi.yml
+- aid: soundcloud:soundcloud-tracks-api
+  name: SoundCloud Tracks API
+  description: Track CRUD, streaming, and comments
+  humanURL: https://developers.soundcloud.com/docs/api/guide
+  baseURL: https://api.soundcloud.com
+  tags:
+  - Tracks
+  properties:
+  - type: OpenAPI
+    url: openapi/soundcloud-tracks-api-openapi.yml
+- aid: soundcloud:soundcloud-users-api
+  name: SoundCloud Users API
+  description: Authenticated user and profile actions
+  humanURL: https://developers.soundcloud.com/docs/api/guide
+  baseURL: https://api.soundcloud.com
+  tags:
+  - Users
+  properties:
+  - type: OpenAPI
+    url: openapi/soundcloud-users-api-openapi.yml
 common:
 - type: AgenticAccess
   url: agentic-access/soundcloud-agentic-access.yml
