@@ -1,0 +1,22 @@
+{
+  "provider": "soundcloud",
+  "sources": [
+    "soundcloud-playlists-api-openapi.yml",
+    "soundcloud-search-api-openapi.yml",
+    "soundcloud-social-api-openapi.yml",
+    "soundcloud-tracks-api-openapi.yml",
+    "soundcloud-users-api-openapi.yml"
+  ],
+  "outputs": [
+    "soundcloud-playlists-api-openapi.yml",
+    "soundcloud-search-api-openapi.yml",
+    "soundcloud-social-api-openapi.yml",
+    "soundcloud-tracks-api-openapi.yml",
+    "soundcloud-users-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
