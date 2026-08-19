@@ -1,0 +1,180 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "SoundCloud Playlists Tracks API",
+    "version": "1.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "oauth2",
+      "flow": "client_credentials",
+      "accessTokenUrl": "https://secure.soundcloud.com/oauth/token",
+      "credentials": {
+        "clientId": "{{clientId}}",
+        "clientSecret": "{{clientSecret}}"
+      }
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Tracks",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Search tracks",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.soundcloud.com/tracks",
+            "params": [
+              {
+                "name": "q",
+                "value": "",
+                "type": "query",
+                "description": "Free-text query against title and description"
+              },
+              {
+                "name": "genres",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "access",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "bpm",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "duration",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "ids",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "linked_partitioning",
+                "value": "",
+                "type": "query",
+                "description": "Enable cursor pagination via next_href"
+              }
+            ]
+          },
+          "docs": "Search tracks"
+        },
+        {
+          "info": {
+            "name": "Upload audio file with metadata",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.soundcloud.com/tracks"
+          },
+          "docs": "Upload audio file with metadata"
+        },
+        {
+          "info": {
+            "name": "Retrieve track",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.soundcloud.com/tracks/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Retrieve track"
+        },
+        {
+          "info": {
+            "name": "Update track metadata and artwork",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://api.soundcloud.com/tracks/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Update track metadata and artwork"
+        },
+        {
+          "info": {
+            "name": "Access transcoded streaming formats for a track",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.soundcloud.com/tracks/:id/stream",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Access transcoded streaming formats for a track"
+        },
+        {
+          "info": {
+            "name": "List comments on a track",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.soundcloud.com/tracks/:id/comments",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "List comments on a track"
+        },
+        {
+          "info": {
+            "name": "Add a timed or non-timed comment to a track",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.soundcloud.com/tracks/:id/comments",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Add a timed or non-timed comment to a track"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

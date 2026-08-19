@@ -1,0 +1,671 @@
+{
+  "item": [
+    {
+      "id": "e6302532-6def-4e96-9bf6-565080af2896",
+      "name": "Tracks",
+      "description": {
+        "content": "Track CRUD, streaming, and comments",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "f940a75b-1ca4-45fb-8c84-81761ec1c560",
+          "name": "Search tracks",
+          "request": {
+            "name": "Search tracks",
+            "description": {},
+            "url": {
+              "path": [
+                "tracks"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "q",
+                  "value": "<string>",
+                  "description": "Free-text query against title and description"
+                },
+                {
+                  "disabled": false,
+                  "key": "genres",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "access",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "bpm",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "duration",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "ids",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "linked_partitioning",
+                  "value": "<boolean>",
+                  "description": "Enable cursor pagination via next_href"
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "90847678-4df5-4176-8e19-6fcd5e892ae2",
+              "name": "Track collection",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "tracks"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "q",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "genres",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "access",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "bpm",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "duration",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "ids",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "linked_partitioning",
+                      "value": "<boolean>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "61c4c6b2-e54f-4081-96aa-8eb6cb63a5fd",
+          "name": "Upload audio file with metadata",
+          "request": {
+            "name": "Upload audio file with metadata",
+            "description": {},
+            "url": {
+              "path": [
+                "tracks"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "fd8b8fae-e948-442a-819e-133433d0590e",
+              "name": "Track created",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "tracks"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "Created",
+              "code": 201,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "96984e84-ddd7-4dce-8465-41f77f1d267d",
+          "name": "Retrieve track",
+          "request": {
+            "name": "Retrieve track",
+            "description": {},
+            "url": {
+              "path": [
+                "tracks",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "22ad57e6-0a67-4c19-a940-992447752c3a",
+              "name": "Track details",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "tracks",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "c188abee-978f-4fdf-ba41-cb5c35c0db67",
+          "name": "Update track metadata and artwork",
+          "request": {
+            "name": "Update track metadata and artwork",
+            "description": {},
+            "url": {
+              "path": [
+                "tracks",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "PUT",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "250b0dad-5083-45e4-b321-39c45c0e6802",
+              "name": "Track updated",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "tracks",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "PUT",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "774a65d7-5d34-4e39-9628-a11d750d9258",
+          "name": "Access transcoded streaming formats for a track",
+          "request": {
+            "name": "Access transcoded streaming formats for a track",
+            "description": {},
+            "url": {
+              "path": [
+                "tracks",
+                ":id",
+                "stream"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "92b2ab70-64d5-42ff-aa1d-ca629f73d442",
+              "name": "Redirect to stream URL",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "tracks",
+                    ":id",
+                    "stream"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Found",
+              "code": 302,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "709e1b02-6c35-48b7-be69-c2d9efac7408",
+          "name": "List comments on a track",
+          "request": {
+            "name": "List comments on a track",
+            "description": {},
+            "url": {
+              "path": [
+                "tracks",
+                ":id",
+                "comments"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "61d96983-397f-46aa-93c5-74955f18c63a",
+              "name": "Comment collection",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "tracks",
+                    ":id",
+                    "comments"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "e8c56274-4d76-439b-a36f-cdfee3d82199",
+          "name": "Add a timed or non-timed comment to a track",
+          "request": {
+            "name": "Add a timed or non-timed comment to a track",
+            "description": {},
+            "url": {
+              "path": [
+                "tracks",
+                ":id",
+                "comments"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "b37abf29-1452-439a-9526-a71ebe967ca8",
+              "name": "Comment created",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "tracks",
+                    ":id",
+                    "comments"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "Created",
+              "code": 201,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.soundcloud.com",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "oauth2",
+    "oauth2": [
+      {
+        "key": "scope",
+        "value": "non-expiring"
+      },
+      {
+        "key": "accessTokenUrl",
+        "value": "https://secure.soundcloud.com/oauth/token"
+      },
+      {
+        "key": "authUrl",
+        "value": "https://secure.soundcloud.com/authorize"
+      },
+      {
+        "key": "grant_type",
+        "value": "authorization_code"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "3c07170c-0f7a-4711-996e-dc2926b05234",
+    "name": "SoundCloud Playlists Tracks API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The SoundCloud HTTP API exposes endpoints for tracks (upload, metadata,\nstreaming, comments), users (/me, profile actions), playlists (CRUD),\nsearch/discovery, and social actions (follow, like). Authentication uses\nOAuth 2.1 with PKCE. Access tokens expire approximately every hour.\n\nThe token endpoint is on secure.soundcloud.com; all resource endpoints are\non api.soundcloud.com.\n\n\nContact Support:\n Name: SoundCloud Developers",
+      "type": "text/plain"
+    }
+  }
+}

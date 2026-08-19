@@ -1,0 +1,296 @@
+{
+  "item": [
+    {
+      "id": "156c59d2-be0a-4586-aa75-8f34cd956d8a",
+      "name": "Playlists",
+      "description": {
+        "content": "Playlist CRUD",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "604ffb93-d43c-4b5d-bb24-93d7b60f3693",
+          "name": "Create a playlist",
+          "request": {
+            "name": "Create a playlist",
+            "description": {},
+            "url": {
+              "path": [
+                "playlists"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "c395f70e-4af6-4bd9-8755-e35daf72a7a1",
+              "name": "Playlist created",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "playlists"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "Created",
+              "code": 201,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "0216f1de-014a-49d3-ae9f-70a50e37aa22",
+          "name": "Get playlist (with optional tracks)",
+          "request": {
+            "name": "Get playlist (with optional tracks)",
+            "description": {},
+            "url": {
+              "path": [
+                "playlists",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "show_tracks",
+                  "value": "<boolean>",
+                  "description": "Set to false to exclude tracks from the response"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "48cbd247-76e7-4abb-b316-6eb7e1077408",
+              "name": "Playlist details",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "playlists",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "show_tracks",
+                      "value": "<boolean>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "b478b115-9450-46fe-a7be-10d9e7b04258",
+          "name": "Update playlist metadata or tracks",
+          "request": {
+            "name": "Update playlist metadata or tracks",
+            "description": {},
+            "url": {
+              "path": [
+                "playlists",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "PUT",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "d5788fe6-1f7c-433f-8a8e-121f82dbd80f",
+              "name": "Playlist updated",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "playlists",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "PUT",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.soundcloud.com",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "oauth2",
+    "oauth2": [
+      {
+        "key": "scope",
+        "value": "non-expiring"
+      },
+      {
+        "key": "accessTokenUrl",
+        "value": "https://secure.soundcloud.com/oauth/token"
+      },
+      {
+        "key": "authUrl",
+        "value": "https://secure.soundcloud.com/authorize"
+      },
+      {
+        "key": "grant_type",
+        "value": "authorization_code"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "ff49a94b-dd8e-47bc-a87d-bfdf6165a17b",
+    "name": "SoundCloud Playlists API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The SoundCloud HTTP API exposes endpoints for tracks (upload, metadata,\nstreaming, comments), users (/me, profile actions), playlists (CRUD),\nsearch/discovery, and social actions (follow, like). Authentication uses\nOAuth 2.1 with PKCE. Access tokens expire approximately every hour.\n\nThe token endpoint is on secure.soundcloud.com; all resource endpoints are\non api.soundcloud.com.\n\n\nContact Support:\n Name: SoundCloud Developers",
+      "type": "text/plain"
+    }
+  }
+}

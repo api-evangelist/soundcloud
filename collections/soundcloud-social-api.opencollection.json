@@ -1,0 +1,137 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "SoundCloud Playlists Social API",
+    "version": "1.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "oauth2",
+      "flow": "client_credentials",
+      "accessTokenUrl": "https://secure.soundcloud.com/oauth/token",
+      "credentials": {
+        "clientId": "{{clientId}}",
+        "clientSecret": "{{clientSecret}}"
+      }
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Social",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Follow a user",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://api.soundcloud.com/me/followings/:userId",
+            "params": [
+              {
+                "name": "userId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Follow a user"
+        },
+        {
+          "info": {
+            "name": "Unfollow a user",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api.soundcloud.com/me/followings/:userId",
+            "params": [
+              {
+                "name": "userId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Unfollow a user"
+        },
+        {
+          "info": {
+            "name": "Like a track",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.soundcloud.com/likes/tracks/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Like a track"
+        },
+        {
+          "info": {
+            "name": "Unlike a track",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api.soundcloud.com/likes/tracks/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Unlike a track"
+        },
+        {
+          "info": {
+            "name": "Like a playlist",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.soundcloud.com/likes/playlists/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Like a playlist"
+        },
+        {
+          "info": {
+            "name": "Unlike a playlist",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api.soundcloud.com/likes/playlists/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Unlike a playlist"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

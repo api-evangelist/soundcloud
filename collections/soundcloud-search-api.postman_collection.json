@@ -1,0 +1,306 @@
+{
+  "item": [
+    {
+      "id": "254b3351-d540-498e-bdce-a8a75700f2be",
+      "name": "Search",
+      "description": {
+        "content": "Search and resolution",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "490e9d7a-b25f-4ccf-995d-b3fa12a431da",
+          "name": "Search tracks",
+          "request": {
+            "name": "Search tracks",
+            "description": {},
+            "url": {
+              "path": [
+                "tracks"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "q",
+                  "value": "<string>",
+                  "description": "Free-text query against title and description"
+                },
+                {
+                  "disabled": false,
+                  "key": "genres",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "access",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "bpm",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "duration",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "ids",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "linked_partitioning",
+                  "value": "<boolean>",
+                  "description": "Enable cursor pagination via next_href"
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "6f72f332-9564-4d04-81bd-3950d04aa083",
+              "name": "Track collection",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "tracks"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "q",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "genres",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "access",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "bpm",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "duration",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "ids",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "linked_partitioning",
+                      "value": "<boolean>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "f7263a7a-a1bb-4bad-b89d-094205e7afd5",
+          "name": "Resolve a SoundCloud URL to an API resource representation",
+          "request": {
+            "name": "Resolve a SoundCloud URL to an API resource representation",
+            "description": {},
+            "url": {
+              "path": [
+                "resolve"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "url",
+                  "value": "<uri>",
+                  "description": "(Required) "
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "54c97a2c-226a-43f1-bfb2-971cb7ca4c54",
+              "name": "Resource representation",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "resolve"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "url",
+                      "value": "<uri>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "f20fec97-a061-489b-8c00-60269b264846",
+              "name": "Redirect to canonical API resource",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "resolve"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "url",
+                      "value": "<uri>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Found",
+              "code": 302,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.soundcloud.com",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "oauth2",
+    "oauth2": [
+      {
+        "key": "scope",
+        "value": "non-expiring"
+      },
+      {
+        "key": "accessTokenUrl",
+        "value": "https://secure.soundcloud.com/oauth/token"
+      },
+      {
+        "key": "authUrl",
+        "value": "https://secure.soundcloud.com/authorize"
+      },
+      {
+        "key": "grant_type",
+        "value": "authorization_code"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "a6ced6ea-1a3d-41d5-8f0e-b5caad5ea4c5",
+    "name": "SoundCloud Playlists Search API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The SoundCloud HTTP API exposes endpoints for tracks (upload, metadata,\nstreaming, comments), users (/me, profile actions), playlists (CRUD),\nsearch/discovery, and social actions (follow, like). Authentication uses\nOAuth 2.1 with PKCE. Access tokens expire approximately every hour.\n\nThe token endpoint is on secure.soundcloud.com; all resource endpoints are\non api.soundcloud.com.\n\n\nContact Support:\n Name: SoundCloud Developers",
+      "type": "text/plain"
+    }
+  }
+}

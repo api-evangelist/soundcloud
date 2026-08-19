@@ -1,0 +1,190 @@
+{
+  "item": [
+    {
+      "id": "a7e1545d-7acc-4c83-9755-86c5da56bd94",
+      "name": "Users",
+      "description": {
+        "content": "Authenticated user and profile actions",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "34b8d16e-af00-484d-be01-de1a05286563",
+          "name": "Obtain or refresh an OAuth 2.1 access token (PKCE)",
+          "request": {
+            "name": "Obtain or refresh an OAuth 2.1 access token (PKCE)",
+            "description": {},
+            "url": {
+              "path": [
+                "oauth",
+                "token"
+              ],
+              "host": [
+                "{{oauth-token-Url}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "76178b10-69ad-4116-a80c-85910a5fe6cd",
+              "name": "Access token response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "oauth",
+                    "token"
+                  ],
+                  "host": [
+                    "{{oauth-token-Url}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "7af6ff17-6e93-467a-9c39-41b9e7137305",
+          "name": "Get the authenticated user's profile",
+          "request": {
+            "name": "Get the authenticated user's profile",
+            "description": {},
+            "url": {
+              "path": [
+                "me"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "da042047-238c-44dc-89cb-8f740f702f40",
+              "name": "User profile",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "me"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.soundcloud.com",
+      "key": "baseUrl"
+    },
+    {
+      "type": "string",
+      "value": "https://secure.soundcloud.com",
+      "key": "oauth-token-Url"
+    }
+  ],
+  "auth": {
+    "type": "oauth2",
+    "oauth2": [
+      {
+        "key": "scope",
+        "value": "non-expiring"
+      },
+      {
+        "key": "accessTokenUrl",
+        "value": "https://secure.soundcloud.com/oauth/token"
+      },
+      {
+        "key": "authUrl",
+        "value": "https://secure.soundcloud.com/authorize"
+      },
+      {
+        "key": "grant_type",
+        "value": "authorization_code"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "edc28968-33b7-4f02-9077-014b26b5ca4b",
+    "name": "SoundCloud Playlists Users API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The SoundCloud HTTP API exposes endpoints for tracks (upload, metadata,\nstreaming, comments), users (/me, profile actions), playlists (CRUD),\nsearch/discovery, and social actions (follow, like). Authentication uses\nOAuth 2.1 with PKCE. Access tokens expire approximately every hour.\n\nThe token endpoint is on secure.soundcloud.com; all resource endpoints are\non api.soundcloud.com.\n\n\nContact Support:\n Name: SoundCloud Developers",
+      "type": "text/plain"
+    }
+  }
+}
