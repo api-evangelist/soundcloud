@@ -23,6 +23,13 @@ tags:
 - Music
 - Streaming
 - Audio
+- Authentication
+- Tracks
+- Playlists
+tags_raw:
+- Music
+- Streaming
+- Audio
 - OAuth
 - Tracks
 - Playlists
@@ -39,6 +46,12 @@ apis:
   humanURL: https://developers.soundcloud.com/docs/api/guide
   baseURL: https://api.soundcloud.com
   tags:
+  - Tracks
+  - User
+  - Playlists
+  - Search
+  - Social
+  tags_raw:
   - Tracks
   - Users
   - Playlists
@@ -99,6 +112,8 @@ apis:
   humanURL: https://developers.soundcloud.com/docs/api/guide
   baseURL: https://api.soundcloud.com
   tags:
+  - User
+  tags_raw:
   - Users
   properties:
   - type: OpenAPI
