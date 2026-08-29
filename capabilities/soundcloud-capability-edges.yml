@@ -1,0 +1,27 @@
+slug: soundcloud
+provider: SoundCloud
+generated_by: planning/capability-mapping/scripts/classify_capabilities.py
+model: claude-opus-5
+frame:
+- Media, Entertainment & Telecom Content
+min_confidence: 0.7
+capability_model:
+  source: https://github.com/vincentmakes/turbo-ea-capabilities
+  license: CC-BY-4.0
+  attribution: Turbo EA Capabilities by Vincent Verdet — Turbo EA, https://github.com/vincentmakes/turbo-ea-capabilities,
+    CC BY 4.0
+  notice: NOTICE
+edge_count: 1
+edges:
+- tag: Tracks
+  spec_file: soundcloud-tracks-api-openapi.yml
+  capability_id: BC-3710
+  capability_id_l1: BC-3710
+  capability_name: Media Asset Management
+  confidence: 0.75
+  evidence: POST /tracks createTrack Upload audio file with metadata; PUT /tracks/{id} updateTrack Update
+    track metadata and artwork; GET /tracks/{id}/stream getTrackStream Access transcoded streaming formats
+    for a track
+  reason: Operations onboard audio assets with metadata, maintain descriptive metadata/artwork, and expose
+    transcoded renditions — media asset management. L2 left null because evidence spans ingest, metadata
+    cataloguing and transcoding without clearly naming one.
