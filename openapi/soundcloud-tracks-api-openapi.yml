@@ -1,6 +1,6 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
-  title: SoundCloud Playlists Tracks API
+  title: SoundCloud Tracks API
   version: 1.0.0
   summary: SoundCloud REST API for tracks, users, playlists, search, social actions, and streaming.
   description: 'The SoundCloud HTTP API exposes endpoints for tracks (upload, metadata,
@@ -14,9 +14,7 @@ info:
 
     The token endpoint is on secure.soundcloud.com; all resource endpoints are
 
-    on api.soundcloud.com.
-
-    '
+    on api.soundcloud.com.'
   contact:
     name: SoundCloud Developers
     url: https://developers.soundcloud.com/docs/api/guide
