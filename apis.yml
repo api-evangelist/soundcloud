@@ -76,8 +76,6 @@ apis:
     url: https://developers.soundcloud.com/docs/api/guide#authentication
   - type: RateLimits
     url: https://developers.soundcloud.com/docs/api/rate-limits
-  - url: graphql/soundcloud-graphql.md
-    type: GraphQL
 - aid: soundcloud:soundcloud-playlists-api
   name: SoundCloud Playlists API
   description: Playlist CRUD
