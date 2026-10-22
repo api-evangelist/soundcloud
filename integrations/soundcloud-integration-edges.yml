@@ -1,27 +1,4 @@
 edges:
-- partner_name: DDEX (Digital Data Exchange)
-  partner: null
-  partner_match: register
-  type: register
-  direction: partner-built
-  channel: standard-directory
-  relationship: standard-participant
-  evidence: https://ddex.net/membership/current-members/
-  category: music metadata and rights messaging standard
-  contract_reference:
-    register: DDEX current members (ddex.net/membership/current-members)
-    spec_file: null
-    role: ddex-full-member
-    registered_name: SoundCloud
-    register_id: SoundCloud
-    tier: full
-    matched_domain: soundcloud.com
-    matched_by: domain
-    identity: wikidata Q568769 'SoundCloud' P856 https://soundcloud.com
-    detected_by: sweep-media.py
-    detected: '2026-10-15'
-  detected_by: sweep-media.py
-  first_seen: '2026-10-15'
 - partner_name: Zapier
   partner: zapier
   partner_match: aggregator
@@ -46,6 +23,29 @@ edges:
     beta: false
     builder: unknown (not in the directory record)
   detected_by: sweep-workflow-automation.py
+  first_seen: '2026-10-15'
+- partner_name: DDEX (Digital Data Exchange)
+  partner: null
+  partner_match: register
+  type: register
+  direction: partner-built
+  channel: standard-directory
+  relationship: standard-participant
+  evidence: https://ddex.net/membership/current-members/
+  category: music metadata and rights messaging standard
+  contract_reference:
+    register: DDEX current members (ddex.net/membership/current-members)
+    spec_file: null
+    role: ddex-full-member
+    registered_name: SoundCloud
+    register_id: SoundCloud
+    tier: full
+    matched_domain: soundcloud.com
+    matched_by: domain
+    identity: wikidata Q568769 'SoundCloud' P856 https://soundcloud.com
+    detected_by: sweep-media.py
+    detected: '2026-10-19'
+  detected_by: sweep-media.py
   first_seen: '2026-10-15'
 generated: '2026-10-15'
 method: searched
