@@ -47,6 +47,47 @@ edges:
     detected: '2026-10-19'
   detected_by: sweep-media.py
   first_seen: '2026-10-15'
+- partner_name: APIs.guru OpenAPI Directory
+  partner: apis-guru
+  partner_match: register
+  type: register
+  channel: standard-directory
+  relationship: standard-participant
+  direction: third-party
+  evidence: https://apis.guru/
+  category: API definition directory listing (OpenAPI)
+  contract_reference:
+    register: APIs.guru OpenAPI Directory
+    spec_file: null
+    standard: APIs.guru OpenAPI Directory
+    role: listed-in-directory
+    directory_provider: soundcloud.com
+    matched_domain: soundcloud.com
+    matched_by: domain
+    apis_listed: 1
+    version_count: 1
+    first_added: '2021-05-19'
+    last_updated: '2021-06-21'
+    origin_publisher_hosted: false
+    origin_hosts:
+    - gist.githubusercontent.com
+    categories:
+    - media
+    own_openapi_files: 5
+    listings:
+    - key: soundcloud.com
+      title: SoundCloud Public API Specification
+      preferred: 1.0.0
+      versions: 1
+      swagger_url: https://api.apis.guru/v2/specs/soundcloud.com/1.0.0/openapi.json
+      origin_url: https://gist.githubusercontent.com/MikeRalphson/a9eb3040cb611121b568844958564849/raw/d0996b827b9eb2ae4fa946b9aacf02b03dc3d933/openapi.json
+      openapi_version: 3.0.1
+    signal_note: 'participation only: a community directory listing (APIs.guru collects definitions; the provider
+      did not file them). Signals: version_count, apis_listed, origin_publisher_hosted.'
+    detected_by: sweep-openapi-directory-apis-guru.py
+    detected: '2026-10-22'
+  detected_by: sweep-openapi-directory-apis-guru.py
+  first_seen: '2026-10-22'
 generated: '2026-10-15'
 method: searched
 source:
@@ -56,3 +97,5 @@ checked:
 - https://ddex.net/membership/current-members/
 - https://raw.githubusercontent.com/c2pa-org/conformance-public/main/conforming-products/conforming-products-list.json
 - https://zapier.com/api/v4/apps/
+- https://api.apis.guru/v2/list.json
+- https://api.apis.guru/v2/providers.json
