@@ -93,3 +93,16 @@
     detected: '2026-10-22'
   status: not-a-workflow
   arazzo: null
+- slug: soundcloud-discord-discord-app-directory
+  label: Discord (discord-app-directory)
+  partner: discord
+  partner_name: Discord (discord-app-directory)
+  category: Social, Utilities
+  type: marketplace
+  marketplace: discord-app-directory
+  channel: partner-built
+  evidence: https://discord.com/discovery/applications/890343617762304070
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null

@@ -88,6 +88,25 @@ edges:
     detected: '2026-10-22'
   detected_by: sweep-openapi-directory-apis-guru.py
   first_seen: '2026-10-22'
+- partner_name: Discord (discord-app-directory)
+  partner: discord
+  partner_match: mirror
+  mirror_match: domain
+  type: marketplace
+  relationship: platform-app
+  direction: third-party
+  channel: partner-built
+  marketplace: discord-app-directory
+  evidence: https://discord.com/discovery/applications/890343617762304070
+  mirror_of: discord/integrations/discord-integration-edges.yml
+  apps:
+  - SoundCloud
+  listing_count: 1
+  detected: '2026-10-23'
+  detected_by: mirror-platform-listings.py
+  category: Social, Utilities
+  publisher_verified:
+  - discord-verified-app
 generated: '2026-10-15'
 method: searched
 source:
@@ -99,3 +118,4 @@ checked:
 - https://zapier.com/api/v4/apps/
 - https://api.apis.guru/v2/list.json
 - https://api.apis.guru/v2/providers.json
+- discord/integrations/discord-integration-edges.yml
